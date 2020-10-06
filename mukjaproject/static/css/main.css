@@ -65,6 +65,7 @@ span{
     right:32px;
     font-size: 24px;
     color: rgb(192, 57, 43);
+    
 }
 
 .sectionbar{
@@ -73,6 +74,8 @@ span{
     align-items: center;
     background-color: #333;
     padding: 8px 12px;
+
+    
 }
 
 .sectionbar__menu{
@@ -81,6 +84,7 @@ span{
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    
 }
 
 .sectionbar__menu li{
@@ -91,7 +95,7 @@ span{
     display: flex;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1px 16px;
     text-decoration: none;
 }
 
