@@ -1,11 +1,12 @@
-div.first{
+div.title{
     overflow: auto ;
     background-color: orange;
     display: block;
     text-align: center;
 }
-.second{
-    background-color: yellow;
+.nav{
+    display: inline;
+    background-color: whitesmoke;
     text-align: center;
     
 }
@@ -13,16 +14,17 @@ div.first{
     color: brown;
 }
 .why2{
-    color: white;
+    color: whitesmoke;
 }
 .why3{
     color: orange;
 }
-.why4{
-    background-color: wheat;
-    color: tomato;
-    height: 50px;
-    width: 80px;
+.navbtn{
+    float: left;
+    background-color: whitesmoke;
+    color: brown;
+    height: 70px;
+    width: 29%;
 }
 .dropdown{
     position: relative;
@@ -31,7 +33,7 @@ div.first{
 }
 .dropbtn{
     background-color: orangered;
-    color: white;
+    color: whitesmoke;
     padding: 31.5px;
     font-size: 20px;
     border: none;
@@ -41,7 +43,7 @@ div.first{
 .dropdown-content{
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: whitesmoke;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     
@@ -61,6 +63,6 @@ div.first{
 .dropdown:hover .dropdown-content{
     display: block;
 }
-#a{position: relative; right: 16px;}
-#b{position: relative; left: 57px;}
-#c{position: relative; left: 130px;}
+#a{position: relative; border: 0; margin: 0; padding: 0; }
+#b{position: relative; border: 0; margin: 0; padding: 0; }
+#c{position: relative; border: 0; margin: 0; padding: 0; }
