@@ -67,6 +67,35 @@ span{
     color: rgb(192, 57, 43);
 }
 
+.sectionbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 8px 12px;
+}
+
+.sectionbar__menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.sectionbar__menu li{
+    float: left;
+}
+
+.sectionbar__menu li a{
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
 @media screen and (max-width: 760px) {
     .navbar {
         flex-direction: column;
