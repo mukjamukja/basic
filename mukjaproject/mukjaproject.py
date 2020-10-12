@@ -21,16 +21,14 @@ def get_conn():
 
 @app.route("/")
 def main():
-    name_list=[]
-    rate_list=[]
+    information=[]
     conn = get_conn()
     cur = conn.cursor()
-    cur.execute("SELECT name, rate FROM store")
-    for (name, rate) in cur:
-        name_list.append(name)
-        rate_list.append(rate)
-
-    return render_template('main.html', name=name_list, rate=rate_list)
+    cur.execute("SELECT id, name, rate, tag FROM store")
+    for i in cur:
+        information.append(i)
+    conn.close()
+    return render_template('main.html', inform=information)
 
 @app.route("/reporter/<int:id>/")
 def reporter(id):

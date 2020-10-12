@@ -8,8 +8,8 @@
     <script 
     src="https://kit.fontawesome.com/2e6580eb92.js" 
     crossorigin="anonymous">
-</script>
-<script src="../static/js/main.js" defer></script>
+    </script>
+    <script src="../static/js/main.js" defer></script>
 </head>
 <body>
 
@@ -45,217 +45,23 @@
     </div>
 
     <div class="grid_view">
-
+        {% for info in inform %}
+        {% if loop.index < 10 %}
         <div class = "fir_store">
-            <a id = "storename" href="">first store name</a>
-
+            <a id = "{{ info[1] }}" href="">first store {{ info[1] }}</a>
             <div id = "storeimg">
                 <img src="" alt="first store img">
             </div>
-
-            <div id = "storeexplain">
-                Aenean quis dapibus era fames ac turpis egestas. Mae
-            </div>
-
             <div id = "storepoint">
-                ★n.n
+                {{ info[2] }}
             </div>
-
             <div id = "hashtags">
-                #alpha #beta #gamma
+                {{ info[3] }}
             </div>
-
         </div>
-
-
-        <div class = "sec_store">
-            <a id = "storename" href="">second store name</a>
-
-            <div id = "storeimg">
-                <img src="" alt="second store img">
-            </div>
-
-            <div id = "storeexplain">
-                Aenean quis dapibus era fames ac turpis egestas. Mae
-            </div>
-
-            <div id = "storepoint">
-                ★n.n
-            </div>
-
-            <div id = "hashtags">
-                #alpha #beta #gamma
-            </div>
-            
-        </div>
-
-        <div class = "thi_store">
-            <a id = "storename" href="">third store name</a>
-
-            <div id = "storeimg">
-                <img src="" alt="third store img">
-            </div>
-
-            <div id = "storeexplain">
-                Aenean quis dapibus era fames ac turpis egestas. Mae
-            </div>
-
-            <div id = "storepoint">
-                ★n.n
-            </div>
-
-            <div id = "hashtags">
-                #alpha #beta #gamma
-            </div>
-        
-        </div>
-
-        <div class = "fou_store">
-            <a id = "storename" href="">fourth store name</a>
-
-            <div id = "storeimg">
-                <img src="" alt="fourth store img">
-            </div>
-
-            <div id = "storeexplain">
-                Aenean quis dapibus era fames ac turpis egestas. Mae
-            </div>
-
-            <div id = "storepoint">
-                ★n.n
-            </div>
-
-            <div id = "hashtags">
-                #alpha #beta #gamma
-            </div>
-        
-        </div>
-
-        <div class = "fif_store">
-            <a id = "storename" href="">fifth store name</a>
-
-            <div id = "storeimg">
-                <img src="" alt="fifth store img">
-            </div>
-
-            <div id = "storeexplain">
-                Aenean quis dapibus era fames ac turpis egestas. Mae
-            </div>
-
-            <div id = "storepoint">
-                ★n.n
-            </div>
-
-            <div id = "hashtags">
-                #alpha #beta #gamma
-            </div>
-
-        </div>
-        <div class = "six_store">
-            <a id = "storename" href="">sixth store name</a>
-
-            <div id = "storeimg">
-                <img src="" alt="sixth store img">
-            </div>
-
-            <div id = "storeexplain">
-                Aenean quis dapibus era fames ac turpis egestas. Mae
-            </div>
-
-            <div id = "storepoint">
-                ★n.n
-            </div>
-
-            <div id = "hashtags">
-                #alpha #beta #gamma
-            </div>
-        
-        </div>
-
-        <div class = "sev_store">
-            <a id = "storename" href="">seventh store name</a>
-
-            <div id = "storeimg">
-                <img src="" alt="seventh store img">
-            </div>
-
-            <div id = "storeexplain">
-                Aenean quis dapibus era fames ac turpis egestas. Mae
-            </div>
-
-            <div id = "storepoint">
-                ★n.n
-            </div>
-
-            <div id = "hashtags">
-                #alpha #beta #gamma
-            </div>
-        
-        </div>
-
-        <div class = "eig_store">
-            <a id = "storename" href="">eighth store name</a>
-
-            <div id = "storeimg">
-                <img src="" alt="eighth store img">
-            </div>
-
-            <div id = "storeexplain">
-                Aenean quis dapibus era fames ac turpis egestas. Mae
-            </div>
-
-            <div id = "storepoint">
-                ★n.n
-            </div>
-
-            <div id = "hashtags">
-                #alpha #beta #gamma
-            </div>
-        
-        </div>
-
-        <div class = "nin_store">
-            <a id = "storename" href="">ninth store name</a>
-
-            <div id = "storeimg">
-                <img src="" alt="ninth store img">
-            </div>
-
-            <div id = "storeexplain">
-                Aenean quis dapibus era fames ac turpis egestas. Mae
-            </div>
-
-            <div id = "storepoint">
-                ★n.n
-            </div>
-
-            <div id = "hashtags">
-                #alpha #beta #gamma
-            </div>
-        
-        </div>
-
-        <div class = "ten_store">
-            <a id = "storename" href="">tenth store name</a>
-
-            <div id = "storeimg">
-                <img src="" alt="tenth store img">
-            </div>
-
-            <div id = "storeexplain">
-                Aenean quis dapibus era fames ac turpis egestas. Mae
-            </div>
-
-            <div id = "storepoint">
-                ★n.n
-            </div>
-
-            <div id = "hashtags">
-                #alpha #beta #gamma
-            </div>
-        
-        </div>
-        
+        {% else %}
+        {% endif %}
+        {% endfor %}
     </div>
     
     <div class = "center">    
