@@ -81,12 +81,11 @@ span{
 }
 
 .sectionbar__menu{
+    display: inline;
     list-style-type: none;
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
-    background-color: #;
-    
 }
 
 .sectionbar__menu li{
@@ -102,74 +101,131 @@ span{
 }
 
 .grid_view{
+    position: relative;
+    column-gap: 5%;
+    row-gap: 2.5%;
     overflow: hidden;
-    text-align: center;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 5%;
-    grid-gap: 5%;
-    grid-auto-rows: minmax(250px, auto);
-    grid-auto-columns: minmax(250px, auto);
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(350px, auto);
+    grid-auto-columns: minmax(350px, auto);
+    margin: 5% 
     
 }
 
 .grid_view>*{
     border-style: solid;
+    border-radius: 20px;
     border-color: rgb(243, 150, 1, 0.87);
+    padding: 10px 5px;
 }
 
+   
+
 .fir_store{
-    grid-column: 1;
-    grid-row: 1;
+    margin-left: auto;
+    margin-right: auto;
+   
 }
 
 .sec_store{ 
-    grid-column: 2;
-    grid-row: 1;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .thi_store{
-    grid-column: 1;
-    grid-row: 2;
+    margin-left: auto;
+    margin-right: auto;
+   
 }
 
 .fou_store{
-    grid-column: 2;
-    grid-row: 2;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .fif_store{
-    grid-column: 1;
-    grid-row: 3;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .six_store{
-    grid-column: 2;
-    grid-row: 3;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .sev_store{
-    grid-column: 1;
-    grid-row: 4;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .eig_store{
-    grid-column: 2;
-    grid-row: 4;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .nin_store{
-    grid-column: 1;
-    grid-row: 5;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .ten_store{
-    grid-column: 2;
-    grid-row: 5;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
+
+#storename{
+    margin-top: 0;
+    color: #333;
+    font-size: medium;
+}
+
+#storeimg{
+    border: solid;
+    color: #333;
+    border-color: lightgray;
+    background-color: lightgray;
+    margin-top: 2%;
+    height: 55%;
+}
+
+#storeexplain{
+    margin-right: 0;
+    max-width: 80%;
+    text-align: left;
+    color: grey;
+    font-size: small;
+    margin-top: 2%;
+}
+
+#storepoint{
+    display: inline;
+    font-size: larger;
+    color: gold;   
+}
+
+#hashtags{
+    display: inline;
+    position: relative;
+    float: right;
+    color: grey;
+    font-size: smaller;
+    
+    
+}
+
 .center{
     text-align: center;
 }
+
 .paging{
     display: inline-block;
 }
@@ -209,7 +265,7 @@ span{
 
 
 @media screen and (max-width: 760px) {
-    .mainbar {
+    .mainbar{
         flex-direction: column;
         align-items: flex-start;
         padding: 8px 24px;
@@ -233,13 +289,32 @@ span{
         width: 100%;
 
     }
+
     .mainbar__menubtn{
         display: block;
     }
 
-
     .mainbar__menu.active,
     .mainbar__links.active{
         display: flex;
+    }
+
+    
+
+   
+
+
+
+
+
+
+
+    .grid_view{
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5%;
+        grid-auto-rows: minmax(250px, auto);
+        grid-auto-columns: minmax(250px, auto);
     }
 }
