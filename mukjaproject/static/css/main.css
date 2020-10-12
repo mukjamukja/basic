@@ -99,6 +99,61 @@ span{
     text-decoration: none;
 }
 
+.grid_view{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 16px;
+    margin-left: 5%;
+    margin-right: 5%;
+    grid-gap: 5%;
+    grid-auto-rows: minmax(250px, auto);
+    grid-auto-columns: minmax(250px, auto);
+    
+}
+
+.fir_store{
+    border-style: solid;
+    border-color: rgb(243, 150, 1, 0.87);
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.sec_store{ 
+    border-style: solid;
+    border-color: rgb(243, 150, 1, 0.87);
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.thi_store{
+    border-style: solid;
+    border-color: rgb(243, 150, 1, 0.87);
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.fou_store{
+    border-style: solid;
+    border-color: rgb(243, 150, 1, 0.87);
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.fif_store{
+    border-style: solid;
+    border-color: rgb(243, 150, 1, 0.87);
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.six_store{
+    border-style: solid;
+    border-color: rgb(243, 150, 1, 0.87);
+    grid-column: 2;
+    grid-row: 3;
+}
+
 
 @media screen and (max-width: 760px) {
     .navbar {
