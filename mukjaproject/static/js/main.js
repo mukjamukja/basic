@@ -1,6 +1,6 @@
-const togglebtn = document.querySelector('.navbar__menubtn');
-const menu = document.querySelector('.navbar__menu');
-const links = document.querySelector('.navbar__links');
+const togglebtn = document.querySelector('.mainbar__menubtn');
+const menu = document.querySelector('.mainbar__menu');
+const links = document.querySelector('.mainbar__links');
 
 
 togglebtn.addEventListener('click', ()=> {

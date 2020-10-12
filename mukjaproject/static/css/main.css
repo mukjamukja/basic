@@ -1,5 +1,7 @@
 body{
     margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 a{
@@ -12,7 +14,7 @@ span{
     color:rgb(192, 57, 43);
 }
 
-.navbar{
+.mainbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,34 +22,34 @@ span{
     padding: 8px 12px;
 }
 
-.navbar__logo{
+.mainbar__logo{
     font-size: 30px;
     color: white;
 }
 
-.navbar__logo i {
+.mainbar__logo i {
     color:white;
 }
 
-.navbar__menu{
+.mainbar__menu{
     display: flex;
     list-style: none;
     padding-left: 0;
 }
 
-.navbar__menu li{
+.mainbar__menu li{
     padding: 8px 12px;
     font-size: 18px;
 }
 
-.navbar__menu li:hover{
+.mainbar__menu li:hover{
     background-color:rgb(192, 57, 43);
     border-radius: 8px;
     
 }
 
 
-.navbar__links {
+.mainbar__links {
     list-style: none;
     color: white;
     display: flex;
@@ -55,11 +57,11 @@ span{
     font-size: 20px;
 }
 
-.navbar__links i{
+.mainbar__links i{
     padding: 8px 12px;
 }
 
-.navbar__menubtn{
+.mainbar__menubtn{
     display: none;
     position: absolute;
     right:32px;
@@ -72,7 +74,7 @@ span{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: rgb(192, 57, 43);
     padding: 8px 12px;
 
     
@@ -83,7 +85,7 @@ span{
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #;
     
 }
 
@@ -99,39 +101,145 @@ span{
     text-decoration: none;
 }
 
+.grid_view{
+    overflow: hidden;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5%;
+    grid-gap: 5%;
+    grid-auto-rows: minmax(250px, auto);
+    grid-auto-columns: minmax(250px, auto);
+    
+}
+
+.grid_view>*{
+    border-style: solid;
+    border-color: rgb(243, 150, 1, 0.87);
+}
+
+.fir_store{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.sec_store{ 
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.thi_store{
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.fou_store{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.fif_store{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.six_store{
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.sev_store{
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.eig_store{
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.nin_store{
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.ten_store{
+    grid-column: 2;
+    grid-row: 5;
+}
+.center{
+    text-align: center;
+}
+.paging{
+    display: inline-block;
+}
+
+.paging a{
+    background-color: rgb(192, 57, 43);
+    color: white;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.paging a.active{
+    background-color:rgb(243, 150, 1, 0.87);
+    color: white;
+    border: 1px solid rgb(243, 150, 1, 0.87);
+}
+
+.paging a:hover:not(.active){
+    background-color: #ddd;
+}
+
+
+.footer{
+    text-align: center;
+    position: absolute;
+    bottom: unset;
+    width: 100%;
+    height: auto;
+    background: #333;
+    color: whitesmoke
+
+}
+
 
 @media screen and (max-width: 760px) {
-    .navbar {
+    .mainbar {
         flex-direction: column;
         align-items: flex-start;
         padding: 8px 24px;
     }
 
-    .navbar__menu{
+    .mainbar__menu{
         display: none;
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
 
-    .navbar__menu li{
+    .mainbar__menu li{
         width: 100%;
         text-align: center;
     }
 
-    .navbar__links{
+    .mainbar__links{
         display: none;
         justify-content: center;
         width: 100%;
 
     }
-    .navbar__menubtn{
+    .mainbar__menubtn{
         display: block;
     }
 
 
-    .navbar__menu.active,
-    .navbar__links.active{
+    .mainbar__menu.active,
+    .mainbar__links.active{
         display: flex;
     }
 }
