@@ -138,9 +138,7 @@ span{
 
 
 .grid_view{
-    padding-top: 150px;
-    column-gap: 5%;
-    row-gap: 2.5%;
+    padding: 150px 15% 0px 15%;
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -249,11 +247,10 @@ span{
     }
 
     .grid_view{
+        padding: 130px 2.5% 0px 2.5%;
         overflow: hidden;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 5%;
         grid-auto-rows: minmax(250px, auto);
-        grid-auto-columns: minmax(250px, auto);
     }
 }
