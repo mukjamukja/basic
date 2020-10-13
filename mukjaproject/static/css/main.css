@@ -48,7 +48,6 @@ span{
     
 }
 
-
 .mainbar__links {
     list-style: none;
     color: white;
@@ -76,8 +75,7 @@ span{
     align-items: center;
     background-color: rgb(192, 57, 43);
     padding: 8px 12px;
-
-    
+   
 }
 
 .sectionbar__menu{
@@ -99,6 +97,26 @@ span{
     padding: 1px 16px;
     text-decoration: none;
 }
+
+/* sortbtn */
+
+
+.sortbtn__menu{
+    display: none;
+    list-style-type: none;
+}
+
+.sortbtn__menu.active{
+    display: block;
+    text-align: left;
+    background-color: yellow;
+    font-style: #333;
+
+}
+
+
+/* grid */
+
 
 .grid_view{
     position: relative;
@@ -128,59 +146,6 @@ span{
    
 }
 
-.sec_store{ 
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-
-.thi_store{
-    margin-left: auto;
-    margin-right: auto;
-   
-}
-
-.fou_store{
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-
-.fif_store{
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-
-.six_store{
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-
-.sev_store{
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-
-.eig_store{
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-
-.nin_store{
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-
-.ten_store{
-    margin-left: auto;
-    margin-right: auto;
-    
-}
 
 #storename{
     margin-top: 0;
@@ -264,6 +229,8 @@ span{
 }
 
 
+
+/* ----------------------mediaquery--------------------- */
 @media screen and (max-width: 760px) {
     .mainbar{
         flex-direction: column;
@@ -298,16 +265,6 @@ span{
     .mainbar__links.active{
         display: flex;
     }
-
-    
-
-   
-
-
-
-
-
-
 
     .grid_view{
         overflow: hidden;
