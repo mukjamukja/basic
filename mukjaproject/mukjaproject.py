@@ -9,7 +9,7 @@ def get_conn():
         conn = mariadb.connect(
             user="ubuntu",
             password="0625",
-            host="localhost",
+            host="193.123.250.119",
             port=3306,
             database="mukja_db"
         )
