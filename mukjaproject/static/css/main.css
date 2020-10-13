@@ -2,6 +2,15 @@ body{
     margin: 0;
     padding: 0;
     height: 100%;
+    
+}
+
+#topfix{
+    top: 0;
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    z-index: 5;
 }
 
 a{
@@ -107,7 +116,6 @@ span{
 
 .sortbtn__menu li{
     float: left;
-    background: black;
 }
 
 .sortbtn__menu li a{
@@ -115,9 +123,9 @@ span{
 }
 
 .sortbtn__menu.active{
-    background: black;
+    background: #333;
     margin : 0 auto;
-    padding: 0;
+    padding: 8px 16px;
     justify-content: space-around;
     display: flex;
     text-align: center;
@@ -130,7 +138,7 @@ span{
 
 
 .grid_view{
-    position: relative;
+    padding-top: 150px;
     column-gap: 5%;
     row-gap: 2.5%;
     overflow: hidden;
@@ -138,8 +146,6 @@ span{
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(350px, auto);
     grid-auto-columns: minmax(350px, auto);
-    margin: 5% 
-    
 }
 
 
@@ -147,9 +153,13 @@ span{
     border-style: solid;
     border-radius: 20px;
     border-color: rgb(243, 150, 1, 0.87);
-    padding: 10px 5px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 10px;
+    margin: 5%;
+    
+}
+
+.store_template a{
+    color: #333;
 }
 
 
@@ -159,7 +169,7 @@ span{
     border-color: lightgray;
     background-color: lightgray;
     margin-top: 2%;
-    height: 55%;
+    height: 65%;
 }
 
 #storeexplain{
@@ -187,34 +197,6 @@ span{
     
 }
 
-.center{
-    text-align: center;
-}
-
-.paging{
-    display: inline-block;
-}
-
-.paging a{
-    background-color: rgb(192, 57, 43);
-    color: white;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-    transition: background-color .3s;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-}
-
-.paging a.active{
-    background-color:rgb(243, 150, 1, 0.87);
-    color: white;
-    border: 1px solid rgb(243, 150, 1, 0.87);
-}
-
-.paging a:hover:not(.active){
-    background-color: #ddd;
-}
 
 
 #footer{
