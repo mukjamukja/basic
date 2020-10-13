@@ -32,11 +32,11 @@ span{
 
 .mainbar__logo{
     font-size: 30px;
-    color: white;
+    color: whitesmoke;
 }
 
 .mainbar__logo i {
-    color:white;
+    color:whitesmoke;
 }
 
 .mainbar__menu{
@@ -53,12 +53,11 @@ span{
 .mainbar__menu li:hover{
     background-color:rgb(192, 57, 43);
     border-radius: 8px;
-    
 }
 
 .mainbar__links {
     list-style: none;
-    color: white;
+    color: whitesmoke;
     display: flex;
     padding-left: 0;
     font-size: 20px;
@@ -100,37 +99,37 @@ span{
 
 .sectionbar__menu li a{
     display: flex;
-    color: white;
+    color: whitesmoke;
     text-align: center;
     padding: 1px 16px;
     text-decoration: none;
 }
 
+.sectionbar__menu li a:hover{
+    color: rgb(192, 57, 43);
+    background-color:whitesmoke;
+    border-radius: 8px;
+}
 /* sortbtn */
 
 
 .sortbtn__menu{
     display: none;
-    list-style-type: none;
+    
 }
 
-.sortbtn__menu li{
+.sortbtn__menu table{
     float: left;
-}
-
-.sortbtn__menu li a{
     padding: 1px 16px;
 }
 
 .sortbtn__menu.active{
-    background: #333;
+    color: whitesmoke;
+    background: rgb(33,33,33,0.87);
     margin : 0 auto;
     padding: 8px 16px;
     justify-content: space-around;
     display: flex;
-    text-align: center;
-    
-
 }
 
 
@@ -154,6 +153,10 @@ span{
     padding: 10px;
     margin: 5%;
     
+}
+
+.store_template:hover{
+    border-color:rgb(192, 57, 43);
 }
 
 .store_template a{
