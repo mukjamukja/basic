@@ -9,7 +9,7 @@ def get_conn():
         conn = mariadb.connect(
             user="ubuntu",
             password="0625",
-            host="localhost",
+            host="193.123.250.119",
             port=3306,
             database="mukja_db"
         )
@@ -30,21 +30,20 @@ def main():
     conn.close()
     return render_template('main.html', inform=information)
 
-@app.route("/reporter/<int:id>/")
-def reporter(id):
+@app.route("/store/<int:store_id>/")
+def store_detail(store_id):
     conn = get_conn()
     cur = conn.cursor()
-    cur.execute("SELECT nick_name, part, reg_date, email, phone FROM reporter WHERE r_id=?", (id,))
-    return render_template('reporter.html', cur=cur)
+    cur.execute("SELECT id, name, loc, address, tag, rate, inform FROM store WHERE id=?", (store_id,))
+    information = []
+    for i in cur:
+        information.append(i)
 
-@app.route("/reporter_list")
-def reporter_list():
-    value = []
-    conn = get_conn()
-    cur = conn.cursor()
-    cur.execute("SELECT nick_name, r_id FROM reporter")
+    return render_template('store_detail.html', information=information)
 
-    return render_template('reporter_list.html', cur=cur)
+@app.route("/practice")
+def practice():
+    return render_template('practice.html')
 
 
 if __name__ == "__main__":

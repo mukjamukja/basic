@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <title>Muk:ja</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <script 
     src="https://kit.fontawesome.com/2e6580eb92.js" 
     crossorigin="anonymous">
@@ -57,22 +57,36 @@
     <div class="grid_view">
         {% for info in inform %}
         {% if loop.index < 10 %}
-        <div class = "store_template" id="{{ info[0] }}">
-            <a id = "{{ info[1] }}" href="">first store {{ info[1] }}</a>
+        <div class = "store_template" onclick="loadDetail('{{ info[0] }}')">
+            <div id = "{{ info[1] }}" href="">{{ info[1] }}</div>
             <div id = "storeimg">
                 <img src="" alt="first store img">
             </div>
-            <div id = "storepoint">
+            <div id = "score">
                 {{ info[2] }}
             </div>
-            <div id = "hashtags">
+            <div id = "tags">
                 {{ info[3] }}
             </div>
         </div>
-        {% else %}
+        <div id="{{ info[0] }}">
+        </div>
         {% endif %}
         {% endfor %}
     </div>
+    
+    <script>
+    function loadDetail(store_id="") {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if(this.readyState == 4 && this.status == 200) {
+                document.getElementById(store_id).innerHTML = this.responseText;
+            };
+        };
+        xhttp.open("GET", "/store/"+store_id+"/", true);
+        xhttp.send();
+    }
+    </script>
     
     <div class = "center">    
         <div class= "paging">
@@ -87,8 +101,6 @@
 
     </div>
 
-    <script src="../static/js/main_ajax.js" charset="utf-8">
-    </script>
 
     <div class = "footer">
         Project mjmj
