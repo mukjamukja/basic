@@ -47,7 +47,7 @@
     <div class="grid_view">
         {% for info in inform %}
         {% if loop.index < 10 %}
-        <div class = "fir_store">
+        <div class = "store_template" id="{{ info[0] }}">
             <a id = "{{ info[1] }}" href="">first store {{ info[1] }}</a>
             <div id = "storeimg">
                 <img src="" alt="first store img">
