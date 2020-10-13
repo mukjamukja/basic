@@ -118,21 +118,27 @@ span{
     
 }
 
-.sortbtn__menu table{
+.sortbtn__menu li{
+    list-style-type: none;
     float: left;
     padding: 1px 16px;
 }
 
 .sortbtn__menu.active{
     color: whitesmoke;
-    background: rgb(33,33,33,0.87);
+    background: rgb(33,33,33,0.64);
     margin : 0 auto;
     padding: 8px 16px;
     justify-content: space-around;
     display: flex;
 }
 
-
+.loc a{
+    padding: 5px;
+}
+.loc a:hover{
+    background-color:rgb(33,33,33,0.64);
+}
 /* grid */
 
 
@@ -255,5 +261,23 @@ span{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: minmax(250px, auto);
+    }
+
+    .sortbtn__menu.active{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .score{
+        padding: 0;
+    }
+    
+    .loc{
+        padding: 10px;
+    }
+
+    .sortbtn__menu li {
+        list-style-type: none;
+        float: left;
+        padding: 5px;
     }
 }
