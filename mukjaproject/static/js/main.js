@@ -3,7 +3,10 @@ const mainmenu = document.querySelector('.mainbar__menu');
 const mainlinks = document.querySelector('.mainbar__links');
 
 const sortbtn = document.querySelector('.sectionbar__sortbtn');
-const sortmenu = document.querySelector('.sectionbar__menu');
+const sortbtnmenu = document.querySelector('.sortbtn__menu');
+
+const gridbtn = document.querySelector('.sectionbar__gridbtn');
+const mapbtn = document.querySelector('.sectionbar__mapbtn');
 
 
 mainbtn.addEventListener('click', ()=> {
@@ -11,7 +14,17 @@ mainbtn.addEventListener('click', ()=> {
     mainlinks.classList.toggle('active');
 });
 
+gridbtn.addEventListener('click', () => {
+    gridbtn.classList.toggle('active')
+})
+
+mapbtn.addEventListener('click', ()=> {
+    mapbtn.classList.toggle('active')
+})
+
 sortbtn.addEventListener('click', ()=> {
-    sortmenu.classList.toggle('active');
+    sortbtnmenu.classList.toggle('active');
 });
+
+
 
