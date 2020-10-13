@@ -11,56 +11,60 @@
     </script>
     <script src="../static/js/main.js" defer></script>
 </head>
+
 <body>
+    <div id = topfix>
+        <nav class="mainbar">
+            <div class="mainbar__logo">
+                <i class="fas fa-utensils"></i>
+                <b><a href="#"><span style = "color:rgb(192, 57, 43);">M</span>ukja-Muk<span style = "color:rgb(192, 57, 43);">j</span>a</a></b>
+            </div>
 
-    <nav class="mainbar">
-        <div class="mainbar__logo">
-            <i class="fas fa-utensils"></i>
-            <b><a href="#"><span style = "color:rgb(192, 57, 43);">M</span>ukja-Muk<span style = "color:rgb(192, 57, 43);">j</span>a</a></b>
+            <ul class="mainbar__menu">        
+                <li><a href="">HOME</a></li>
+                <li><a href="">LOGIN</a></li>
+                <li><a href="">ABOUT US</a></li>
+                <li><a href="">CONTACT US</a></li>
+            </ul>
+
+            <ul class="mainbar__links">
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-facebook"></i></li>
+            </ul>
+
+            <a href="#" class="mainbar__menubtn">
+            <i class="fas fa-bars"></i>
+            </a>
+
+        </nav>
+    
+        <div class="sectionbar">
+            <ul class="sectionbar__menu">
+                <li><a href="#" class="sectionbar__gridbtn">GRID</a></li>
+                <li><a href="#" class="sectionbar__mapbtn">MAP</a></li>
+                <li><a href="#" class="sectionbar__sortbtn">SORT</a></li>
+            </ul>
         </div>
-
-        <ul class="mainbar__menu">        
-            <li><a href="">HOME</a></li>
-            <li><a href="">LOGIN</a></li>
-            <li><a href="">ABOUT US</a></li>
-            <li><a href="">CONTACT US</a></li>
-        </ul>
-
-        <ul class="mainbar__links">
-            <li><i class="fab fa-instagram"></i></li>
-            <li><i class="fab fa-facebook"></i></li>
-        </ul>
-
-        <a href="#" class="mainbar__menubtn">
-        <i class="fas fa-bars"></i>
-        </a>
-    </nav>
-    
-    <div class="sectionbar">
-        <ul class="sectionbar__menu">
-            <li><a href="#" class="sectionbar__gridbtn">GRID</a></li>
-            <li><a href="#" class="sectionbar__mapbtn">MAP</a></li>
-            <li><a href="#" class="sectionbar__sortbtn">SORT</a></li>
+        
+        <div>
+            <ul class="sortbtn__menu">
+                    <li><a href="">sort1</a></li>
+                    <li><a href="">sort2</a></li>
+                    <li><a href="">sort3</a></li>
+                    <li><a href="">sort4</a></li>
+                    <li><a href="">sort5</a></li>
+                    <li><a href="">sort6</a></li>                  
+            </ul>
+        </div>
     </div>
     
-    <div>
-        <ul class="sortbtn__menu">
-                <li><a href="">1</a></li>
-                <li><a href="">2</a></li>
-                <li><a href="">3</a></li>
-                <li><a href="">4</a></li>
-                <li><a href="">5</a></li>
-                <li><a href="">6</a></li>                  
-        </ul>
-    </div>
-
     <div class="grid_view">
         {% for info in inform %}
         {% if loop.index < 10 %}
         <div class = "store_template" onclick="loadDetail('{{ info[0] }}')">
             <div id = "{{ info[1] }}" href="">{{ info[1] }}</div>
             <div id = "storeimg">
-                <img src="" alt="first store img">
+                <img src="" alt="store img">
             </div>
             <div id = "score">
                 {{ info[2] }}
@@ -97,22 +101,12 @@
             <a href="">4</a>
             <a href="">&raquo;</a>
 
-    <div class= "page">
-
-    </div>
 
 
-    <div class = "footer">
-        Project mjmj
-        <br>
-        Lee Taekyoung
-        <br>
-        Moon Hongju
-        <br>
-        Kim Gunho
-        <br>
-        Kim Seyeon
+    <div id = "footer">
+        Project mjmj<br>ltyiz x mhj x gust x pavv
     </div>
 
 </body>
+
 </html>

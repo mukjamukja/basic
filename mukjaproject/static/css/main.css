@@ -1,13 +1,21 @@
-
+body{
     margin: 0;
     padding: 0;
     height: 100%;
+    
+}
+
+#topfix{
+    top: 0;
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    z-index: 5;
 }
 
 a{
     text-decoration: none;
     color: whitesmoke;
-    
 }
 
 span{
@@ -106,11 +114,22 @@ span{
     list-style-type: none;
 }
 
+.sortbtn__menu li{
+    float: left;
+}
+
+.sortbtn__menu li a{
+    padding: 1px 16px;
+}
+
 .sortbtn__menu.active{
-    display: block;
-    text-align: left;
-    background-color: yellow;
-    font-style: #333;
+    background: #333;
+    margin : 0 auto;
+    padding: 8px 16px;
+    justify-content: space-around;
+    display: flex;
+    text-align: center;
+    
 
 }
 
@@ -119,39 +138,28 @@ span{
 
 
 .grid_view{
-    position: relative;
-    column-gap: 5%;
-    row-gap: 2.5%;
+    padding: 150px 15% 0px 15%;
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(350px, auto);
     grid-auto-columns: minmax(350px, auto);
-    margin: 5% 
-    
 }
 
-.grid_view>*{
+
+.store_template{
     border-style: solid;
     border-radius: 20px;
     border-color: rgb(243, 150, 1, 0.87);
-    padding: 10px 5px;
+    padding: 10px;
+    margin: 5%;
+    
 }
 
-   
-
-.store_template{
-    margin-left: auto;
-    margin-right: auto;
-   
-}
-
-
-#storename{
-    margin-top: 0;
+.store_template a{
     color: #333;
-    font-size: medium;
 }
+
 
 #storeimg{
     border: solid;
@@ -159,7 +167,7 @@ span{
     border-color: lightgray;
     background-color: lightgray;
     margin-top: 2%;
-    height: 55%;
+    height: 65%;
 }
 
 #storeexplain{
@@ -187,39 +195,10 @@ span{
     
 }
 
-.center{
+
+
+#footer{
     text-align: center;
-}
-
-.paging{
-    display: inline-block;
-}
-
-.paging a{
-    background-color: rgb(192, 57, 43);
-    color: white;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-    transition: background-color .3s;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-}
-
-.paging a.active{
-    background-color:rgb(243, 150, 1, 0.87);
-    color: white;
-    border: 1px solid rgb(243, 150, 1, 0.87);
-}
-
-.paging a:hover:not(.active){
-    background-color: #ddd;
-}
-
-
-.footer{
-    text-align: center;
-    position: block;
     bottom: 0px;
     width: 100%;
     height: auto;
@@ -231,6 +210,7 @@ span{
 
 
 /* ----------------------mediaquery--------------------- */
+
 @media screen and (max-width: 760px) {
     .mainbar{
         flex-direction: column;
@@ -267,11 +247,10 @@ span{
     }
 
     .grid_view{
+        padding: 130px 2.5% 0px 2.5%;
         overflow: hidden;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 5%;
         grid-auto-rows: minmax(250px, auto);
-        grid-auto-columns: minmax(250px, auto);
     }
 }
