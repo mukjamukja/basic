@@ -3,7 +3,7 @@ import mariadb
 import sys
 app = Flask(__name__)
 
-# Connect to MariaDB Platform
+# connect to mariadb platform
 def get_conn():
     try:
         conn = mariadb.connect(
@@ -13,8 +13,8 @@ def get_conn():
             port=3306,
             database="mukja_db2"
         )
-    except mariadb.Error as e:
-        print(f"Error connecting to MariaDB Platform: {e}")
+    except mariadb.error as e:
+        print(f"error connecting to mariadb platform: {e}")
         sys.exit(1)
     return conn
 
@@ -39,7 +39,8 @@ def store_detail(store_id):
     for i in cur:
         information.append(i)
 
-    return render_template('store_detail.html', information=information)
+    
+    return render_template('store_detail.html', information=information, tag=tag)
 
 @app.route("/practice")
 def practice():
