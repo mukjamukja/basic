@@ -84,44 +84,36 @@
             </div>
         </div>
         <!-- id="{{ info[0] }}" -->
+    {% endif %}
+    {% endfor %}
     </div>
 
-    <div class="modal">
+    <div id="myModal" class="modal">
       <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p>Some text in the Modal..</p> 
+            <!-- 안에 들어갈 내용은 template/store_detail.html 에서 정의 -->
+            <div id="store_detail"></div> 
         </div>
     </div>
-    {% endif %}
-    {% endfor %}
-
 
     <script>
     function loadDetail(store_id="") {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if(this.readyState == 4 && this.status == 200) {
-                document.getElementById(store_id).innerHTML = this.responseText;
+                document.getElementById("store_detail").innerHTML = this.responseText;
+                document.getElementById("myModal").style.display = "block";
             };
         };
         xhttp.open("GET", "/store/"+store_id+"/", true);
         xhttp.send();
     }
-    // Get the modal
-    var modal = document.getElementById("myModal");
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
 
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-    modal.style.display = "block";
-    }
-
+    var modal = document.getElementById("myModal");
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
       modal.style.display = "none";
