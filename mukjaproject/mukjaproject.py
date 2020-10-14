@@ -11,7 +11,7 @@ def get_conn():
             password="0625",
             host="193.123.250.119",
             port=3306,
-            database="mukja_db"
+            database="mukja_db2"
         )
     except mariadb.Error as e:
         print(f"Error connecting to MariaDB Platform: {e}")
@@ -24,7 +24,7 @@ def main():
     information=[]
     conn = get_conn()
     cur = conn.cursor()
-    cur.execute("SELECT id, name, rate, tag FROM store")
+    cur.execute("SELECT store_id, name, rate FROM store")
     for i in cur:
         information.append(i)
     conn.close()
@@ -34,7 +34,7 @@ def main():
 def store_detail(store_id):
     conn = get_conn()
     cur = conn.cursor()
-    cur.execute("SELECT id, name, loc, address, tag, rate, inform FROM store WHERE id=?", (store_id,))
+    cur.execute("SELECT store_id, name, address, rate, inform FROM store WHERE store_id=?", (store_id,))
     information = []
     for i in cur:
         information.append(i)
