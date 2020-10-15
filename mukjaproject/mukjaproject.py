@@ -32,7 +32,6 @@ def get_tag(store_id=0):
 
 def main():
     information=[]
-    image=[]
 
     conn = get_conn()
     cur = conn.cursor()
