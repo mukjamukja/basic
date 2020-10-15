@@ -18,17 +18,37 @@ def get_conn():
         sys.exit(1)
     return conn
 
-
-@app.route("/")
-def main():
-    information=[]
+def get_tag(store_id=0):
     conn = get_conn()
     cur = conn.cursor()
+    cur.execute("SELECT tag_name FROM tag WHERE tag_id in (SELECT tag_id FROM tag_link WHERE store_id = ?);", (store_id,))
+    tags = []
+    for t in cur:
+        tags.append(t)
+    return tags
+
+
+@app.route("/")
+
+def main():
+    information=[]
+    image=[]
+
+    conn = get_conn()
+    cur = conn.cursor()
+
     cur.execute("SELECT store_id, name, rate FROM store")
     for i in cur:
         information.append(i)
+
+    cur.execute("SELECT img_name FROM image")
+    for i in cur:
+        image.append(i)
+
     conn.close()
-    return render_template('main.html', inform=information)
+  
+    return render_template('main.html', inform=information, img=image)
+
 
 @app.route("/store/<int:store_id>/")
 def store_detail(store_id):
@@ -39,8 +59,7 @@ def store_detail(store_id):
     for i in cur:
         information.append(i)
 
-    
-    return render_template('store_detail.html', information=information, tag=tag)
+    return render_template('store_detail.html', information=information, tags=get_tag(int(store_id)))
 
 @app.route("/practice")
 def practice():
@@ -49,7 +68,7 @@ def practice():
 @app.route("/map.html/")
 def map():
     return render_template("map.html")
-   
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
