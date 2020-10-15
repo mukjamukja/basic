@@ -29,7 +29,6 @@ def get_tag(store_id=0):
 
 
 @app.route("/")
-
 def main():
     information=[]
 
