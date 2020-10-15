@@ -170,11 +170,11 @@ span{
 
 .store_template{
     border-style: solid;
-    max-width: auto;
     border-radius: 20px;
     border-color: rgb(243, 150, 1, 0.87);
     padding: 10px;
     margin: 5%;
+    text-align: center;
     
 }
 
@@ -205,14 +205,13 @@ span{
 }
 
 .score {
-    display: inline;
+    text-align: left;
     font-size: larger;
     color: gold;   
 }
 
 .tags {
-    display: inline;
-    position: relative;
+    text-align: right;
     float: right;
     color: grey;
     font-size: smaller;
@@ -294,8 +293,8 @@ span{
 
 @media screen and (max-width: 760px) {
     .grid_view{
-        padding: 130px 2.5% 0px 2.5%;
-        overflow: hidden;
+        margin: auto;
+        overflow: scroll;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: minmax(250px, auto);
@@ -317,5 +316,13 @@ span{
         list-style-type: none;
         float: left;
         padding: 5px;
+    }
+
+    .store_template{
+        
+    }
+
+    .store_template img{
+
     }
 }
