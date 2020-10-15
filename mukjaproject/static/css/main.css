@@ -23,11 +23,16 @@ span{
 }
 
 .mainbar{
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     background-color:rgb(243, 150, 1, 0.87);
-    padding: 8px 12px;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 24px;
 }
 
 .mainbar__logo{
@@ -42,7 +47,12 @@ span{
 .mainbar__menu{
     display: flex;
     list-style: none;
+    padding-top: 0px;
     padding-left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .mainbar__menu li{
@@ -57,10 +67,12 @@ span{
 
 .mainbar__links {
     list-style: none;
-    color: whitesmoke;
-    display: flex;
+    color: white;
     padding-left: 0;
     font-size: 20px;
+    display: none;
+    justify-content: center;
+    width: 100%;
 }
 
 .mainbar__links i{
@@ -68,7 +80,7 @@ span{
 }
 
 .mainbar__menubtn{
-    display: none;
+    display: block;
     position: absolute;
     right:32px;
     font-size: 24px;
@@ -77,6 +89,10 @@ span{
 }
 
 .sectionbar{
+    position: sticky;
+    top: 0px;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -143,17 +159,18 @@ span{
 
 
 .grid_view{
-    padding: 150px 15% 0px 15%;
+    padding: 150px 10% 0px 10%;
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(350px, auto);
-    grid-auto-columns: minmax(350px, auto);
+    grid-auto-rows: minmax(auto, auto);
+    grid-auto-columns: minmax(auto, auto);
 }
 
 
 .store_template{
     border-style: solid;
+    max-width: auto;
     border-radius: 20px;
     border-color: rgb(243, 150, 1, 0.87);
     padding: 10px;
@@ -171,12 +188,11 @@ span{
 
 
 .store_img {
-    border: solid;
-    color: #333;
-    border-color: lightgray;
-    background-color: lightgray;
-    margin-top: 2%;
-    height: 65%;
+    width: inherit;
+    max-width: 100%;
+    height: auto;
+    align-items: center;
+    
 }
 
 .store_explain {
@@ -258,43 +274,10 @@ span{
 }
 
 
+
 /* ----------------------mediaquery--------------------- */
 
 @media screen and (max-width: 760px) {
-    .mainbar{
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 8px 24px;
-    }
-
-    .mainbar__menu{
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .mainbar__menu li{
-        width: 100%;
-        text-align: center;
-    }
-
-    .mainbar__links{
-        display: none;
-        justify-content: center;
-        width: 100%;
-
-    }
-
-    .mainbar__menubtn{
-        display: block;
-    }
-
-    .mainbar__menu.active,
-    .mainbar__links.active{
-        display: flex;
-    }
-
     .grid_view{
         padding: 130px 2.5% 0px 2.5%;
         overflow: hidden;
