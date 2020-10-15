@@ -46,6 +46,10 @@ def store_detail(store_id):
 def practice():
     return render_template('practice.html')
 
+@app.route("/map.html/")
+def map():
+    return render_template("map.html")
+   
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
