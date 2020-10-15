@@ -257,6 +257,16 @@ span{
   cursor: pointer;
 }
 
+.top {
+    font-size: 40px;
+    color: rgb(243, 150, 1);
+    position: fixed; 
+    right: 2%; 
+    bottom: 50px; 
+    display: none; 
+    z-index: 999;
+}
+
 
 #footer{
     text-align: center;
@@ -266,6 +276,11 @@ span{
     background: #333;
     color: whitesmoke
 
+}
+
+.mainbar__menu.active,
+.mainbar__links.active{
+    display: flex;
 }
 
 /* ----------------------mediaquery--------------------- */
