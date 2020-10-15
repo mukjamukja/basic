@@ -18,6 +18,15 @@ def get_conn():
         sys.exit(1)
     return conn
 
+def get_tag(store_id=0):
+    conn = get_conn()
+    cur = conn.cursor()
+    cur.execute("SELECT tag_name FROM tag WHERE tag_id in (SELECT tag_id FROM tag_link WHERE store_id = ?);", (store_id,))
+    tags = []
+    for t in cur:
+        tags.append(t)
+    return tags
+
 
 @app.route("/")
 def main():
@@ -40,7 +49,7 @@ def store_detail(store_id):
         information.append(i)
 
     
-    return render_template('store_detail.html', information=information, tag=tag)
+    return render_template('store_detail.html', information=information, tags=get_tag(int(store_id)))
 
 @app.route("/practice")
 def practice():
