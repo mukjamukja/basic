@@ -29,7 +29,6 @@ def get_tag(store_id=0):
 
 
 @app.route("/")
-
 def main():
     information=[]
     image=[]
@@ -41,7 +40,7 @@ def main():
     for i in cur:
         information.append(i)
 
-    cur.execute("SELECT img_file FROM image")
+    cur.execute("SELECT img_name FROM image")
     for i in cur:
         image.append(i)
 
