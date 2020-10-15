@@ -37,17 +37,12 @@ def main():
     conn = get_conn()
     cur = conn.cursor()
 
-    cur.execute("SELECT store_id, name, rate FROM store")
+    cur.execute("SELECT store_id, thumbnail, name, rate FROM store")
     for i in cur:
         information.append(i)
-
-    cur.execute("SELECT img_file FROM image")
-    for i in cur:
-        image.append(i)
-
     conn.close()
   
-    return render_template('main.html', inform=information, img=image)
+    return render_template('main.html', inform=information)
 
 
 @app.route("/store/<int:store_id>/")
