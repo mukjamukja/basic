@@ -41,7 +41,11 @@ def main():
     for i in cur:
         information.append(i)
 
+<<<<<<< HEAD
     cur.execute("SELECT img_name FROM image")
+=======
+    cur.execute("SELECT img_file FROM image")
+>>>>>>> 5227874f1b22eabe58ffecbaf237c9ff9126637c
     for i in cur:
         image.append(i)
 
