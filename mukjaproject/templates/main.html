@@ -20,7 +20,7 @@
         <i class="fas fa-arrow-circle-up">TOP</i>
     </div>
 
-    <div id = topfix>
+    <!-- <div id = topfix> -->
         <nav class="mainbar">
             <div class="mainbar__logo">
                 <i class="fas fa-utensils"></i>
@@ -45,8 +45,8 @@
     
         <div class="sectionbar">
             <ul class="sectionbar__menu">
-                <li><a href="#" class="sectionbar__gridbtn">GRID</a></li>
-                <li><a href="map.html" class="sectionbar__mapbtn">MAP</a></li>
+                <li><a href="" class="sectionbar__gridbtn">GRID</a></li>
+                <li><a href="/map.html/" class="sectionbar__mapbtn">MAP</a></li>
                 <li><a href="#" class="sectionbar__sortbtn">SORT</a></li>
             </ul>
         </div>
@@ -68,21 +68,21 @@
             </ul>
 
         </div>
-    </div>
+    <!-- </div> -->
     
     <div class="grid_view">
     {% for info in inform %}
         {% if loop.index < 10 %}
             <div class = "store_template" onclick="loadDetail('{{ info[0] }}')">
-                <div id = "{{ info[2] }}" href="">{{ info[2] }}</div>
+                <div style="text-align: left; font-size:larger" id = "{{ info[2] }}" href="">{{ info[2] }}</div>
                 <div id = "store_img">
                     <img src= '../static/img/thumb/{{ info[1] }}' alt="info[1]">
                 </div>
                 <div class="score">
-                    {{ info[3] }}
+                    ★{{ info[3] }}
                 </div>
                 <div class="tags">
-                    {{ info[3] }}
+                    #{{ info[3] }}
                 </div>
             </div>
             <!-- id="{{ info[0] }}" -->
