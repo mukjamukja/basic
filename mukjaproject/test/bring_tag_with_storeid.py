@@ -1,7 +1,6 @@
 import mariadb
 import sys
 
-
 # Connect to MariaDB Platform
 def get_conn():
     try:
@@ -19,11 +18,11 @@ def get_conn():
 store_id = 1
 conn = get_conn()
 cur = conn.cursor()
-cur.execute(' select tag_name from tag where tag_id in (select tag_id from tag_link where store_id = ?);',(store_id,))
+cur.execute('select tag_name from tag where tag_id in (select tag_id from tag_link where store_id = ?);',(store_id,))
 for i in cur:
     print(i)
 print("=" * 50)
-cur.execute('select name from store where store_id=?',(store_id,))
-for i in cur:
-    print(i)
+cur.execute('select tag_name from tag where tag_id in (select tag_id from tag_link where store_id = ?);',(store_id,))
+tags = cur.fetchall()
+print(tags)
 conn.close()
