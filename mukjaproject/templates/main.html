@@ -69,22 +69,23 @@
     
     <div class="grid_view">
     {% for info in inform %}
-    {% if loop.index < 10 %}
-        <div class = "store_template" onclick="loadDetail('{{ info[0] }}')">
-            <div id = "{{ info[1] }}" href="">{{ info[1] }}</div>
-            <div id = "store_img">
-                <img src="" alt="store image">
+        {% if loop.index < 10 %}
+            <div class = "store_template" onclick="loadDetail('{{ info[0] }}')">
+                <div id = "{{ info[1] }}" href="">{{ info[1] }}</div>
+                <div id = "store_img">
+                    <img src= '{{ img[0][0] }}' alt= '{{ img[0][0] }}'>
+                </div>
+                <div class="score">
+                    {{ info[2] }}
+                </div>
+                <div class="tags">
+                    {{ info[2] }}
+                </div>
             </div>
-            <div class="score">
-                {{ info[2] }}
-            </div>
-            <div class="tags">
-                {{ info[2] }}
-            </div>
-        </div>
-        <!-- id="{{ info[0] }}" -->
-    {% endif %}
+            <!-- id="{{ info[0] }}" -->
+        {% endif %}
     {% endfor %}
+    
     </div>
 
     <div id="myModal" class="modal">
@@ -124,20 +125,7 @@
         modal.style.display = "none";
       }
     }
-    </script>
-    
-    <div class = "center">    
-        <div class= "paging">
-            <a href="">&laquo;</a>
-            <a href="">1</a>
-            <a href="">2</a>
-            <a href="">3</a>
-            <a href="">4</a>
-            <a href="">&raquo;</a>
-        </div>
-    </div>
-
-
+</script>
 
     <div id = "footer">
         Project mjmj<br>ltyiz x mhj x gust x pavv

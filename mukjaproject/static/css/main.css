@@ -171,7 +171,7 @@ span{
 
 
 .store_img {
-    _border: solid;
+    border: solid;
     color: #333;
     border-color: lightgray;
     background-color: lightgray;
