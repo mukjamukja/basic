@@ -71,15 +71,15 @@
     {% for info in inform %}
         {% if loop.index < 10 %}
             <div class = "store_template" onclick="loadDetail('{{ info[0] }}')">
-                <div id = "{{ info[1] }}" href="">{{ info[1] }}</div>
+                <div id = "{{ info[2] }}" href="">{{ info[2] }}</div>
                 <div id = "store_img">
-                    <img src= '{{ img[0][0] }}' alt= '{{ img[0][0] }}'>
+                    <img src= '../static/img/thumb/{{ info[1] }}' alt="info[1]">
                 </div>
                 <div class="score">
-                    {{ info[2] }}
+                    {{ info[3] }}
                 </div>
                 <div class="tags">
-                    {{ info[2] }}
+                    {{ info[3] }}
                 </div>
             </div>
             <!-- id="{{ info[0] }}" -->
