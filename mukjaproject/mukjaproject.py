@@ -13,7 +13,7 @@ def get_conn():
             port=3306,
             database="mukja_db2"
         )
-    except mariadb.error as e:
+    except mariadb.Error as e:
         print(f"error connecting to mariadb platform: {e}")
         sys.exit(1)
     return conn
