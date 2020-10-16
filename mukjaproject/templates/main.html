@@ -77,15 +77,15 @@
                 <span class="box">box</span>
                 <label for="chinese">중식</label>
 
-                <input type="button" id="western" name="양식" value="western">
+                <input type="checkbox" id="western" name="양식" value="western">
                 <span class="box">box</span>
                 <label for="western">양식</label>
 
-                <input type="button" id="asian" name="아시안" value="asian">
+                <input type="checkbox" id="asian" name="아시안" value="asian">
                 <span class="box">box</span>
                 <label for="asian">아시안</label>
 
-                <input type="button" id="bunsik" name="분식" value="bunsik">
+                <input type="checkbox" id="bunsik" name="분식" value="bunsik">
                 <span class="box">box</span>
                 <label for="bunsik">분식</label>
 
@@ -163,6 +163,19 @@
       }
     }
     </script>
+
+    <script>
+        var tag = $('.sortbtn_tag input');
+
+        tag.clik(function(){
+            var tagetValue = [];
+            tag.filter(':checked').each(function(){
+                targetValue.push('.' + $(this).value());
+            });
+            console.log(targetValue);
+        });
+    </script>
+
 
     <div id = "footer">
         Project mjmj<br>ltyiz x mhj x gust x pavv

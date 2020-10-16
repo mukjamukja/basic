@@ -282,6 +282,18 @@ span{
     display: flex;
 }
 
+.sortbtn_tag input {
+    display: none;
+}
+
+.sortbtn_tag .box{
+    width: 13px;
+    height: 13px;
+    background-color: #fefefe;
+    text-indent: -9999em;
+    display: inline-block;
+}
+
 
 /* ----------------------mediaquery--------------------- */
 
