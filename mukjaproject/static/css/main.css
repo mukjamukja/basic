@@ -293,11 +293,10 @@ span{
 
 @media screen and (max-width: 760px) {
     .grid_view{
-        margin: auto;
-        overflow: scroll;
+        padding: 5%;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: minmax(250px, auto);
+        grid-template-columns: repeat(2, 50%);
+    
     }
 
     .sortbtn__menu.active{
@@ -323,6 +322,6 @@ span{
     }
 
     .store_template img{
-
+        max-width: 97.5%;
     }
 }
