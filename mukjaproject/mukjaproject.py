@@ -43,6 +43,7 @@ def main():
     return render_template('main.html', inform=information)
 
 
+
 @app.route("/store/<int:store_id>/")
 def store_detail(store_id):
     conn = get_conn()

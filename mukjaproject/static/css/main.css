@@ -5,13 +5,13 @@ body{
     
 }
 
-#topfix{
+/* #topfix{
     top: 0;
     position: fixed;
     margin: 0;
     width: 100%;
     z-index: 5;
-}
+} */
 
 a{
     text-decoration: none;
@@ -23,7 +23,7 @@ span{
 }
 
 .mainbar{
-    position: static;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -170,11 +170,11 @@ span{
 
 .store_template{
     border-style: solid;
-    max-width: auto;
     border-radius: 20px;
     border-color: rgb(243, 150, 1, 0.87);
     padding: 10px;
     margin: 5%;
+    text-align: center;
     
 }
 
@@ -205,14 +205,13 @@ span{
 }
 
 .score {
-    display: inline;
+    text-align: left;
     font-size: larger;
     color: gold;   
 }
 
 .tags {
-    display: inline;
-    position: relative;
+    text-align: right;
     float: right;
     color: grey;
     font-size: smaller;
@@ -257,6 +256,16 @@ span{
   cursor: pointer;
 }
 
+.top {
+    font-size: 40px;
+    color: rgb(243, 150, 1);
+    position: fixed; 
+    right: 2%; 
+    bottom: 50px; 
+    display: none; 
+    z-index: 999;
+}
+
 
 #footer{
     text-align: center;
@@ -267,22 +276,26 @@ span{
     color: whitesmoke
 
 }
-<<<<<<< HEAD
+
 #map{
     width: 500px;
     height: 500px;
-    margin: auto;
+    
 }
 
-=======
->>>>>>> fc18db46dc253f86373cec1058aa79ef47b6ba19
+
+.mainbar__menu.active,
+.mainbar__links.active{
+    display: flex;
+}
+
 
 /* ----------------------mediaquery--------------------- */
 
 @media screen and (max-width: 760px) {
     .grid_view{
-        padding: 130px 2.5% 0px 2.5%;
-        overflow: hidden;
+        margin: auto;
+        overflow: scroll;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: minmax(250px, auto);
@@ -304,5 +317,13 @@ span{
         list-style-type: none;
         float: left;
         padding: 5px;
+    }
+
+    .store_template{
+        
+    }
+
+    .store_template img{
+
     }
 }

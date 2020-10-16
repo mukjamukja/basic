@@ -73,3 +73,7 @@ var contentString0 = [
 
 //                                  //
 
+var c = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.483656,126.929491),
+    map: map
+});  //맵핀
