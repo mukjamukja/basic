@@ -27,6 +27,15 @@ def get_tag(store_id=0):
         tags.append(t)
     return tags
 
+def get_img(store_id=0):
+    conn = get_conn()
+    cur = conn.cursor()
+    cur.execute("SELECT img_name FROM image WHERE store_id = ?", (store_id,))
+    imgs = []
+    for i in cur:
+        imgs.append(i)
+    return imgs
+
 
 @app.route("/")
 def main():
@@ -43,17 +52,19 @@ def main():
     return render_template('main.html', inform=information)
 
 
-
+ 
 @app.route("/store/<int:store_id>/")
+
 def store_detail(store_id):
     conn = get_conn()
     cur = conn.cursor()
-    cur.execute("SELECT store_id, name, address, rate, inform FROM store WHERE store_id=?", (store_id,))
+    cur.execute("SELECT store_id, name, address, rate, inform, writer, post_date FROM store WHERE store_id=?", (store_id,))
     information = []
     for i in cur:
         information.append(i)
+    conn.close()
 
-    return render_template('store_detail.html', information=information, tags=get_tag(int(store_id)))
+    return render_template('store_detail.html', information=information, tags=get_tag(int(store_id)), imgs=get_img(int(store_id)))
 
 @app.route("/practice")
 def practice():
