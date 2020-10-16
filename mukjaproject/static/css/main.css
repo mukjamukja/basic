@@ -128,7 +128,6 @@ span{
 
 .sortbtn__menu li{
     list-style-type: none;
-    float: left;
     padding: 1px 16px;
 }
 
@@ -137,9 +136,11 @@ span{
     background: rgb(33,33,33,0.64);
     margin : 0 auto;
     padding: 8px 16px;
-    justify-content: space-around;
     display: flex;
+    height: 30%;
+    width: 100%;
 }
+
 
 .loc a{
     padding: 5px;

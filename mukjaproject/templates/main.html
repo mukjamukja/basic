@@ -6,13 +6,17 @@
     <title>Muk:ja</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
-    <script 
-    src="https://kit.fontawesome.com/2e6580eb92.js" 
-    crossorigin="anonymous">
-    </script>
+    <script src="https://kit.fontawesome.com/2e6580eb92.js" crossorigin="anonymous"></script>
 
     <script src="../static/js/main.js" defer></script>
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../static/js/slider.js" defer></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/slider.css') }}">
+
 </head>
 
 <body>
@@ -52,12 +56,12 @@
         </div>
 
         <div class="sortbtn__menu">
-            <ul>
-                <li>SCORE&nbsp;&nbsp;</li>
-                <li style="text-align: center;">0.0</li>
-                <li><input type="range" min="0" max="10" value="0"></li>
-                <li style="text-align: center;">10.0</li>
-            </ul>
+            <div>
+                <label for="distance">Distance:</label>
+                <input type="test" id="distance" readony style="border:0; color:#f6931f; font-weight:bold;">
+                
+            </div>
+            <div id="slider-range"></div>
             
             <div class="sortbtn__tag">
                 <h3>카테고리</h3>
@@ -130,7 +134,7 @@
         </div>
     </div>
 
-    <script>
+    <script >
     function loadDetail(store_id="") {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
