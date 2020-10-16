@@ -45,8 +45,8 @@
     
         <div class="sectionbar">
             <ul class="sectionbar__menu">
-                <li><a href="#" class="sectionbar__gridbtn">GRID</a></li>
-                <li><a href="#" class="sectionbar__mapbtn">MAP</a></li>
+                <li><a href="" class="sectionbar__gridbtn">GRID</a></li>
+                <li><a href="/map.html/" class="sectionbar__mapbtn">MAP</a></li>
                 <li><a href="#" class="sectionbar__sortbtn">SORT</a></li>
             </ul>
         </div>
@@ -102,15 +102,15 @@
     {% for info in inform %}
         {% if loop.index < 10 %}
             <div class = "store_template" onclick="loadDetail('{{ info[0] }}')">
-                <div id = "{{ info[2] }}" href="">{{ info[2] }}</div>
+                <div style="text-align: left; font-size:larger" id = "{{ info[2] }}" href="">{{ info[2] }}</div>
                 <div id = "store_img">
                     <img src= '../static/img/thumb/{{ info[1] }}' alt="info[1]">
                 </div>
                 <div class="score">
-                    {{ info[3] }}
+                    ★{{ info[3] }}
                 </div>
                 <div class="tags">
-                    {{ info[3] }}
+                    #{{ info[3] }}
                 </div>
             </div>
             <!-- id="{{ info[0] }}" -->
@@ -124,7 +124,9 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <!-- 안에 들어갈 내용은 template/store_detail.html 에서 정의 -->
-            <div id="store_detail"></div> 
+            <div id="store_detail">
+
+            </div> 
         </div>
     </div>
 
@@ -156,7 +158,7 @@
         modal.style.display = "none";
       }
     }
-</script>
+    </script>
 
     <div id = "footer">
         Project mjmj<br>ltyiz x mhj x gust x pavv

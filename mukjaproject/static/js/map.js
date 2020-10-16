@@ -12,7 +12,7 @@ var shinrim = new naver.maps.LatLng(37.484218,126.929708),
 var contentString = [
         '<div class="iw_inner">',
         '   <h3>신림역</h3>',
-        '       <img src="'+ HOME_PATH +'/img/파일경로" width="15" height="15" alt="신림" class="thumb" /><br />',
+        '       <img src="'+ HOME_PATH +'/img/파일경로 " width="15" height="15" alt="신림" class="thumb" /><br />',
         '       <a href="#" target="_blank"></a>',
         '</div>'
     ].join('');
@@ -73,39 +73,7 @@ var contentString0 = [
 
 //                                  //
 
-var bread = new naver.maps.Marker({
-    position: new naver.maps.LatLng(37.484249,126.931686),
-    map: map
-});  //맵핀
-
-
-var seven = new naver.maps.Marker({
-    position: new naver.maps.LatLng(37.484040,126.930420),
-    map: map
-});  //맵핀
-
-
-var pizza = new naver.maps.Marker({
-    position: new naver.maps.LatLng(37.483899,126.928934),
-    map: map
-});  //맵핀
-
-var baskin = new naver.maps.Marker({
-    position: new naver.maps.LatLng(37.484733,126.930114),
-    map: map
-});  //맵핀
-
-var hospital = new naver.maps.Marker({
-    position: new naver.maps.LatLng(37.483269,126.929974),
-    map: map
-});  //맵핀
-
-var sing = new naver.maps.Marker({
-    position: new naver.maps.LatLng(37.483716,126.929089),
-    map: map
-});  //맵핀
-
-var charch = new naver.maps.Marker({
-    position: new naver.maps.LatLng(37.483482,126.930784),
+var c = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.483656,126.929491),
     map: map
 });  //맵핀
