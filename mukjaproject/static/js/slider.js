@@ -1,3 +1,4 @@
+
 $( function() {
     $( "#slider-range" ).slider({
         range: true,
@@ -11,4 +12,3 @@ $( function() {
             $( "#distance" ).val( $( "#slider-range" ).slider( "values", 0 ) +
             "M - " + $( " #slider-range" ).slider( "values", 1 ) + "M" );
         } );
-
