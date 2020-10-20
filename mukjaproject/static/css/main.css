@@ -227,7 +227,9 @@ span{
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  background-color: white;
+  color: rgb(263, 172, 15);
+  border-radius: 20px;
   margin: auto;
   margin-bottom: 200px;
   padding: 20px;

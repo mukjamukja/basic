@@ -1,7 +1,8 @@
 .name {
-    border: 2px solid rgb(243, 150, 1, 0.87);
+    border: 5px ridge #888;
+    border-radius: 10px;
     width: 50px;
-    color: rgb(243, 150, 1, 0.87);
+    color: rgb(263, 172, 15);
     font-size: medium;
     text-align: left;   
 }
@@ -62,6 +63,9 @@ label{
     position: relative;
     right: 55px;
     bottom: 40px;
+}
+strong{
+    display: block;
 }
 #pos1:checked~ul{margin-left:0%;}
 #pos2:checked~ul{margin-left:-100%;}
