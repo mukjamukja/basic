@@ -3,47 +3,58 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/store_detail.css') }}">
+        <style media="screen"></style>
     </head>
 
     <body>
 
-        <div class = name> 
+        <h3 class = "name"> 
             {{ information[0][1] }}
+        </h3>
+
+        <div class = "imgs">
+        <div id="slide">
+            <input type="radio" name="pos" id="pos1" checked>
+            <input type="radio" name="pos" id="pos2">
+            <input type="radio" name="pos" id="pos3">
+            <input type="radio" name="pos" id="pos4">
+        <ul>
+            {% for img in imgs %}   
+            <li><img src="../static/img/details/{{ img[0] }}" alt="{{ img[0] }}"></li>
+            {% endfor %}     
+        </ul>
+        <p class="pos">
+            <label for="pos1"></label>
+            <label for="pos2"></label>
+            <label for="pos3"></label>
+            <label for="pos4"></label>
+        </p>
+        </div>
         </div>
 
-        <div class = imgs>
-            {% for img in imgs %}
-                    <img src="../static/img/details/{{ img[0] }}" alt="{{ img[0] }}">
-            {% endfor %}
-        </div>
-
-        <div class = addr>
+        <strong class = "addr">
             주소 : {{ information[0][2] }}
-        </div> 
+        </strong> 
 
         <div class = tag>
             평점 : {{ information[0][3] }}
         </div>
 
-        <div class = info>
+        <strong class = "info">
             정보 : {{ information[0][4] }}
-        </div>
+        </strong>
 
-        <div class = writer>
+        <strong class = "writer">
             작성자 : {{ information[0][5] }}
-        </div>
+        </strong>
 
-        <div class = date>
+        <strong class = "date">
             
             작성일 : {{ information[0][6] }}
         
-        </div>
-
-        <ul>
-            {% for tag in tags %}
-                <li>{{ tag[0] }}</li>
-            {% endfor %}
-        </ul>
+        </strong>
+        
+        
     
     </body>
 </html>
