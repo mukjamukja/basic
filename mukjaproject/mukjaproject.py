@@ -19,6 +19,10 @@ def get_conn():
     return conn
 
 def get_tag(store_id=0):
+    """
+    input:  스토어 아이디
+    return: 아이디에 해당되는 태그들 모두
+    """
     conn = get_conn()
     cur = conn.cursor()
     cur.execute("SELECT tag_name FROM tag WHERE tag_id in (SELECT tag_id FROM tag_link WHERE store_id = ?);", (store_id,))
@@ -28,12 +32,16 @@ def get_tag(store_id=0):
     return tags
 
 def get_img(store_id=0):
+    """
+    input: 스토어 아이디
+    return:  스토어 아이디에 해당되는 사진들 모두 (사진이름, 순서)
+    """
     conn = get_conn()
     cur = conn.cursor()
-    cur.execute("SELECT img_name FROM image WHERE store_id = ?", (store_id,))
+    cur.execute("SELECT img_name, img_order FROM image WHERE store_id=? ORDER BY img_order ASC", (store_id,))
     imgs = []
-    for i in cur:
-        imgs.append(i)
+    for (img_name, img_order) in cur:
+        imgs.append((img_name, img_order))
     return imgs
 
 
@@ -54,7 +62,6 @@ def main():
 
  
 @app.route("/store/<int:store_id>/")
-
 def store_detail(store_id):
     conn = get_conn()
     cur = conn.cursor()
@@ -64,7 +71,10 @@ def store_detail(store_id):
         information.append(i)
     conn.close()
 
-    return render_template('store_detail.html', information=information, tags=get_tag(int(store_id)), imgs=get_img(int(store_id)))
+    return render_template('store_detail.html',\
+        information=information,\
+        tags=get_tag(store_id),\
+        imgs=get_img(store_id))
 
 @app.route("/practice")
 def practice():
