@@ -64,41 +64,72 @@
             <div id="slider-range"></div>
             
             <div class="sortbtn__tag">
-                <h3>카테고리</h3>
-                <input type="checkbox" id="korean" name="한식" value="korean">
-                <span class="box">box</span>
-                <label for="korean">한식</label>
-
-                <input type="checkbox" id="japanese" name="일식" value="japanese">
-                <span class="box">box</span>
-                <label for="japanese">일식</label>
-
-                <input type="checkbox" id="chinese" name="중식" value="chinese">
-                <span class="box">box</span>
-                <label for="chinese">중식</label>
-
-                <input type="checkbox" id="western" name="양식" value="western">
-                <span class="box">box</span>
-                <label for="western">양식</label>
-
-                <input type="checkbox" id="asian" name="아시안" value="asian">
-                <span class="box">box</span>
-                <label for="asian">아시안</label>
-
-                <input type="checkbox" id="bunsik" name="분식" value="bunsik">
-                <span class="box">box</span>
-                <label for="bunsik">분식</label>
+                <div class="filters">
+                  <div class="ui-group">
+                    <h3>음식카테고리</h3>
+                    <div class="button-group js-radio-button-group" data-filter-group="category">
+                      <button class="button is-checked" data-filter="">전체</button>
+                      <button class="button" data-filter=".yellow">한식</button>
+                      <button class="button" data-filter=".red">일식</button>
+                      <button class="button" data-filter=".blue">양식</button>
+                      <button class="button" data-filter=".yellow">중식</button>
+                      <button class="button" data-filter=".yellow">아시안</button>
+                    </div>
+                  </div>
+                
+                  <div class="ui-group">
+                    <h3>거리별</h3>
+                    <div class="button-group js-radio-button-group" data-filter-group="size">
+                      <button class="button is-checked" data-filter="">0-100m</button>
+                      <button class="button" data-filter=".small">100-200m</button>
+                      <button class="button" data-filter=".wide">200-300m</button>
+                      <button class="button" data-filter=".big">300-400m</button>
+                      <button class="button" data-filter=".tall">400-500m</button>
+                    </div>
+                  </div>
+                
+                  <div class="ui-group">
+                    <h3>평점별</h3>
+                    <div class="button-group js-radio-button-group" data-filter-group="shape">
+                      <button class="button is-checked" data-filter="">any</button>
+                      <button class="button" data-filter=".round">round</button>
+                      <button class="button" data-filter=".square">square</button>
+                    </div>
+                  </div>
+                
+                </div>
+                
+                <div class="grid">
+                  <div class="color-shape small round red"></div>
+                  <div class="color-shape small round blue"></div>
+                  <div class="color-shape small round yellow"></div>
+                  <div class="color-shape small square red"></div>
+                  <div class="color-shape small square blue"></div>
+                  <div class="color-shape small square yellow"></div>
+                  <div class="color-shape wide round red"></div>
+                  <div class="color-shape wide round blue"></div>
+                  <div class="color-shape wide round yellow"></div>
+                  <div class="color-shape wide square red"></div>
+                  <div class="color-shape wide square blue"></div>
+                  <div class="color-shape wide square yellow"></div>
+                  <div class="color-shape big round red"></div>
+                  <div class="color-shape big round blue"></div>
+                  <div class="color-shape big round yellow"></div>
+                  <div class="color-shape big square red"></div>
+                  <div class="color-shape big square blue"></div>
+                  <div class="color-shape big square yellow"></div>
+                  <div class="color-shape tall round red"></div>
+                  <div class="color-shape tall round blue"></div>
+                  <div class="color-shape tall round yellow"></div>
+                  <div class="color-shape tall square red"></div>
+                  <div class="color-shape tall square blue"></div>
+                  <div class="color-shape tall square yellow"></div>
+                </div>
+                
 
             </div>
 
-            <ul>
-                <li>LOCATION&nbsp;&nbsp;</li>
-                <li class="loc"><a href="">0 - 100</a></li>  
-                <li class="loc"><a href="">100 - 200</a></li>
-                <li class="loc"><a href="">300 - 400</a></li>
-                <li class="loc"><a href="">400 - 500</a></li>
-            </ul>
-
+    
         </div>
     <!-- </div> -->
     
@@ -164,17 +195,6 @@
     }
     </script>
 
-    <script>
-        var tag = $('.sortbtn_tag input');
-
-        tag.clik(function(){
-            var tagetValue = [];
-            tag.filter(':checked').each(function(){
-                targetValue.push('.' + $(this).value());
-            });
-            console.log(targetValue);
-        });
-    </script>
 
 
     <div id = "footer">
