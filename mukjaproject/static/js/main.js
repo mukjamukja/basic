@@ -40,4 +40,20 @@ $( document ).ready( function() {
     } );
   } );
 
+// from here for sorting (isotope)
+// init Isotope
+var $grid_view = $('.grid_view').isotope({
+  itemSelector: '.grid_view-item',
+  getSortData: {
+    score: '.score',
+    distance: '.distance',
+    score: '.score parseInt',
+    tag: '[data-tag]',
+  }
+});
 
+// sort items on button click
+$('.sort-by-button-group').on( 'click', 'button', function() {
+  var sortByValue = $(this).attr('data-sort-by');
+  $grid_view.isotope({ sortBy: sortByValue });
+});
