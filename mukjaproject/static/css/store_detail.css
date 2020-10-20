@@ -1,4 +1,7 @@
 .name {
+    border: 2px solid rgb(243, 150, 1, 0.87);
+    width: 50px;
+    color: rgb(243, 150, 1, 0.87);
     font-size: medium;
     text-align: left;   
 }
@@ -18,6 +21,7 @@ ul,li{
     height:300px;
     position:relative;
     left:65px;
+    top: 30px;
     overflow:hidden;
 }
 #slide ul{
@@ -57,12 +61,13 @@ ul,li{
 label{
     position: relative;
     right: 55px;
+    bottom: 40px;
 }
 #pos1:checked~ul{margin-left:0%;}
 #pos2:checked~ul{margin-left:-100%;}
 #pos3:checked~ul{margin-left:-200%;}
 #pos4:checked~ul{margin-left:-300%;}
-#pos1:checked~.pos>label:nth-child(1){background:#666;}
-#pos2:checked~.pos>label:nth-child(2){background:#666;}
-#pos3:checked~.pos>label:nth-child(3){background:#666;}
-#pos4:checked~.pos>label:nth-child(4){background:#666;}
+#pos1:checked~.pos>label:nth-child(1){background: rgb(243, 150, 1, 0.87);}
+#pos2:checked~.pos>label:nth-child(2){background: rgb(243, 150, 1, 0.87);}
+#pos3:checked~.pos>label:nth-child(3){background: rgb(243, 150, 1, 0.87);}
+#pos4:checked~.pos>label:nth-child(4){background: rgb(243, 150, 1, 0.87);}
