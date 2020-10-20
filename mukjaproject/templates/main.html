@@ -11,18 +11,6 @@
     <script src="../static/js/main.js" defer></script>
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     
-<<<<<<< Updated upstream
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="../static/js/slider.js" defer></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/slider.css') }}">
-
-=======
-    <!-- <script src="{{ url_for('static', filename='js/nouislider.min.js') }}"></script>
-    <link rel="sytlesheet" href="{{ url_for('static', filename='css/slider.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/nouislider.min.css') }}"> -->
->>>>>>> Stashed changes
 </head>
 
 <body>
@@ -143,7 +131,6 @@
     
     <div class="grid_view">
     {% for info in inform %}
-        {% if loop.index < 10 %}
             <div class = "store_template" onclick="loadDetail('{{ info[0] }}')">
                 <div style="text-align: left; font-size:larger" id = "{{ info[2] }}" href="">{{ info[2] }}</div>
                 <div id = "store_img">
@@ -157,7 +144,6 @@
                 </div>
             </div>
             <!-- id="{{ info[0] }}" -->
-        {% endif %}
     {% endfor %}
     
     </div>
