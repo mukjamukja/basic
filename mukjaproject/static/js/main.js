@@ -102,22 +102,22 @@ var $grid_view = $(".grid_view").isotope({
 });
 var filters = {};
 
-$('.filters').on('is-checked', '.checkbox', function( event ){
-  var $checkbox = $( event.currentTarget );
+$('.filters').on('click', '.button', function( event ){
+  var $button = $( event.currentTarget );
 
-  var $tagFilter = $checkbox.parents('.tag_filter');
+  var $tagFilter = $button.parents('.tag_filter');
   var filterGroup = $tagFilter.attr('data-filter-group');
-  filters[ filterGroup ] = $checkbox.attr('data-filter');
+  filters[ filterGroup ] = $button.attr('data-filter');
   var filterValue = concatValues( filters );
   $grid_view.isotope({ filter: filterValue });
 });
 
 $('.tag_filter').each( function( i, filterGroup ) {
   var $filterGroup = $( filterGroup );
-  $filterGroup.on( 'is-checked', 'checkbox', function ( event ) {
+  $filterGroup.on( 'click', 'button', function ( event ) {
     $filterGroup.find('.is-checked').removeClass('is-checked');
-    var $checkbox = $( event.currentTarget );
-    $checkbox.addClass('is-checked');
+    var $button = $( event.currentTarget );
+    $button.addClass('is-checked');
   });
 });
 
