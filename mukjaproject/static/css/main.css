@@ -298,6 +298,11 @@ span{
 
 /* ---- button ---- */
 
+* { box-sizing: border-box; }
+
+
+/* ---- button ---- */
+
 .button {
   display: inline-block;
   padding: 0.5em 1.0em;
@@ -313,14 +318,14 @@ span{
 }
 
 .button:hover {
-  background-color: rgba(243, 150, 1, 0.938);
+  background-color: #8CF;
   text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
   color: #222;
 }
 
 .button:active,
 .button.is-checked {
-  background-color:rgb(243, 150, 1);
+  background-color: #28F;
 }
 
 .button.is-checked {
