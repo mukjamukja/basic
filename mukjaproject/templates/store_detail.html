@@ -3,14 +3,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/store_detail.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
         <style media="screen"></style>
+        <script src="../static/js/store_detail.js"></script>
     </head>
 
     <body>
 
-        <div class = "name"> 
+        <h3 class = "name"> 
             {{ information[0][1] }}
-        </div>
+        </h3>
 
         <div class = "imgs">
         <div id="slide">
@@ -18,11 +20,18 @@
             <input type="radio" name="pos" id="pos2">
             <input type="radio" name="pos" id="pos3">
             <input type="radio" name="pos" id="pos4">
+
+            <div class="btn">
+                <a class="prev" style="text-decoration: none;">&#10094;</a>
+                <a class="next" style="text-decoration: none;">&#10095;</a>
+            </div>
+        
         <ul>
             {% for img in imgs %}   
-            <li><img src="../static/img/details/{{ img[0] }}" alt="{{ img[0] }}"></li>
+            <li><img class="newimg" src="../static/img/details/{{ img[0] }}" alt="{{ img[0] }}"></li>
             {% endfor %}     
         </ul>
+        
         <p class="pos">
             <label for="pos1"></label>
             <label for="pos2"></label>
@@ -31,13 +40,14 @@
         </p>
         </div>
         </div>
-
+        
+    <div class="font">
         <div class = "addr">
             주소 : {{ information[0][2] }}
         </div> 
 
-        <div class = "tag">
-            태그 : {{ information[0][3] }}
+        <div class = grade>
+            평점 : {{ information[0][3] }}
         </div>
 
         <div class = "info">
@@ -53,6 +63,14 @@
             작성일 : {{ information[0][6] }}
         
         </div>
+
+        <div class="tag">태그: 
+            {% for tag in tags %}
+                    {{ tag[0] }}
+            {% endfor %}
+        </div>
+    </div>
+    
         
     
     </body>

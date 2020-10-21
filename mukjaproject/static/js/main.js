@@ -40,8 +40,19 @@ $( document ).ready( function() {
     } );
   } );
 
+// from here for sorting (isotope)
+// init Isotope
+var $grid_view = $('.grid_view').isotope({
+  itemSelector: '.grid_view-item',
+  getSortData: {
+    score: '.score',
+    distance: '.distance',
+    score: '.score parseInt',
+    tag: '[data-tag]',
+  }
+});
 
-//*************************필터링*************************/
+
 // external js: isotope.pkgd.js
 
 // init Isotope
@@ -83,6 +94,4 @@ function concatValues( obj ) {
   }
   return value;
 }
-
-
 

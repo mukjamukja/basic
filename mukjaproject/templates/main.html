@@ -10,13 +10,8 @@
 
     <script src="../static/js/main.js" defer></script>
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="{{ url_for('static', filename='js/isotope.pkgd.min.js') }}"></script>
     
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="../static/js/slider.js" defer></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/slider.css') }}">
-
 </head>
 
 <body>
@@ -55,9 +50,7 @@
         </div>
 
         <div class="sortbtn__menu">
-           
-        
-            
+
             <div class="sortbtn__tag">
                 <div class="filters">
                   <div class="ui-group">
@@ -126,26 +119,32 @@
 
             </div>
     
+
         </div>
    
     
     <div class="grid_view">
     {% for info in inform %}
-        {% if loop.index < 10 %}
-            <div class = "store_template" onclick="loadDetail('{{ info[0] }}')">
-                <div style="text-align: left; font-size:larger" id = "{{ info[2] }}" href="">{{ info[2] }}</div>
-                <div id = "store_img">
-                    <img src= '../static/img/thumb/{{ info[1] }}' alt="info[1]">
-                </div>
-                <div class="score">
-                    ★{{ info[3] }}
-                </div>
-                <div class="tags">
-                    #{{ info[3] }}
-                </div>
+            
+        <div class = "grid_view-item" onclick="loadDetail('{{ info[0] }}')">
+                
+            <div style="text-align: left; font-size:larger" id = "{{ info[2] }}" href="">
+                {{ info[2] }}
             </div>
-            <!-- id="{{ info[0] }}" -->
-        {% endif %}
+
+            <div class="store_img">
+                <img src= '../static/img/thumb/{{ info[1] }}' alt="info[1]">
+            </div>
+
+            <div class="score">
+                {{ info[3] }}
+            </div>
+
+            <div class="tags">
+                #{{ info[3] }}
+            </div>
+        </div>
+        <!-- id="{{ info[0] }}" -->
     {% endfor %}
     
     </div>
