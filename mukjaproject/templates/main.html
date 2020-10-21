@@ -65,19 +65,26 @@
     
     <div class="grid_view">
     {% for info in inform %}
-            <div class = "grid_view-item" onclick="loadDetail('{{ info[0] }}')">
-                <div style="text-align: left; font-size:larger" id = "{{ info[2] }}" href="">{{ info[2] }}</div>
-                <div id = "store_img">
-                    <img src= '../static/img/thumb/{{ info[1] }}' alt="info[1]">
-                </div>
-                <div class="score">
-                    {{ info[3] }}
-                </div>
-                <div class="tags">
-                    #{{ info[3] }}
-                </div>
+            
+        <div class = "grid_view-item" onclick="loadDetail('{{ info[0] }}')">
+                
+            <div style="text-align: left; font-size:larger" id = "{{ info[2] }}" href="">
+                {{ info[2] }}
             </div>
-            <!-- id="{{ info[0] }}" -->
+
+            <div class="store_img">
+                <img src= '../static/img/thumb/{{ info[1] }}' alt="info[1]">
+            </div>
+
+            <div class="score">
+                {{ info[3] }}
+            </div>
+
+            <div class="tags">
+                #{{ info[3] }}
+            </div>
+        </div>
+        <!-- id="{{ info[0] }}" -->
     {% endfor %}
     
     </div>
