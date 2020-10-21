@@ -19,7 +19,6 @@
         <i class="fas fa-arrow-circle-up">TOP</i>
     </div>
 
-    <div id = topfix>
         <nav class="mainbar">
             <div class="mainbar__logo">
                 <i class="fas fa-utensils"></i>
@@ -51,17 +50,78 @@
         </div>
 
         <div class="sortbtn__menu">
-            <div>
 
-                <div class="button-group sort-by-button-group">
-                    <button data-sort-by="original-order">original order</button>
-                    <button data-sort-by="score">score</button>
-                    <button data-sort-by="distance">distance</button>
-                    <button data-sort-by="tag">tag</button>
+            <div class="sortbtn__tag">
+                <div class="filters">
+                  <div class="ui-group">
+                    <h3>음식카테고리</h3>
+                    <div class="button-group js-radio-button-group" data-filter-group="category">
+                      <button class="button is-checked" data-filter="">전체</button>
+                      <button class="button" data-filter=".yellow">한식</button>
+                      <button class="button" data-filter=".red">일식</button>
+                      <button class="button" data-filter=".blue">양식</button>
+                      <button class="button" data-filter=".yellow">중식</button>
+                      <button class="button" data-filter=".yellow">아시안</button>
+                    </div>
+                  </div>
+                
+                  <div class="ui-group">
+                    <h3>거리별</h3>
+                    <div class="button-group js-radio-button-group" data-filter-group="size">
+                      <button class="button is-checked" data-filter="">0-100m</button>
+                      <button class="button" data-filter=".small">100-200m</button>
+                      <button class="button" data-filter=".wide">200-300m</button>
+                      <button class="button" data-filter=".big">300-400m</button>
+                      <button class="button" data-filter=".tall">400-500m</button>
+                    </div>
+                  </div>
+                
+                  <div class="ui-group">
+                    <h3>평점별</h3>
+                    <div class="button-group js-radio-button-group" data-filter-group="shape">
+                      <button class="button is-checked" data-filter="">⭐</button>
+                      <button class="button" data-filter=".round">⭐⭐</button>
+                      <button class="button" data-filter=".square">⭐⭐⭐</button>
+                      <button class="button" data-filter=".square">⭐⭐⭐⭐</button>
+                      <button class="button" data-filter=".square">⭐⭐⭐⭐⭐</button>
+                    </div>
+                  </div>
                 </div>
             </div>
+                
+                <div class="grid">
+                  <div class="color-shape small round red"></div>
+                  <div class="color-shape small round blue"></div>
+                  <div class="color-shape small round yellow"></div>
+                  <div class="color-shape small square red"></div>
+                  <div class="color-shape small square blue"></div>
+                  <div class="color-shape small square yellow"></div>
+                  <div class="color-shape wide round red"></div>
+                  <div class="color-shape wide round blue"></div>
+                  <div class="color-shape wide round yellow"></div>
+                  <div class="color-shape wide square red"></div>
+                  <div class="color-shape wide square blue"></div>
+                  <div class="color-shape wide square yellow"></div>
+                  <div class="color-shape big round red"></div>
+                  <div class="color-shape big round blue"></div>
+                  <div class="color-shape big round yellow"></div>
+                  <div class="color-shape big square red"></div>
+                  <div class="color-shape big square blue"></div>
+                  <div class="color-shape big square yellow"></div>
+                  <div class="color-shape tall round red"></div>
+                  <div class="color-shape tall round blue"></div>
+                  <div class="color-shape tall round yellow"></div>
+                  <div class="color-shape tall square red"></div>
+                  <div class="color-shape tall square blue"></div>
+                  <div class="color-shape tall square yellow"></div>
+                </div>
+                
+
+            </div>
+    
+
         </div>
-    </div>
+   
     
     <div class="grid_view">
     {% for info in inform %}
@@ -127,6 +187,8 @@
       }
     }
     </script>
+
+
 
     <div id = "footer">
         Project mjmj<br>ltyiz x mhj x gust x pavv

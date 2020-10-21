@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: sans-serif;
     
 }
 
@@ -133,7 +134,7 @@ span{
 
 .sortbtn__menu.active{
     color: whitesmoke;
-    background: rgb(33,33,33,0.64);
+    background: rgb(192, 57, 43);
     margin : 0 auto;
     padding: 8px 16px;
     display: flex;
@@ -278,6 +279,106 @@ span{
 .mainbar__menu.active,
 .mainbar__links.active{
     display: flex;
+}
+
+.sortbtn_tag input {
+    display: none;
+}
+
+.sortbtn_tag .box{
+    width: 13px;
+    height: 13px;
+    background-color: #fefefe;
+    text-indent: -9999em;
+    display: inline-block;
+}
+
+/* ----------------------filter sample CSS--------------------- */
+
+
+/* ---- button ---- */
+
+.button {
+  display: inline-block;
+  padding: 0.5em 1.0em;
+  background: #EEE;
+  border: none;
+  border-radius: 7px;
+  background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );
+  color: #222;
+  font-family: sans-serif;
+  font-size: 16px;
+  text-shadow: 0 1px white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgba(243, 150, 1, 0.938);
+  text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+  color: #222;
+}
+
+.button:active,
+.button.is-checked {
+  background-color:rgb(243, 150, 1);
+}
+
+.button.is-checked {
+  color: white;
+  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+}
+
+.button:active {
+  box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+}
+
+/* ---- button-group ---- */
+
+.button-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.button-group .button {
+  float: left;
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 1px;
+}
+
+.button-group .button:first-child { border-radius: 0.5em 0 0 0.5em; }
+.button-group .button:last-child { border-radius: 0 0.5em 0.5em 0; }
+
+/* ---- isotope ---- */
+
+.grid {
+  background: #EEE;
+  max-width: 1200px;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ui group */
+
+.ui-group {
+  display: inline-block;
+}
+
+.ui-group h3 {
+  display: inline-block;
+  margin-right: 0.2em;
+  font-size: 16px;
+}
+
+.ui-group .button-group {
+  display: inline-block;
+  margin-right: 20px;
 }
 
 
