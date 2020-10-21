@@ -2,12 +2,12 @@ body{
     margin: 0;
     padding: 0;
     height: 100%;
+    
 }
 
 a{
     text-decoration: none;
     color: whitesmoke;
-    
 }
 
 span{
@@ -15,26 +15,36 @@ span{
 }
 
 .mainbar{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     background-color:rgb(243, 150, 1, 0.87);
-    padding: 8px 12px;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 24px;
 }
 
 .mainbar__logo{
     font-size: 30px;
-    color: white;
+    color: whitesmoke;
 }
 
 .mainbar__logo i {
-    color:white;
+    color:whitesmoke;
 }
 
 .mainbar__menu{
     display: flex;
     list-style: none;
+    padding-top: 0px;
     padding-left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .mainbar__menu li{
@@ -45,16 +55,16 @@ span{
 .mainbar__menu li:hover{
     background-color:rgb(192, 57, 43);
     border-radius: 8px;
-    
 }
-
 
 .mainbar__links {
     list-style: none;
     color: white;
-    display: flex;
     padding-left: 0;
     font-size: 20px;
+    display: none;
+    justify-content: center;
+    width: 100%;
 }
 
 .mainbar__links i{
@@ -62,7 +72,7 @@ span{
 }
 
 .mainbar__menubtn{
-    display: none;
+    display: block;
     position: absolute;
     right:32px;
     font-size: 24px;
@@ -71,22 +81,24 @@ span{
 }
 
 .sectionbar{
+    position: sticky;
+    top: 0px;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(192, 57, 43);
     padding: 8px 12px;
-
-    
+   
 }
 
 .sectionbar__menu{
+    display: inline;
     list-style-type: none;
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
-    background-color: #;
-    
 }
 
 .sectionbar__menu li{
@@ -95,111 +107,160 @@ span{
 
 .sectionbar__menu li a{
     display: flex;
-    color: white;
+    color: whitesmoke;
     text-align: center;
     padding: 1px 16px;
     text-decoration: none;
 }
 
-.grid_view{
-    overflow: hidden;
-    text-align: center;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 5%;
-    grid-gap: 5%;
-    grid-auto-rows: minmax(250px, auto);
-    grid-auto-columns: minmax(250px, auto);
+.sectionbar__menu li a:hover{
+    color: rgb(192, 57, 43);
+    background-color:whitesmoke;
+    border-radius: 8px;
+}
+/* sortbtn */
+
+
+.sortbtn__menu{
+    display: none;
     
 }
 
-.grid_view>*{
-    border-style: solid;
-    border-color: rgb(243, 150, 1, 0.87);
+.sortbtn__menu li{
+    list-style-type: none;
+    padding: 1px 16px;
 }
 
-.fir_store{
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.sec_store{ 
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.thi_store{
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.fou_store{
-    grid-column: 2;
-    grid-row: 2;
-}
-
-.fif_store{
-    grid-column: 1;
-    grid-row: 3;
-}
-
-.six_store{
-    grid-column: 2;
-    grid-row: 3;
-}
-
-.sev_store{
-    grid-column: 1;
-    grid-row: 4;
-}
-
-.eig_store{
-    grid-column: 2;
-    grid-row: 4;
-}
-
-.nin_store{
-    grid-column: 1;
-    grid-row: 5;
-}
-
-.ten_store{
-    grid-column: 2;
-    grid-row: 5;
-}
-.center{
-    text-align: center;
-}
-.paging{
-    display: inline-block;
-}
-
-.paging a{
-    background-color: rgb(192, 57, 43);
-    color: white;
-    float: left;
+.sortbtn__menu.active{
+    color: whitesmoke;
+    background: rgb(33,33,33,0.64);
+    margin : 0 auto;
     padding: 8px 16px;
-    text-decoration: none;
-    transition: background-color .3s;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-}
-
-.paging a.active{
-    background-color:rgb(243, 150, 1, 0.87);
-    color: white;
-    border: 1px solid rgb(243, 150, 1, 0.87);
-}
-
-.paging a:hover:not(.active){
-    background-color: #ddd;
+    display: flex;
+    height: 30%;
+    width: 100%;
 }
 
 
-.footer{
+.loc a{
+    padding: 5px;
+}
+.loc a:hover{
+    background-color:rgb(33,33,33,0.64);
+}
+/* grid */
+
+
+.grid_view{
+    margin: 3%;
+    display: grid;
+}
+
+
+.grid_view-item{
+    border-style: solid;
+    border-radius: 20px;
+    border-color: rgb(243, 150, 1, 0.87);
+    padding: 10px;
+    margin: 10px;
     text-align: center;
+}
+
+.grid_view-item:hover{
+    border-color:rgb(192, 57, 43);
+}
+
+.grid_view-item a{
+    color: #333;
+}
+
+.store_img{
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+}
+
+
+.store_img img{
+    max-height: 100%;
     position: absolute;
-    bottom: unset;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+}
+
+.score {
+    text-align: left;
+    font-size: larger;
+    color: gold;   
+}
+
+.tags {
+    text-align: right;
+    float: right;
+    color: grey;
+    font-size: smaller;
+}
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  padding-top: 150px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: white;
+  color: rgb(263, 172, 15);
+  border-radius: 20px;
+  margin: auto;
+  margin-bottom: 200px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.top {
+    font-size: 40px;
+    color: rgb(243, 150, 1);
+    position: fixed; 
+    right: 2%; 
+    bottom: 50px; 
+    display: none; 
+    z-index: 999;
+}
+
+
+#footer{
+    text-align: center;
+    bottom: 0px;
     width: 100%;
     height: auto;
     background: #333;
@@ -207,39 +268,60 @@ span{
 
 }
 
+#map{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+
+.mainbar__menu.active,
+.mainbar__links.active{
+    display: flex;
+}
+
+
+/* ----------------------mediaquery--------------------- */
 
 @media screen and (max-width: 760px) {
-    .mainbar {
+    
+
+ 
+
+    .store_img{
+        position: relative;
+        overflow: hidden;
+        width: 180px;
+        height: 180px;
+    }
+    
+    
+    .store_img img{
+        max-height: 100%;
+        position: absolute;
+        top: -9999px;
+        bottom: -9999px;
+        left: -9999px;
+        right: -9999px;
+        margin: auto;
+    }
+
+    .sortbtn__menu.active{
         flex-direction: column;
         align-items: flex-start;
-        padding: 8px 24px;
+    }
+    .score{
+        padding: 0;
+    }
+    
+    .loc{
+        padding: 10px;
     }
 
-    .mainbar__menu{
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+    .sortbtn__menu li {
+        list-style-type: none;
+        float: left;
+        padding: 5px;
     }
 
-    .mainbar__menu li{
-        width: 100%;
-        text-align: center;
-    }
-
-    .mainbar__links{
-        display: none;
-        justify-content: center;
-        width: 100%;
-
-    }
-    .mainbar__menubtn{
-        display: block;
-    }
-
-
-    .mainbar__menu.active,
-    .mainbar__links.active{
-        display: flex;
-    }
 }

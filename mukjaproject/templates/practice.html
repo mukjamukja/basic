@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+    <body>
+        <div>
+            this is for demo 
+
+        <div id="demo">
+            this part will change
+        </div>
+        <div id="demo_1">
+            first first first
+        </div>
+
+        <button type="button" onclick="loadDoc()">first</button>
+        <button type="button" onclick="reLoadDoc()">second</button>
+    <script>
+    function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if(this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+            };
+        };
+        xhttp.open("GET", "/ajax/test", true);
+        xhttp.send();
+    }
+
+    function reLoadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if(this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo_1").innerHTML = this.responseText;
+            };
+        };
+        xhttp.open("GET", "/ajax/test_1", true);
+        xhttp.send();
+    }
+    </script>
+    <p id='first' onclick="callFunc('second')">april</p>
+        <script>
+                function callFunc(myString="") {
+                        alert(myString)
+                        document.getElementById('first').innerHTML = myString;
+                };
+        </script>
+    </body>
+</html>
+

@@ -2,23 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../static/css/main.css">
     <title>Muk:ja</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/2e6580eb92.js" crossorigin="anonymous"></script>
-
-    <script src="../static/js/main.js" defer></script>
-    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="{{ url_for('static', filename='js/isotope.pkgd.min.js') }}"></script>
-    
+    <script 
+    src="https://kit.fontawesome.com/2e6580eb92.js"
+    crossorigin="anonymous">
+</script>
+<script src="../static/js/main.js" defer></script>
+<script src="../static/js/map.js" defer></script>
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=tmavp3dxm5"></script>
 </head>
-
 <body>
-    <div class="top" style="cursor: pointer">
-        <i class="fas fa-arrow-circle-up">TOP</i>
-    </div>
-
     <div id = topfix>
         <nav class="mainbar">
             <div class="mainbar__logo">
@@ -27,7 +23,8 @@
             </div>
 
             <ul class="mainbar__menu">        
-                <li><a href="">HOME</a></li>
+                <li><a href="./main.html">HOME</a></li>
+                <li><a href="">LOGIN</a></li>
                 <li><a href="">ABOUT US</a></li>
                 <li><a href="">CONTACT US</a></li>
             </ul>
@@ -40,54 +37,38 @@
             <a href="#" class="mainbar__menubtn">
             <i class="fas fa-bars"></i>
             </a>
+
         </nav>
     
         <div class="sectionbar">
             <ul class="sectionbar__menu">
-                <li><a href="" class="sectionbar__gridbtn">GRID</a></li>
-                <li><a href="/map.html/" class="sectionbar__mapbtn">MAP</a></li>
+                <li><a href="/" class="sectionbar__gridbtn">GRID</a></li>
+                <li><a href="#" class="sectionbar__mapbtn">MAP</a></li>
                 <li><a href="#" class="sectionbar__sortbtn">SORT</a></li>
             </ul>
         </div>
 
         <div class="sortbtn__menu">
-            <div>
-
-                <div class="button-group sort-by-button-group">
-                    <button data-sort-by="original-order">original order</button>
-                    <button data-sort-by="score">score</button>
-                    <button data-sort-by="distance">distance</button>
-                    <button data-sort-by="tag">tag</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="grid_view">
-    {% for info in inform %}
+            <ul>
+                <li>SCORE&nbsp;&nbsp;</li>
+                <li style="text-align: center;">0.0</li>
+                <li><input type="range" min="0" max="10" value="0"></li>
+                <li style="text-align: center;">10.0</li>
+            </ul>
             
-        <div class = "grid_view-item" onclick="loadDetail('{{ info[0] }}')">
-                
-            <div style="text-align: left; font-size:larger" id = "{{ info[2] }}" href="">
-                {{ info[2] }}
-            </div>
+            <ul>
+                <li>LOCATION&nbsp;&nbsp;</li>
+                <li class="loc"><a href="">0 - 100</a></li>  
+                <li class="loc"><a href="">100 - 200</a></li>
+                <li class="loc"><a href="">300 - 400</a></li>
+                <li class="loc"><a href="">400 - 500</a></li>
+            </ul>
 
-            <div class="store_img">
-                <img src= '../static/img/thumb/{{ info[1] }}' alt="info[1]">
-            </div>
-
-            <div class="score">
-                {{ info[3] }}
-            </div>
-
-            <div class="tags">
-                #{{ info[3] }}
-            </div>
         </div>
-        <!-- id="{{ info[0] }}" -->
-    {% endfor %}
-    
     </div>
+
+        
+    
 
     <div id="myModal" class="modal">
       <!-- Modal content -->
@@ -98,7 +79,7 @@
         </div>
     </div>
 
-    <script >
+    <script>
     function loadDetail(store_id="") {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -128,10 +109,11 @@
     }
     </script>
 
-    <div id = "footer">
+    <div id="map"><br></div>
+    
+
+    <div id = "footer" style="position: absolute;">
         Project mjmj<br>ltyiz x mhj x gust x pavv
     </div>
-
 </body>
-
 </html>
