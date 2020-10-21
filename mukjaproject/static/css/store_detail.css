@@ -1,16 +1,15 @@
 .name {
     border: 5px ridge #888;
     border-radius: 10px;
-    width: 50px;
+    width: 58px;
     color: rgb(263, 172, 15);
     font-size: medium;
     text-align: left;   
 }
 
 .imgs img{
-    width: 200px;
-    height: 200px;
-    
+    width: 300px;
+    height: 250px;
 }
 
 *{margin:0;padding:0;}
@@ -21,13 +20,14 @@ ul,li{
     margin:0 auto; 
     height:300px;
     position:relative;
-    left:65px;
+    left:17px;
     top: 30px;
     overflow:hidden;
 }
 #slide ul{
     width:400%;
-    height:100%;transition:1s;
+    height:100%;
+    transition:1s;
 }
 #slide ul:after{
     content:"";
@@ -46,7 +46,7 @@ ul,li{
     display:inline-block;
     vertical-align:middle;
     width:10px;height:10px;
-    border:2px solid #666;
+    
     background:#fff;
     transition:0.3s;
     border-radius:50%;
@@ -61,11 +61,36 @@ ul,li{
 }
 label{
     position: relative;
-    right: 55px;
+    right: 10px;
+    border: 2px solid rgb(263, 172, 15);
     bottom: 40px;
 }
 strong{
     display: block;
+}
+.font{
+    font-family: 'Yeon Sung', cursive;
+}
+.tag{
+    text-align: right;
+    font-size: small;
+    color: grey;
+}
+.newimg{
+    border-radius: 30px;
+    
+}
+.prev{
+    color: black;
+    position:absolute;
+    top:30%;
+    left:0;
+}
+.next{
+    color: black;
+    position:absolute;
+    top:30%;
+    right:0%;
 }
 #pos1:checked~ul{margin-left:0%;}
 #pos2:checked~ul{margin-left:-100%;}
