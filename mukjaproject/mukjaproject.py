@@ -11,17 +11,27 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    information=[]
 
     conn = get_conn()
     cur = conn.cursor()
 
+    information=[]
     cur.execute("SELECT store_id, thumbnail, name, rate FROM store")
     for i in cur:
         information.append(i)
+
+    dict_tag = {}
+    cur.execute('select store_id, tag_id from tag_link')
+    for (store_id, tag_id) in cur:
+        if store_id in dict_tag:
+            dict_tag[store_id].append(tag_id)
+        else:
+            dict_tag[store_id] = [tag_id]
+
+    print(dict_tag)
     conn.close()
   
-    return render_template('main.html', inform=information)
+    return render_template('main.html', inform=information, dict_tag = dict_tag)
 
 
  

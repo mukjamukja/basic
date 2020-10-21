@@ -76,7 +76,7 @@
                     </div>
                   </div>
                 
-                  <div class="ui-group">
+                <div class="ui-group">
                     <h3>평점별</h3>
                     <div class="button-group js-radio-button-group" data-filter-group="shape">
                       <button class="button is-checked" data-filter="">⭐</button>
@@ -85,40 +85,21 @@
                       <button class="button" data-filter=".square">⭐⭐⭐⭐</button>
                       <button class="button" data-filter=".square">⭐⭐⭐⭐⭐</button>
                     </div>
-                  </div>
+                </div>
+                    <div class="filters">
+                    <div class="ui-group">
+                      <div class="tag_filter"  data-filter-group="tag">
+                        <label><input class="checkbox" type="checkbox is-checked" data-filter="">select all</label>
+                        <label><input class="checkbox" type="checkbox" data-filter=".1">1</label>
+                        <label><input class="checkbox" type="checkbox" data-filter=".2">2</label>
+                        <label><input class="checkbox" type="checkbox" data-filter=".3">3</label>
+                        <label><input class="checkbox" type="checkbox" data-filter=".4">4</label>
+                        <label><input class="checkbox" type="checkbox" data-filter=".5">5</label>
+                      </div>
+                    </div>
+                    </div>
                 </div>
             </div>
-                
-                <div class="grid">
-                  <div class="color-shape small round red"></div>
-                  <div class="color-shape small round blue"></div>
-                  <div class="color-shape small round yellow"></div>
-                  <div class="color-shape small square red"></div>
-                  <div class="color-shape small square blue"></div>
-                  <div class="color-shape small square yellow"></div>
-                  <div class="color-shape wide round red"></div>
-                  <div class="color-shape wide round blue"></div>
-                  <div class="color-shape wide round yellow"></div>
-                  <div class="color-shape wide square red"></div>
-                  <div class="color-shape wide square blue"></div>
-                  <div class="color-shape wide square yellow"></div>
-                  <div class="color-shape big round red"></div>
-                  <div class="color-shape big round blue"></div>
-                  <div class="color-shape big round yellow"></div>
-                  <div class="color-shape big square red"></div>
-                  <div class="color-shape big square blue"></div>
-                  <div class="color-shape big square yellow"></div>
-                  <div class="color-shape tall round red"></div>
-                  <div class="color-shape tall round blue"></div>
-                  <div class="color-shape tall round yellow"></div>
-                  <div class="color-shape tall square red"></div>
-                  <div class="color-shape tall square blue"></div>
-                  <div class="color-shape tall square yellow"></div>
-                </div>
-                
-
-            </div>
-    
 
         </div>
    
@@ -126,7 +107,7 @@
     <div class="grid_view">
     {% for info in inform %}
             
-        <div class = "grid_view-item" onclick="loadDetail('{{ info[0] }}')">
+        <div class = "grid_view-item{% for tag in dict_tag[info[0]] %} {{ tag }}{% endfor %}" onclick="loadDetail('{{ info[0] }}')">
                 
             <div style="text-align: left; font-size:larger" id = "{{ info[2] }}" href="">
                 {{ info[2] }}
@@ -140,8 +121,8 @@
                 {{ info[3] }}
             </div>
 
-            <div class="tags">
-                #{{ info[3] }}
+            <div class="tag{% for tag in dict_tag[inform[0]] %} {{ tag }}{% endfor %}">
+                {% for tag in dict_tag[info[0]] %} {{ tag }}{% endfor %}
             </div>
         </div>
         <!-- id="{{ info[0] }}" -->
