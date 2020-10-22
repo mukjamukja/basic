@@ -101,6 +101,7 @@ var $grid_view = $(".grid_view").isotope({
   itemSelector: '.grid_view-item'
 });
 var filters = {};
+var filterValue = "";
 
 $('.filters').on('click', '.button', function( event ){
   var $button = $( event.currentTarget );
@@ -108,23 +109,34 @@ $('.filters').on('click', '.button', function( event ){
   var $tagFilter = $button.parents('.tag_filter');
   var filterGroup = $tagFilter.attr('data-filter-group');
   filters[ filterGroup ] = $button.attr('data-filter');
-  var filterValue = concatValues( filters );
+  // change concatValues function to add and sub value
+  filterValue = concatValues( filters );
   $grid_view.isotope({ filter: filterValue });
 });
 
 $('.tag_filter').each( function( i, filterGroup ) {
   var $filterGroup = $( filterGroup );
   $filterGroup.on( 'click', 'button', function ( event ) {
-    $filterGroup.find('.is-checked').removeClass('is-checked');
+  $filterGroup.find(id='tag_reset').removeClass('is-checked');
+    // $filterGroup.find('.is-checked').removeClass('is-checked');
     var $button = $( event.currentTarget );
-    $button.addClass('is-checked');
+    if ( $button.attr( 'class' ).indexOf('is-checked') < 0) {
+      $button.addClass('is-checked');
+    } else {
+      $button.removeClass('is-checked');
+    };
   });
 });
 
 function concatValues( obj ) {
-  var value = '';
+  var value = filterValue;
   for ( var prop in obj ) {
-    value += obj[ prop ];
-  }
+    if ( value.indexOf( ',' + obj[prop] ) < 0 ) {
+      value += ',' + obj[prop];
+    } else {
+      value = value.replace(',' + obj[prop], '');
+    }
+    // value += obj[ prop ];
+  };
   return value;
-}
+};
