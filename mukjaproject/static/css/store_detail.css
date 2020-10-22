@@ -1,7 +1,7 @@
 .name {
     border: 5px ridge #888;
     border-radius: 10px;
-    width: 58px;
+    width: 90px;
     color: rgb(263, 172, 15);
     font-size: medium;
     text-align: left;   
@@ -17,11 +17,8 @@ ul,li{
     list-style:none;
     }
 #slide{
-    margin:0 auto; 
-    height:300px;
+    height: 300px;
     position:relative;
-    left:17px;
-    top: 30px;
     overflow:hidden;
 }
 #slide ul{
@@ -78,6 +75,9 @@ strong{
 }
 .newimg{
     border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     
 }
 .prev{
