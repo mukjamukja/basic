@@ -40,63 +40,8 @@ $( document ).ready( function() {
     } );
   } );
 
-// from here for sorting (isotope)
-// init Isotope
-// var $grid_view = $('.grid_view').isotope({
-//   itemSelector: '.grid_view-item',
-//   getSortData: {
-//     score: '.score',
-//     distance: '.distance',
-//     score: '.score parseInt',
-//     tag: '[data-tag]',
-//   };
-// });
 
-
-// external js: isotope.pkgd.js
-
-// // init Isotope
-// var $grid = $('.grid').isotope({
-//   itemSelector: '.color-shape'
-// });
-
-// // store filter for each group
-// var filters = {};
-
-// $('.filters').on( 'click', '.button', function( event ) {
-//   var $button = $( event.currentTarget );
-//   // get group key
-//   var $buttonGroup = $button.parents('.button-group');
-//   var filterGroup = $buttonGroup.attr('data-filter-group');
-//   // set filter for group
-//   filters[ filterGroup ] = $button.attr('data-filter');
-//   // combine filters
-//   var filterValue = concatValues( filters );
-//   // set filter for Isotope
-//   $grid.isotope({ filter: filterValue });
-// });
-
-// // change is-checked class on buttons
-// $('.button-group').each( function( i, buttonGroup ) {
-//   var $buttonGroup = $( buttonGroup );
-//   $buttonGroup.on( 'click', 'button', function( event ) {
-//     $buttonGroup.find('.is-checked').removeClass('is-checked');
-//     var $button = $( event.currentTarget );
-//     $button.addClass('is-checked');
-//   });
-// });
-  
-// // flatten object by concatting values
-// function concatValues( obj ) {
-//   var value = '';
-//   for ( var prop in obj ) {
-//     value += obj[ prop ];
-//   }
-//   return value;
-// }
-
-// init isotope
-
+// from here for isotope
 var $grid_view = $(".grid_view").isotope({
   itemSelector: '.grid_view-item'
 });
@@ -108,6 +53,10 @@ $('.filters').on('click', '.button', function( event ){
 
   var $tagFilter = $button.parents('.tag_filter');
   var filterGroup = $tagFilter.attr('data-filter-group');
+  if ( $button.attr( 'id' ) == 'tag_reset') {
+    filterValue = "";
+    filterGroup.find('.is-checked').removeClass('is-checked');
+  };
   filters[ filterGroup ] = $button.attr('data-filter');
   // change concatValues function to add and sub value
   filterValue = concatValues( filters );
@@ -142,18 +91,9 @@ function concatValues( obj ) {
           valueList.push( obj[prop] );
         } else {
           valueList.splice(temp_index, 1);
-        }
-    }
-  }
-    // if ( value == "" ) {
-    //   value += obj[prop];
-    // } else if ( value.indexOf( obj[prop] ) == 0 ) {
-    //   value = value.replace( obj[prop] , '');
-    // } else if ( value.indexOf( obj[prop] ) > 1 ) {
-    //   kk
-    // } else {
-    //   value = value.replace(',' + obj[prop], '');
-    // value += obj[ prop ];
+        };
+    };
+  };
   valueString = valueList.join(',');
   return valueString;
 };
