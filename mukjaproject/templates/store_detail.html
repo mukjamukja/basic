@@ -21,14 +21,11 @@
             <input type="radio" name="pos" id="pos3">
             <input type="radio" name="pos" id="pos4">
 
-            <div class="btn">
-                <a class="prev" style="text-decoration: none;">&#10094;</a>
-                <a class="next" style="text-decoration: none;">&#10095;</a>
-            </div>
+            
         
         <ul>
             {% for img in imgs %}   
-            <li><img class="newimg" src="../static/img/details/{{ img[0] }}" alt="{{ img[0] }}"></li>
+            <li><a href="#"><img class="newimg" src="../static/img/details/{{ img[0] }}" alt="{{ img[0] }}"></a></li>
             {% endfor %}     
         </ul>
         

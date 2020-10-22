@@ -56,7 +56,15 @@ def practice():
 
 @app.route("/map.html/")
 def map():
-    return render_template("map.html")
+    conn = get_conn()
+    cur = conn.cursor()
+
+    location = []
+    cur.execute("select name, lat, lon from store")
+    for loc in cur:
+        location.append(loc)
+
+    return render_template("map.html", location=location)
 
 
 if __name__ == "__main__":
