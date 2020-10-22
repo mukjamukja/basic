@@ -117,7 +117,7 @@ $('.filters').on('click', '.button', function( event ){
 $('.tag_filter').each( function( i, filterGroup ) {
   var $filterGroup = $( filterGroup );
   $filterGroup.on( 'click', 'button', function ( event ) {
-  $filterGroup.find(id='tag_reset').removeClass('is-checked');
+  $filterGroup.find('#tag_reset').removeClass('is-checked');
     // $filterGroup.find('.is-checked').removeClass('is-checked');
     var $button = $( event.currentTarget );
     if ( $button.attr( 'class' ).indexOf('is-checked') < 0) {
@@ -129,14 +129,31 @@ $('.tag_filter').each( function( i, filterGroup ) {
 });
 
 function concatValues( obj ) {
-  var value = filterValue;
+  var valueString = filterValue;
+  var valueList = []
   for ( var prop in obj ) {
-    if ( value.indexOf( ',' + obj[prop] ) < 0 ) {
-      value += ',' + obj[prop];
+    if ( valueString == "" ) {
+      valueString = obj[prop];
+      return valueString;
     } else {
-      value = value.replace(',' + obj[prop], '');
+        valueList = valueString.split(',');
+        var temp_index = valueList.indexOf( obj[prop], 0 );
+        if ( temp_index < 0 ) {
+          valueList.push( obj[prop] );
+        } else {
+          valueList.splice(temp_index, 1);
+        }
     }
+  }
+    // if ( value == "" ) {
+    //   value += obj[prop];
+    // } else if ( value.indexOf( obj[prop] ) == 0 ) {
+    //   value = value.replace( obj[prop] , '');
+    // } else if ( value.indexOf( obj[prop] ) > 1 ) {
+    //   kk
+    // } else {
+    //   value = value.replace(',' + obj[prop], '');
     // value += obj[ prop ];
-  };
-  return value;
+  valueString = valueList.join(',');
+  return valueString;
 };
