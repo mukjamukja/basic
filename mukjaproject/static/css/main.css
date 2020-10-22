@@ -91,7 +91,8 @@ span{
     align-items: center;
     background-color: rgb(192, 57, 43);
     padding: 8px 12px;
-   
+    z-index: 5;
+    
 }
 
 .sectionbar__menu{
