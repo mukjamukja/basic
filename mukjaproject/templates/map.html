@@ -14,12 +14,13 @@
 <script src="../static/js/map.js" defer></script>
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=tmavp3dxm5"></script>
 </head>
+
 <body>
     <div id = topfix>
         <nav class="mainbar">
             <div class="mainbar__logo">
                 <i class="fas fa-utensils"></i>
-                <b><a href="#"><span style = "color:rgb(192, 57, 43);">M</span>ukja-Muk<span style = "color:rgb(192, 57, 43);">j</span>a</a></b>
+                <b><a href="#"><span style = "color:rgb(126, 104, 102);">M</span>ukja-Muk<span style = "color:rgb(192, 57, 43);">j</span>a</a></b>
             </div>
 
             <ul class="mainbar__menu">        
@@ -43,30 +44,64 @@
         <div class="sectionbar">
             <ul class="sectionbar__menu">
                 <li><a href="/" class="sectionbar__gridbtn">GRID</a></li>
-                <li><a href="#" class="sectionbar__mapbtn">MAP</a></li>
+                <li><a href="/map.html/" class="sectionbar__mapbtn">MAP</a></li>
                 <li><a href="#" class="sectionbar__sortbtn">SORT</a></li>
             </ul>
         </div>
 
         <div class="sortbtn__menu">
-            <ul>
-                <li>SCORE&nbsp;&nbsp;</li>
-                <li style="text-align: center;">0.0</li>
-                <li><input type="range" min="0" max="10" value="0"></li>
-                <li style="text-align: center;">10.0</li>
-            </ul>
-            
-            <ul>
-                <li>LOCATION&nbsp;&nbsp;</li>
-                <li class="loc"><a href="">0 - 100</a></li>  
-                <li class="loc"><a href="">100 - 200</a></li>
-                <li class="loc"><a href="">300 - 400</a></li>
-                <li class="loc"><a href="">400 - 500</a></li>
-            </ul>
+
+            <div class="sortbtn__tag">
+                <div class="filters">
+                  <div class="ui-group">
+                    <h3>음식카테고리</h3>
+                    <div class="button-group js-radio-button-group" data-filter-group="category">
+                      <button class="button is-checked" data-filter="">전체</button>
+                      <button class="button" data-filter=".yellow">한식</button>
+                      <button class="button" data-filter=".red">일식</button>
+                      <button class="button" data-filter=".blue">양식</button>
+                      <button class="button" data-filter=".yellow">중식</button>
+                      <button class="button" data-filter=".yellow">아시안</button>
+                    </div>
+                  </div>
+                
+                  <div class="ui-group">
+                    <h3>거리별</h3>
+                    <div class="button-group js-radio-button-group" data-filter-group="size">
+                      <button class="button is-checked" data-filter="">0-100m</button>
+                      <button class="button" data-filter=".small">100-200m</button>
+                      <button class="button" data-filter=".wide">200-300m</button>
+                      <button class="button" data-filter=".big">300-400m</button>
+                      <button class="button" data-filter=".tall">400-500m</button>
+                    </div>
+                  </div>
+                
+                <div class="ui-group">
+                    <h3>평점별</h3>
+                    <div class="button-group js-radio-button-group" data-filter-group="shape">
+                      <button class="button is-checked" data-filter="">⭐</button>
+                      <button class="button" data-filter=".round">⭐⭐</button>
+                      <button class="button" data-filter=".square">⭐⭐⭐</button>
+                      <button class="button" data-filter=".square">⭐⭐⭐⭐</button>
+                      <button class="button" data-filter=".square">⭐⭐⭐⭐⭐</button>
+                    </div>
+                </div>
+                    <div class="filters">
+                    <div class="ui-group">
+                      <div class="tag_filter"  data-filter-group="tag">
+                        <button class="button" type="button is-checked" data-filter="">select all</button>
+                        <button class="button" type="button" data-filter=".1">1</button>
+                        <button class="button" type="button" data-filter=".2">2</button>
+                        <button class="button" type="button" data-filter=".3">3</button>
+                        <button class="button" type="button" data-filter=".4">4</button>
+                        <button class="button" type="button" data-filter=".5">5</button>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
-    </div>
-
         
     
 
