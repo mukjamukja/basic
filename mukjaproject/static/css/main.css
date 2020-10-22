@@ -91,6 +91,7 @@ span{
     align-items: center;
     background-color: rgb(192, 57, 43);
     padding: 8px 12px;
+    z-index: 999;
    
 }
 
@@ -160,11 +161,12 @@ span{
 
 .grid_view-item{
     border-style: solid;
-    border-radius: 20px;
+    border-radius: 10px;
     border-color: rgb(243, 150, 1, 0.87);
-    padding: 10px;
+    padding: 3px;
     margin: 10px;
     text-align: center;
+    border-width: 1px;
 }
 
 .grid_view-item:hover{
@@ -400,8 +402,8 @@ span{
     .store_img{
         position: relative;
         overflow: hidden;
-        width: 180px;
-        height: 180px;
+        width: 120px;
+        height: 120px;
     }
     
     
