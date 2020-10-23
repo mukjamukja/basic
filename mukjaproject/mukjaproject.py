@@ -55,7 +55,7 @@ def store_detail(store_id):
         tags=get_tag(store_id),\
         imgs=get_img(store_id))
 
-@app.route("/practice")
+@app.route("/practice/")
 def practice():
     return render_template('practice.html')
 
@@ -70,6 +70,10 @@ def map():
         location.append(loc)
 
     return render_template("map.html", location=location)
+
+@app.route("/about-us/")
+def about_us():
+    return render_template("About_us.html")
 
 
 if __name__ == "__main__":
