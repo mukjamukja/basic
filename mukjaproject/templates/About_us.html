@@ -9,8 +9,8 @@
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
     <script src="https://kit.fontawesome.com/2e6580eb92.js" crossorigin="anonymous"></script>
 
-    <script src="../static/js/main.js" defer></script>
-    <script src="../static/js/About_us.js" defer></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/About_us.js') }}" defer></script>
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 
 
@@ -25,12 +25,12 @@
         <nav class="mainbar">
             <div class="mainbar__logo">
                 <i class="fas fa-utensils"></i>
-                <b><a href="#"><span style = "color:rgb(192, 57, 43);">M</span>ukja-Muk<span style = "color:rgb(192, 57, 43);">j</span>a</a></b>
+                <b><a href="/"><span>M</span>ukja-Muk<span></span>j</span>a</a></b>
             </div>
 
             <ul class="mainbar__menu">        
                 <li><a href="/">HOME</a></li>
-                <li><a href="">ABOUT US</a></li>
+                <li><a href="/about-us">ABOUT US</a></li>
                 <li><a href="">CONTACT US</a></li>
             </ul>
 
