@@ -42,8 +42,21 @@ $( document ).ready( function() {
 
 
 // from here for isotope
+// for filtering
 var $grid_view = $(".grid_view").isotope({
-  itemSelector: '.grid_view-item'
+  itemSelector: '.grid_view-item',
+  layoutMode: 'fitRows',
+  getSortData: {
+    store_name: '.store_name',
+    distance: '.distance parseInt',
+    // sortAscending: false,
+    score: '.score parseInt',
+  },
+  sortAscending: {
+    store_name: true,
+    distance: true,
+    score: false
+  }
 });
 var filters = {};
 var filterValue = "";
@@ -99,3 +112,24 @@ function concatValues( obj ) {
   valueString = valueList.join(',');
   return valueString;
 };
+
+// external js: isotope.pkgd.js
+
+
+// for sorting
+// init Isotope
+
+// bind sort button click
+$('.sort-by-button-group').on( 'click', 'button', function() {
+  var sortValue = $(this).attr('data-sort-value');
+  $grid_view.isotope({ sortBy: sortValue });
+});
+
+// change is-checked class on buttons
+$('.button-group').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'button', function() {
+    $buttonGroup.find('.is-checked').removeClass('is-checked');
+    $( this ).addClass('is-checked');
+  });
+});

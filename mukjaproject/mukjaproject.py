@@ -16,7 +16,7 @@ def main():
     cur = conn.cursor()
 
     information=[]
-    cur.execute("SELECT store_id, thumbnail, name, rate FROM store ORDER BY rate DESC")
+    cur.execute("SELECT store_id, thumbnail, name, rate, distance FROM store ORDER BY rate DESC")
     for i in cur:
         information.append(i)
 
