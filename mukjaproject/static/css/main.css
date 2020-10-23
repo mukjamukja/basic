@@ -1,6 +1,5 @@
 body{
     margin: 0;
-    padding: 0;
     height: 100%;
     font-family: sans-serif;
     
@@ -156,7 +155,9 @@ span{
 
 .grid_view{
     display: grid;
+    padding: 5%;
     place-items: center;
+    grid-column-gap: 10px;
 }
 
 
@@ -164,8 +165,8 @@ span{
     border-style: solid;
     border-radius: 10px;
     border-color: rgb(243, 150, 1, 0.87);
+    margin: 2.5%;
     padding: 3px;
-    margin: 10px;
     text-align: center;
     border-width: 1px;
 }
@@ -403,8 +404,8 @@ span{
     .store_img{
         position: relative;
         overflow: hidden;
-        width: 120px;
-        height: 120px;
+        width: 100%;
+        height: auto;
     }
     
     
