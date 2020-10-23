@@ -155,7 +155,9 @@ span{
 
 .grid_view{
     display: grid;
-    padding: 5%;
+    padding: 1.25% 2.5% ;
+    margin: 0 5%;
+    text-align: center;
     place-items: center;
     grid-column-gap: 10px;
 }
