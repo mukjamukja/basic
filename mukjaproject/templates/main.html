@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
     <script src="https://kit.fontawesome.com/2e6580eb92.js" crossorigin="anonymous"></script>
 
-    <script src="../static/js/main.js" defer></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="{{ url_for('static', filename='js/isotope.pkgd.min.js') }}"></script>
     
@@ -55,12 +55,10 @@
                 <div class="filters">
                     <div class="ui-group">
                       <div class="tag_filter"  data-filter-group="tag">
-                        <button class="button" id='tag_reset' type="button is-checked" data-filter="">select all</button>
-                        <button class="button" type="button" data-filter=".1">1</button>
-                        <button class="button" type="button" data-filter=".2">2</button>
-                        <button class="button" type="button" data-filter=".3">3</button>
-                        <button class="button" type="button" data-filter=".4">4</button>
-                        <button class="button" type="button" data-filter=".5">5</button>
+                        <button class="button" id='tag_reset' type="button is-checked" data-filter="">초기화</button>
+                        {% for tag in tag_list %}
+                        <button class="button" type="button" data-filter=".{{ tag[0] }}">{{ tag[1] }}</button>
+                        {% endfor %}
                       </div>
                     </div>
                 </div>
@@ -79,14 +77,15 @@
             </div>
 
             <div class="store_img">
-                <img src= '../static/img/thumb/{{ info[1] }}' alt="info[1]">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+                <img src= '../static/img/thumb/{{ info[1] }}' alt="{{ info[1] }}">
             </div>
 
             <div class="score">
                 {{ info[3] }}
             </div>
 
-            <div class="tag{% for tag in dict_tag[inform[0]] %} {{ tag }}{% endfor %}">
+            <div class="tag{% for tag in dict_tag[inform[0]] %} {{ tag }}{% endfor %}" type="hidden">
                 {% for tag in dict_tag[info[0]] %} {{ tag }}{% endfor %}
             </div>
         </div>
@@ -104,35 +103,7 @@
         </div>
     </div>
 
-    <script >
-    function loadDetail(store_id="") {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if(this.readyState == 4 && this.status == 200) {
-                document.getElementById("store_detail").innerHTML = this.responseText;
-                document.getElementById("myModal").style.display = "block";
-            };
-        };
-        xhttp.open("GET", "/store/"+store_id+"/", true);
-        xhttp.send();
-    }
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    var modal = document.getElementById("myModal");
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-    </script>
+    <script src="{{ url_for('static', filename='js/modal.js') }}"></script>
 
 
 

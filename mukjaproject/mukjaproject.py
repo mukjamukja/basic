@@ -20,6 +20,11 @@ def main():
     for i in cur:
         information.append(i)
 
+    tag_list = []
+    cur.execute("SELECT tag_id, tag_name FROM tag")
+    for tag in cur:
+        tag_list.append(tag)
+
     dict_tag = {}
     cur.execute('select store_id, tag_id from tag_link')
     for (store_id, tag_id) in cur:
@@ -31,7 +36,7 @@ def main():
     print(dict_tag)
     conn.close()
   
-    return render_template('main.html', inform=information, dict_tag = dict_tag)
+    return render_template('main.html', inform=information, dict_tag=dict_tag, tag_list=tag_list)
 
 
  

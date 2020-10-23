@@ -53,10 +53,6 @@ $('.filters').on('click', '.button', function( event ){
 
   var $tagFilter = $button.parents('.tag_filter');
   var filterGroup = $tagFilter.attr('data-filter-group');
-  if ( $button.attr( 'id' ) == 'tag_reset') {
-    filterValue = "";
-    filterGroup.find('.is-checked').removeClass('is-checked');
-  };
   filters[ filterGroup ] = $button.attr('data-filter');
   // change concatValues function to add and sub value
   filterValue = concatValues( filters );
@@ -71,6 +67,12 @@ $('.tag_filter').each( function( i, filterGroup ) {
     var $button = $( event.currentTarget );
     if ( $button.attr( 'class' ).indexOf('is-checked') < 0) {
       $button.addClass('is-checked');
+      if ( $button.attr( 'id' ) == 'tag_reset') {
+        filterValue = "";
+        $filterGroup.find('.is-checked').removeClass('is-checked');
+        $button.addClass('is-checked');
+        $grid_view.isotope({ filter:filterValue });
+      }
     } else {
       $button.removeClass('is-checked');
     };
