@@ -1,10 +1,8 @@
 .name {
-    border: 5px ridge #888;
-    border-radius: 10px;
     width: 100px;
     color: rgb(263, 172, 15);
     font-size: medium;
-    text-align: left; 
+    
     font-family: 'Black Han Sans', sans-serif;  
 }
 
