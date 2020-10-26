@@ -404,6 +404,19 @@ span{
         padding: 0;
     }
     
+    .loc{
+        padding: 10px;
+    }
+
+    .grid_view{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .grid_view-item{
+        width: 45%;
+    }
     .sortbtn__menu li {
         list-style-type: none;
         float: left;
@@ -412,8 +425,8 @@ span{
     .store_img{
         position: relative;
         overflow: hidden;
-        width: 185px;
-        height: 185px;
+        width: 200px;
+        height: 200px;
     }
     
 
