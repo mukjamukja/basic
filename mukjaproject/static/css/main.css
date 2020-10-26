@@ -140,7 +140,6 @@ span{
     padding: 8px 16px;
     display: flex;
     height: 30%;
-    width: 100%;
 }
 
 
@@ -156,9 +155,9 @@ span{
 .grid_view{
     display: grid;
     padding: 1.25% 2.5% ;
-    margin: 0 3%;
+    margin: 0 6%;
     place-items: center;
-    align-content: space-evenly;
+    align-content: space-around;
 }
 
 
@@ -180,9 +179,9 @@ span{
 .store_img{
     position: relative;
     overflow: hidden;
+    margin: 0 auto;
     width: 200px;
     height: 200px;
-    margin: 0 auto;
 }
 
 
@@ -399,9 +398,10 @@ span{
         z-index: 999;
     }
 
-    .grid_view-item{
-
+    .grid_view{
+        margin: 0 auto;
     }
+
     
     .sortbtn__menu.active{
         flex-direction: column;
@@ -423,8 +423,8 @@ span{
     .store_img{
         position: relative;
         overflow: hidden;
-        min-width: 100px;
-        min-height: 100px;
+        width: 100px;
+        height: 100px;
     }
     
 
