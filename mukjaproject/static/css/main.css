@@ -398,7 +398,10 @@ span{
         display: none; 
         z-index: 999;
     }
- 
+    
+    .grid_view{
+        padding: 5%;
+    }
 
     .store_img{
         position: relative;
