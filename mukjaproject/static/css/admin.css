@@ -1,0 +1,10 @@
+
+input[id="address"] {
+    width: 30rem;
+}
+
+input[id="inform"] {
+    height: 5rem;
+    width: 68%;
+
+}
