@@ -56,5 +56,11 @@
     <div id = "footer" style="position: absolute;">
         Project mjmj<br>ltyiz x mhj x gust x pavv
     </div>
+    <div style="display:none;">
+        {% for i in location %}
+        {{ i[0] }}, {{ i[1] }}, {{ i[2] }}
+        {% endfor %}
+    </div>
+
 </body>
 </html>
