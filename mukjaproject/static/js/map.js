@@ -10,26 +10,26 @@ var mapposition = {
     p9:(37.482125,126.928968),
     p10:(37.48193,126.929747),
     p11:(37.481896,126.930176),
-    p12:(37.485948,126.929929),
+    p12:(37.485487,126.929956),
     p13:(37.484697,126.927772)
 }
 var HOME_PATH = window.HOME_PATH || '.';
-var shinrim = new naver.maps.LatLng(37.484559, 126.928429),
+var shinrim = new naver.maps.LatLng(37.489894,126.927110), //처음 맵 기준 
     map = new naver.maps.Map('map', {
         center: shinrim,
         zoom: 16
     }),
     meal = new naver.maps.Marker({
         map: map,
-        position: shinrim
+        position: new naver.maps.LatLng(37.484559, 126.928429),
     });
 
 var contentString = [
         '<div class="iw_inner">',
         '   <h3>통큰갈비</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/details/d4_2.png" width="15" height="15" alt="사진"></a>',
+        '      <img src="../img/thumb/tn_1.png'+ HOME_PATH +' width="10%" height="15" alt="사진">',
         '       <div>주소 : 신림동 1599-4</div>',
-        '       <div>평점 : 4</div>',
+        '       <div>평점 : 8</div>',
         '       <div>정보 : 한식</div>',
         '</div>'
     ].join('');
@@ -64,9 +64,9 @@ var meal2 = new naver.maps.Marker({
 var contentString2 = [
     '<div class="iw_inner">',
         '   <h3>막불감동</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/details/d4_3.png" width="15" height="15" alt="사진"></a>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_2.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 신림동 1433-60</div>',
-        '       <div>평점 : 4</div>',
+        '       <div>평점 : 8</div>',
         '       <div>정보 : 한식</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
@@ -100,9 +100,9 @@ var meal3 = new naver.maps.Marker({
 var contentString3 = [
     '<div class="iw_inner">',
         '   <h3>르브와 </h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/details/d4_3.png" width="15" height="15" alt="사진"></a>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_3.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 서원동 34 3층</div>',
-        '       <div>평점 : 4</div>',
+        '       <div>평점 : 8</div>',
         '       <div>정보 : 양식</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
@@ -136,9 +136,9 @@ var meal4 = new naver.maps.Marker({
 var contentString4 = [
     '<div class="iw_inner">',
         '   <h3>용궁중화요리</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/details/d4_3.png" width="15" height="15" alt="사진"></a>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_4.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 신림동 1640-1</div>',
-        '       <div>평점 : 3</div>',
+        '       <div>평점 : 6</div>',
         '       <div>정보 : 중식</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
@@ -172,9 +172,9 @@ var meal5 = new naver.maps.Marker({
 var contentString5 = [
     '<div class="iw_inner">',
         '   <h3>스시오</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/details/d4_3.png" width="15" height="15" alt="사진"></a>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_5.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 신림동 1640-2</div>',
-        '       <div>평점 : 3</div>',
+        '       <div>평점 : 6</div>',
         '       <div>정보 : 일식</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
@@ -208,9 +208,9 @@ var meal6 = new naver.maps.Marker({
 var contentString6 = [
     '<div class="iw_inner">',
         '   <h3>전주식당</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/details/d4_3.png" width="15" height="15" alt="사진"></a>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_6.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 신림동 신림로66길20</div>',
-        '       <div>평점 : 4</div>',
+        '       <div>평점 : 8</div>',
         '       <div>정보 : 한식</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
@@ -244,9 +244,9 @@ var meal7 = new naver.maps.Marker({
 var contentString7 = [
         '<div class="iw_inner">',
             '   <h3>24시서울밥집</h3>',
-            '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/details/d4_3.png" width="15" height="15" alt="사진"></a>',
+            '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_7.png" width="15" height="15" alt="사진"></a>',
             '       <div>주소 : 서원동 관천로36-1</div>',
-            '       <div>평점 : 4</div>',
+            '       <div>평점 : 7</div>',
             '       <div>정보 : 한식</div>',
             '</div>'
         ].join('');  //핀 이벤트의 html
@@ -280,9 +280,9 @@ var meal8 = new naver.maps.Marker({
 var contentString8 = [
     '<div class="iw_inner">',
         '   <h3>틈새라면</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/details/d4_3.png" width="15" height="15" alt="사진"></a>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_8.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 신림동 1638-20</div>',
-        '       <div>평점 : 4</div>',
+        '       <div>평점 : 7</div>',
         '       <div>정보 : 분식</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
@@ -316,9 +316,9 @@ var meal9 = new naver.maps.Marker({
 var contentString9 = [
     '<div class="iw_inner">',
         '   <h3>뽕잎사랑</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/details/d4_3.png" width="15" height="15" alt="사진"></a>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_9.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 서원동 신원로 35</div>',
-        '       <div>평점 : 4</div>',
+        '       <div>평점 : 8</div>',
         '       <div>정보 : 한식</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
@@ -352,9 +352,9 @@ var meal10 = new naver.maps.Marker({
 var contentString10 = [
     '<div class="iw_inner">',
         '   <h3>싸움의 고수</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/details/d4_3.png" width="15" height="15" alt="사진"></a>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_10.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 서원동 신림로307</div>',
-        '       <div>평점 : 4</div>',
+        '       <div>평점 : 7</div>',
         '       <div>정보 : 한식</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
@@ -388,9 +388,9 @@ var meal11 = new naver.maps.Marker({
 var contentString11 = [
     '<div class="iw_inner">',
         '   <h3>두끼떡볶이</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/details/d4_3.png" width="15" height="15" alt="사진"></a>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_11.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 서원동 신림로310</div>',
-        '       <div>평점 : 4</div>',
+        '       <div>평점 : 7</div>',
         '       <div>정보 : 분식</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
@@ -417,17 +417,17 @@ var infowindow11 = new naver.maps.InfoWindow({
 //                                  //
 
 var meal12 = new naver.maps.Marker({
-    position: new naver.maps.LatLng(37.485948,126.929929),
+    position: new naver.maps.LatLng(37.485487,126.929956),
     map: map
 });  //맵핀
 
 var contentString12 = [
     '<div class="iw_inner">',
-        '   <h3>십원집</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/details/d4_3.png" width="15" height="15" alt="사진"></a>',
-        '       <div>주소 : 신림동 1424-19</div>',
-        '       <div>평점 : 4</div>',
-        '       <div>정보 : 한식</div>',
+        '   <h3>서가앤쿡</h3>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_12.png" width="15" height="15" alt="사진"></a>',
+        '       <div>주소 : 신림동 신림로350</div>',
+        '       <div>평점 : 6</div>',
+        '       <div>정보 : 양식</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
 
@@ -460,9 +460,9 @@ var meal13 = new naver.maps.Marker({
 var contentString13 = [
     '<div class="iw_inner">',
         '   <h3>깡통 닭갈비</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/details/d4_3.png" width="15" height="15" alt="사진"></a>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_13.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 남부순환로 1597-14</div>',
-        '       <div>평점 : 4</div>',
+        '       <div>평점 : 8</div>',
         '       <div>정보 : 한식</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
@@ -483,6 +483,42 @@ var infowindow13 = new naver.maps.InfoWindow({
             infowindow13.close();
         } else {
             infowindow13.open(map, meal13);
+        }
+    }); //이벤트 발생 if문
+
+//                                  //
+
+var meal14 = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.49143,126.923997),
+    map: map
+});  //맵핀
+
+var contentString14 = [
+    '<div class="iw_inner">',
+        '   <h3>마라탕 전문점</h3>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
+        '       <div>주소 : 신대방동 395-69번지 2층 211호</div>',
+        '       <div>평점 : 8</div>',
+        '       <div>정보 : 중식</div>',
+        '</div>'
+    ].join('');  //핀 이벤트의 html
+
+var infowindow14 = new naver.maps.InfoWindow({
+        content: contentString14,
+        maxWidth: 140,
+        backgroundColor: "white",
+        borderColor: "green",
+        borderWidth: 5,
+        anchorSize: new naver.maps.Size(10, 10),
+        anchorSkew: true,
+        anchorColor: "white",
+        pixelOffset: new naver.maps.Point(30, -20)
+    }); //핀 이벤트의 css
+    naver.maps.Event.addListener(meal14, "click", function(e) {
+        if (infowindow14.getMap()) {
+            infowindow14.close();
+        } else {
+            infowindow14.open(map, meal14);
         }
     }); //이벤트 발생 if문
 
