@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        hello
+    </div>
+   
+    <form>
+        <fieldset>
+            <legend>음식점 정보 입력</legend>
+            <p>
+                <input type="text" name="store_name" id="store_name">
+                <label for="store_name">store_name</label>
+            </p>
+            <p>
+                <input type="range" name="store_rate" id="store_rate">
+                <label for="store_rate">store_rate</label>
+            </p>
+            <p>
+                <input type="text" name="address" id="address">
+                <label for="address">address</label>
+            </p>
+            <p>
+                <input type="text" name="lat" id="lat" value="16.1212121">
+                <label for="lat">latitude</label>
+            </p>
+            <p>
+                <input type="text" name="lon" id="lon" value="16.1212121">
+                <label for="lon">longitude</label>
+            </p>
+            <p>
+                <input type="text" name="inform" id="inform">
+                <label for="inform">inform</label>
+            </p>
+            <p>
+                <input type="text" name="writer" id="writer">
+                <label for="writer">writer</label>
+            </p>
+            <p>
+                <input type="file" name="thumbnail" id="thumbnail">
+                <label for="thumbnail">thumbnail</label>
+            </p>
+            <p>
+                <input type="range" name="distance" id="distance">
+                <label for="distance">distance</label>
+            </p>
+
+
+
+
+
+
+
+        </fieldset>
+    </form>
+</body>
+</html>

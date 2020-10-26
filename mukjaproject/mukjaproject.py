@@ -74,7 +74,13 @@ def map():
 
 @app.route("/about-us/")
 def about_us():
-    return render_template("About_us.html")
+    return render_template("about_us.html")
+
+@app.route("/admin/")
+def admin():
+    return render_template("admin.html")
+
+
 
 
 if __name__ == "__main__":
