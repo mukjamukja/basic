@@ -181,7 +181,9 @@ span{
 
 
 .store_img img{
-    max-width: 95%;
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
     position: absolute;
     top: -9999px;
     bottom: -9999px;
