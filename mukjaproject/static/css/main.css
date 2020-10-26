@@ -394,9 +394,6 @@ span{
         z-index: 999;
     }
 
-    .grid_view{
-        margin: 0 auto;
-    }
 
     
     .sortbtn__menu.active{
@@ -407,10 +404,6 @@ span{
         padding: 0;
     }
     
-    .loc{
-        padding: 10px;
-    }
-
     .sortbtn__menu li {
         list-style-type: none;
         float: left;
@@ -419,8 +412,8 @@ span{
     .store_img{
         position: relative;
         overflow: hidden;
-        width: 100px;
-        height: 100px;
+        width: 185px;
+        height: 185px;
     }
     
 
