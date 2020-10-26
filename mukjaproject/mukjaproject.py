@@ -9,16 +9,21 @@ from python.get_ import get_conn, get_tag, get_img
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def main():
-
     conn = get_conn()
     cur = conn.cursor()
 
     information=[]
-    cur.execute("SELECT store_id, thumbnail, name, rate FROM store ORDER BY rate DESC")
+    cur.execute("SELECT store_id, thumbnail, name, rate, distance FROM store ORDER BY rate DESC")
     for i in cur:
         information.append(i)
+
+    tag_list = []
+    cur.execute("SELECT tag_id, tag_name FROM tag")
+    for tag in cur:
+        tag_list.append(tag)
 
     dict_tag = {}
     cur.execute('select store_id, tag_id from tag_link')
@@ -28,19 +33,18 @@ def main():
         else:
             dict_tag[store_id] = [tag_id]
 
-    print(dict_tag)
     conn.close()
   
-    return render_template('main.html', inform=information, dict_tag = dict_tag)
-
+    return render_template('main.html', inform=information, dict_tag=dict_tag, tag_list=tag_list)
 
  
 @app.route("/store/<int:store_id>/")
 def store_detail(store_id):
     conn = get_conn()
     cur = conn.cursor()
-    cur.execute("SELECT store_id, name, address, rate, inform, writer, post_date FROM store WHERE store_id=?", (store_id,))
+
     information = []
+    cur.execute("SELECT store_id, name, address, rate, inform, writer, post_date FROM store WHERE store_id=?", (store_id,))
     for i in cur:
         information.append(i)
     conn.close()
@@ -50,11 +54,13 @@ def store_detail(store_id):
         tags=get_tag(store_id),\
         imgs=get_img(store_id))
 
-@app.route("/practice")
+
+@app.route("/practice/")
 def practice():
     return render_template('practice.html')
 
-@app.route("/map.html/")
+
+@app.route("/map/")
 def map():
     conn = get_conn()
     cur = conn.cursor()
@@ -65,6 +71,10 @@ def map():
         location.append(loc)
 
     return render_template("map.html", location=location)
+
+@app.route("/about-us/")
+def about_us():
+    return render_template("About_us.html")
 
 
 if __name__ == "__main__":

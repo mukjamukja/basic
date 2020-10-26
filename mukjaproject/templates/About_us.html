@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muk:ja</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/About_us.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
     <script src="https://kit.fontawesome.com/2e6580eb92.js" crossorigin="anonymous"></script>
 
-    <script src="../static/js/main.js" defer></script>
-    <script src="../static/js/About_us.js" defer></script>
+    <script src="{{ url_for('static', filename='js/About_us.js') }}" defer></script>
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="{{ url_for('static', filename='js/isotope.pkgd.min.js') }}"></script>
 
 
 
@@ -22,16 +19,16 @@
     <div class="top" style="cursor: pointer">
         <i class="fas fa-arrow-circle-up">TOP</i>
     </div>
-
+    <div class="about_bg parallax">
         <nav class="mainbar">
             <div class="mainbar__logo">
                 <i class="fas fa-utensils"></i>
-                <b><a href="#"><span style = "color:rgb(192, 57, 43);">M</span>ukja-Muk<span style = "color:rgb(192, 57, 43);">j</span>a</a></b>
+                <b><a href="/"><span>M</span>ukja-Muk<span>:j</span>a</a></b>
             </div>
 
             <ul class="mainbar__menu">        
-                <li><a href="">HOME</a></li>
-                <li><a href="">ABOUT US</a></li>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/about-us">ABOUT US</a></li>
                 <li><a href="">CONTACT US</a></li>
             </ul>
 
@@ -44,77 +41,21 @@
             <i class="fas fa-bars"></i>
             </a>
         </nav>
-    
-        <div class="sectionbar">
-            <ul class="sectionbar__menu">
-                <li><a href="" class="sectionbar__gridbtn">GRID</a></li>
-                <li><a href="/map.html/" class="sectionbar__mapbtn">MAP</a></li>
-                <li><a href="#" class="sectionbar__sortbtn">SORT</a></li>
-            </ul>
-        </div>
 
-        <div class="sortbtn__menu">
 
-            <div class="sortbtn__tag">
-                <div class="filters">
-                  <div class="ui-group">
-                    <h3>음식카테고리</h3>
-                    <div class="button-group js-radio-button-group" data-filter-group="category">
-                      <button class="button is-checked" data-filter="">전체</button>
-                      <button class="button" data-filter=".yellow">한식</button>
-                      <button class="button" data-filter=".red">일식</button>
-                      <button class="button" data-filter=".blue">양식</button>
-                      <button class="button" data-filter=".yellow">중식</button>
-                      <button class="button" data-filter=".yellow">아시안</button>
-                    </div>
-                  </div>
-                
-                  <div class="ui-group">
-                    <h3>거리별</h3>
-                    <div class="button-group js-radio-button-group" data-filter-group="size">
-                      <button class="button is-checked" data-filter="">0-100m</button>
-                      <button class="button" data-filter=".small">100-200m</button>
-                      <button class="button" data-filter=".wide">200-300m</button>
-                      <button class="button" data-filter=".big">300-400m</button>
-                      <button class="button" data-filter=".tall">400-500m</button>
-                    </div>
-                  </div>
-                
-                <div class="ui-group">
-                    <h3>평점별</h3>
-                    <div class="button-group js-radio-button-group" data-filter-group="shape">
-                      <button class="button is-checked" data-filter="">⭐</button>
-                      <button class="button" data-filter=".round">⭐⭐</button>
-                      <button class="button" data-filter=".square">⭐⭐⭐</button>
-                      <button class="button" data-filter=".square">⭐⭐⭐⭐</button>
-                      <button class="button" data-filter=".square">⭐⭐⭐⭐⭐</button>
-                    </div>
-                </div>
-                    <div class="filters">
-                    <div class="ui-group">
-                      <div class="tag_filter"  data-filter-group="tag">
-                        <button class="button" type="button is-checked" data-filter="">select all</button>
-                        <button class="button" type="button" data-filter=".1">1</button>
-                        <button class="button" type="button" data-filter=".2">2</button>
-                        <button class="button" type="button" data-filter=".3">3</button>
-                        <button class="button" type="button" data-filter=".4">4</button>
-                        <button class="button" type="button" data-filter=".5">5</button>
-                      </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
 
-        </div>
-
-        <div class="about_bg parallax">
+        
             <div class="ABOUT">
-                <h1>Team Muk<span style = "colorrgb(223, 7, 41);">:j</span>a</a></h1>
-                <p>안녕하세요.저희는 팀 "Muk:ja"입니다.</p>
-                <p>저희는 이번 프로젝트에서 신길역 주변의 맛집을 조사하여</p> 
-                <p>맛집검색 서비스를 런칭하게 되었습니다.</p>
-                <p>현재는 신길역 주변 한정으로만 데이터를 제공하고 있지만 앞으로는</p>
-                <p>서울, 서울근교의 맛집 정보 제공도 예정하고 있습니다!</p>
+                <h1><i>"Team Muk<span style = "color:rgb(223, 7, 41);">:j</span>a"</i></h1>
+                <div class="about">
+                  <p>안녕하세요.저희는 팀 "Muk:ja"입니다.</p>
+                  <p>저희는 이번 프로젝트에서</p>
+                  <p>학원 주변의 맛집을 소개하는</p> 
+                  <p>「맛집검색 서비스」를 런칭하게 되었습니다.</p>
+                  <p>런칭한지 얼마 되지 않아</p> <p>현재까지는 학원 주변 한정으로</p> 
+                  <P>정보를 제공하고 있지만</p>
+                  <p>앞으로 더 많은 맛집 정보 제공도 예정하고 있습니다!</p>
+                </div>
             </div>
           </div>
             <div>
@@ -122,11 +63,11 @@
                 <div class="row">
                   <div class="team_column">
                     <div class="card">
-                      <img src="" alt="택영" style="width:100%">
+                      <img src="/static/img/about_us/TY.jpg" alt="택영" style="width:100%">
                       <div class="container">
                         <h2>Lee T.Y</h2>
                         <p class="title">Team Leader</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p><b>안녕하세요.강아지 분양 받으실 분?</b></p>
                         <p>TY@example.com</p>
                         <p><button class="about_button">Contact</button></p>
                       </div>
@@ -135,11 +76,11 @@
                 
                   <div class="team_column">
                     <div class="card">
-                      <img src="" alt="홍주" style="width:100%">
+                      <img src="/static/img/about_us/HJ.jpg" alt="홍주" style="width:100%">
                       <div class="container">
                         <h2>Moon H.J</h2>
                         <p class="title">Teamate</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>서울 곳곳의 맛집 정보를 알고 싶다면 연락주세요!</p>
                         <p>mhj401@gmail.com</p>
                         <p><button class="about_button">Contact</button></p>
                       </div>
@@ -148,11 +89,11 @@
                   
                   <div class="team_column">
                     <div class="card">
-                      <img src="" alt="근호" style="width:100%">
+                      <img src="/static/img/about_us/GH.jpg" alt="근호" style="width:100%">
                       <div class="container">
                         <h2>Kim G.H</h2>
                         <p class="title">Teamate</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>그노그노의 알코올 투어! 지금 신청하세요!</p>
                         <p>GH@example.com</p>
                         <p><button class="about_button">Contact</button></p>
                       </div>
@@ -161,11 +102,11 @@
   
                   <div class="team_column">
                     <div class="card">
-                      <img src="" alt="세연" style="width:100%">
+                      <img src="/static/img/about_us/SY.jpg" alt="세연" style="width:100%">
                       <div class="container">
                         <h2>Kim S.Y</h2>
                         <p class="title">Teamate</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>어이 세연이~ 팬케이크 어서 오고~</p>
                         <p>SY@example.com</p>
                         <p><button class="about_button">Contact</button></p>
                       </div>
@@ -175,7 +116,8 @@
             </div>
   
             <div id = "footer">
-                <h2>Project mjmj<br>ltyiz x mhj x gust x pavv</h2>
+                <h2>Project mjmj</h2>
+                <p>ltyiz x mhj x gust x pavv</p>
             </div>
     
        

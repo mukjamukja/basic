@@ -42,8 +42,21 @@ $( document ).ready( function() {
 
 
 // from here for isotope
+// for filtering
 var $grid_view = $(".grid_view").isotope({
-  itemSelector: '.grid_view-item'
+  itemSelector: '.grid_view-item',
+  layoutMode: 'fitRows',
+  getSortData: {
+    store_name: '.store_name',
+    distance: '.distance parseInt',
+    // sortAscending: false,
+    score: '.score parseInt',
+  },
+  sortAscending: {
+    store_name: true,
+    distance: true,
+    score: false
+  }
 });
 var filters = {};
 var filterValue = "";
@@ -53,10 +66,6 @@ $('.filters').on('click', '.button', function( event ){
 
   var $tagFilter = $button.parents('.tag_filter');
   var filterGroup = $tagFilter.attr('data-filter-group');
-  if ( $button.attr( 'id' ) == 'tag_reset') {
-    filterValue = "";
-    filterGroup.find('.is-checked').removeClass('is-checked');
-  };
   filters[ filterGroup ] = $button.attr('data-filter');
   // change concatValues function to add and sub value
   filterValue = concatValues( filters );
@@ -71,6 +80,12 @@ $('.tag_filter').each( function( i, filterGroup ) {
     var $button = $( event.currentTarget );
     if ( $button.attr( 'class' ).indexOf('is-checked') < 0) {
       $button.addClass('is-checked');
+      if ( $button.attr( 'id' ) == 'tag_reset') {
+        filterValue = "";
+        $filterGroup.find('.is-checked').removeClass('is-checked');
+        $button.addClass('is-checked');
+        $grid_view.isotope({ filter:filterValue });
+      }
     } else {
       $button.removeClass('is-checked');
     };
@@ -97,3 +112,24 @@ function concatValues( obj ) {
   valueString = valueList.join(',');
   return valueString;
 };
+
+// external js: isotope.pkgd.js
+
+
+// for sorting
+// init Isotope
+
+// bind sort button click
+$('.sort-by-button-group').on( 'click', 'button', function() {
+  var sortValue = $(this).attr('data-sort-value');
+  $grid_view.isotope({ sortBy: sortValue });
+});
+
+// change is-checked class on buttons
+$('.button-group').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'button', function() {
+    $buttonGroup.find('.is-checked').removeClass('is-checked');
+    $( this ).addClass('is-checked');
+  });
+});
