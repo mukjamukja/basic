@@ -75,14 +75,14 @@ def map():
 
 @app.route("/about-us/")
 def about_us():
-    return render_template("About_us.html")
+    return render_template("about_us.html")
 
 @app.route("/admin/")
 def admin():
     return render_template("admin.html")
 
 
-allowed = [jpg, peg, fif, gif, png, ppm, pgm, pbm, pnm, svg, bmp, JPG, PEG, FIF, GIF, PNG, PPM, PGM, PBM, PNM, SVG, BMP]  
+allowed = ['jpg', 'peg', 'fif', 'gif', 'png', 'ppm', 'pgm', 'pbm', 'pnm', 'svg', 'bmp', 'JPG', 'PEG', 'FIF', 'GIF', 'PNG', 'PPM', 'PGM', 'PBM', 'PNM', 'SVG', 'BMP']  
 @app.route("/admin/add_store" , methods=('POST',))
 def add_store():
     name = request.form['store_name']
@@ -121,7 +121,6 @@ def add_store():
         conn.commit()
 
         return show_output
-
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')

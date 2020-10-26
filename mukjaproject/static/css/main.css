@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    padding: 0;
     height: 100%;
     font-family: sans-serif;
     
@@ -89,7 +90,7 @@ span{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(223, 7, 41);
+    background-color: rgb(255,121,42);
     padding: 8px 12px;
     z-index: 99;
    
@@ -117,8 +118,8 @@ span{
 }
 
 .sectionbar__menu li a:hover{
-    color: rgb(223, 7, 41);
-    background-color:whitesmoke;
+    color: white;
+    background-color:rgb(223, 7, 41);
     border-radius: 8px;
 }
 /* sortbtn */
@@ -136,7 +137,7 @@ span{
 
 .sortbtn__menu.active{
     color: whitesmoke;
-    background: rgb(223, 7, 41);
+    background: rgb(255,121,42);
     margin : 0 auto;
     padding: 8px 16px;
     display: flex;
@@ -149,15 +150,13 @@ span{
 
 .grid_view{
     display: grid;
-    padding: 1.25% 2.5% ;
-    margin: 0 6%;
     place-items: center;
     align-content: space-around;
 }
 
 
 .grid_view-item{
-    min-width: 15%;
+    width: 20%;
     border-style: solid;
     border-radius: 10px;
     border-color: rgb(243, 150, 1, 0.87);
@@ -173,16 +172,18 @@ span{
 
 .store_img{
     position: relative;
-    overflow: hidden;
     margin: 0 auto;
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 225px;
 }
 
 
 .store_img img{
-    max-width: 95%;
+    width: 95%;
+    height: 95%;
+    overflow: hidden;
     position: absolute;
+    object-fit: cover;
     top: -9999px;
     bottom: -9999px;
     left: -9999px;
@@ -246,7 +247,7 @@ span{
 }
 
 .top {
-    font-size: 40px;
+    font-size: 30px;
     color: rgb(243, 150, 1);
     position: fixed; 
     right: 2%; 
@@ -257,11 +258,15 @@ span{
 
 
 #footer{
+    position: static;
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
     bottom: 0px;
     width: 100%;
     height: auto;
-    background: #333;
+    background: rgb(41,41,41);
     color: whitesmoke
 
 }
@@ -296,33 +301,35 @@ span{
 /* ---- button ---- */
 
 .button {
-  display: inline-block;
+  display: inline-flex;
   padding: 0.5em 1.0em;
-  background: #EEE;
+  background: #ffffff;
   border: none;
   border-radius: 7px;
-  background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );
+  /* background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) ); */
   color: #222;
   font-family: sans-serif;
   font-size: 16px;
   text-shadow: 0 1px white;
+  margin-top: 8px;
+  margin-bottom: 8px;
   cursor: pointer;
 }
 
 .button:hover {
-  background-color: rgba(243, 150, 1, 0.938);
-  text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
-  color: #222;
+  background-color: rgb(238, 161, 37);
+  /* text-shadow: 0 1px hsla(0, 0%, 100%, 0.5); */
+  color: white;
 }
 
 .button:active,
 .button.is-checked {
-  background-color:rgb(243, 150, 1);
+  background-color:rgb(238, 161, 37);
 }
 
 .button.is-checked {
   color: white;
-  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+  /* text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8); */
 }
 
 .button:active {
@@ -393,9 +400,6 @@ span{
         z-index: 999;
     }
 
-    .grid_view{
-        margin: 0 auto;
-    }
 
     
     .sortbtn__menu.active{
@@ -410,6 +414,15 @@ span{
         padding: 10px;
     }
 
+    .grid_view{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .grid_view-item{
+        min-width: 45%;
+    }
     .sortbtn__menu li {
         list-style-type: none;
         float: left;
@@ -418,8 +431,8 @@ span{
     .store_img{
         position: relative;
         overflow: hidden;
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
     }
     
 
