@@ -86,7 +86,7 @@ html {
       }
       
       .top {
-          font-size: 40px;
+          font-size: 30px;
           color: rgb(245, 164, 34);
           position: fixed; 
           right: 2%; 
@@ -214,8 +214,8 @@ html {
       font-size: 20px;
       color: #F5A422;
       position: fixed; 
-      right: 2%; 
-      bottom: 40px; 
+      right: 3%; 
+      bottom: 30px; 
       display: none; 
       z-index: 999;
   }
