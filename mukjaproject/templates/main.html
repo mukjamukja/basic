@@ -88,8 +88,8 @@
                 <img src= '../static/img/thumb/{{ info[1] }}' alt="{{ info[1] }}">
             </div>
         
-            <div style="display:none;">{{ info[3] }}</div>
-            <div style="display:none;">{{ info[4] }}</div>
+            <div class="score" style="display:none;">{{ info[3] }}</div>
+            <div class="distance" style="display:none;">{{ info[4] }}</div>
             <div class="score">★{{ info[3] }}</div>
             <div class="distance">{{ info[4] }}m</div>
             <div class="tag{% for tag in dict_tag[inform[0]] %} {{ tag }}{% endfor %}" style="display:none;">
