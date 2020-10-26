@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    padding: 0;
     height: 100%;
     font-family: sans-serif;
     
@@ -257,12 +258,15 @@ span{
 
 
 #footer{
-    position: sticky;
+    position: static;
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
     bottom: 0px;
     width: 100%;
     height: auto;
-    background: #333;
+    background: rgb(41,41,41);
     color: whitesmoke
 
 }
