@@ -80,9 +80,7 @@ def about_us():
 def admin():
     return render_template("admin.html")
 
-@app.route("/admin/")
-def admin():
-    return render_template("admin.html")
+
 
 
 if __name__ == "__main__":
