@@ -76,6 +76,10 @@ def map():
 def about_us():
     return render_template("about_us.html")
 
+@app.route("/admin/")
+def admin():
+    return render_template("admin.html")
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
