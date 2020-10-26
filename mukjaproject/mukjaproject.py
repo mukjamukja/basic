@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import mariadb
 import sys
+import os
 
 from python.add_tag import add_tag_link     # add_tag_link(store_id, tag_name)
 from python.get_ import get_conn, get_tag, get_img
@@ -79,6 +80,51 @@ def about_us():
 @app.route("/admin/")
 def admin():
     return render_template("admin.html")
+
+
+from werkzeug.utils import secure_filename
+UPLOAD_FOLDER = '/static/img/thumb'
+ALLOWED_EXTENSIONS = set(['pdf', 'png', 'jpg', 'jpeg'])
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
+
+@app.route("/admin/add_store" , methods=('POST',))
+def add_store():
+    name = request.form['store_name']
+    rate = request.form['store_rate']
+    address = request.form['address']
+    lat = request.form['lat']
+    lon = request.form['lon']
+    inform = request.form['inform']
+    writer = request.form['writer']
+    file = request.files['thumbnail']
+    filename = secure_filename(file.filename)
+    file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+    distance = request.form['distance']
+    pwd = request.form['pwd']
+
+    conn = get_conn()
+    cur = conn.cursor()
+
+    if pwd != "0000":
+        return "password wrong!"
+    elif pwd == "0000":
+        cur.execute("insert into store\
+            (name, rate, address,\
+            lat, lon, inform,\
+            writer, thumbnail, distance) values(?,?,?,?,?,?,?,?,?)",\
+            (name, rate, address, lat, lon, inform,\
+            writer, file.filename, distance))
+
+        cur.execute("select * from store where store_id=(select max(store_id) from store)")
+        show_output = ""
+        for out in cur.fetchall():
+            show_output += str(out)
+        conn.commit()
+
+        return show_output
 
 
 if __name__ == "__main__":
