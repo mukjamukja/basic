@@ -11,7 +11,7 @@
         hello!
     </div>
    
-    <form action="/admin/add_store" method="post">
+    <form action="/admin/add_store" method="post" enctype="multipart/form-data">
         <fieldset>
             <legend>음식점 정보 입력</legend>
             <p>
@@ -47,7 +47,7 @@
                 <label for="thumbnail">thumbnail</label>
             </p>
             <p>
-                <input type="range" name="distance" id="distance">
+                <input type="range" name="distance" id="distance" min="20" max="1000" step="10">
                 <label for="distance">distance</label>
             </p>
             <p>
