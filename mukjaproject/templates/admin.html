@@ -11,7 +11,7 @@
         hello!
     </div>
    
-    <form action="/admin/add_store" method="post">
+    <form action="/admin/add_store" method="post" enctype="multipart/form-data">
         <fieldset>
             <legend>음식점 정보 입력</legend>
             <p>
@@ -20,7 +20,7 @@
             </p>
             <p>
                 <input type="range" name="store_rate" id="store_rate" min="0" max="10" step="1">
-                <label for="store_rate">store_rate</label>
+                <label for="store_rate">store_rate (0 ~ 10)</label>
             </p>
             <p>
                 <input type="text" name="address" id="address">
@@ -47,8 +47,8 @@
                 <label for="thumbnail">thumbnail</label>
             </p>
             <p>
-                <input type="range" name="distance" id="distance">
-                <label for="distance">distance</label>
+                <input type="number" name="distance" id="distance" min="20" max="1200" step="10">
+                <label for="distance">distance (m)</label>
             </p>
             <p>
                 <input type="password" name="pwd" id="pwd">

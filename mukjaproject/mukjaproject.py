@@ -82,14 +82,7 @@ def admin():
     return render_template("admin.html")
 
 
-from werkzeug.utils import secure_filename
-UPLOAD_FOLDER = '/static/img/thumb'
-ALLOWED_EXTENSIONS = set(['pdf', 'png', 'jpg', 'jpeg'])
-
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
-
+allowed = ['jpg', 'peg', 'fif', 'gif', 'png', 'ppm', 'pgm', 'pbm', 'pnm', 'svg', 'bmp', 'JPG', 'PEG', 'FIF', 'GIF', 'PNG', 'PPM', 'PGM', 'PBM', 'PNM', 'SVG', 'BMP']  
 @app.route("/admin/add_store" , methods=('POST',))
 def add_store():
     name = request.form['store_name']
@@ -100,8 +93,10 @@ def add_store():
     inform = request.form['inform']
     writer = request.form['writer']
     file = request.files['thumbnail']
-    filename = secure_filename(file.filename)
-    file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+    filename = file.filename
+    if filename[-3:] not in allowed:
+        return "지원하지 않은 이미지 형식입니다."
+    file.save(os.path.join('static/img/thumb', filename))
     distance = request.form['distance']
     pwd = request.form['pwd']
 
@@ -122,10 +117,10 @@ def add_store():
         show_output = ""
         for out in cur.fetchall():
             show_output += str(out)
+        show_output += "<a href='/'>home</a>"
         conn.commit()
 
         return show_output
-
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
