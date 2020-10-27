@@ -93,7 +93,7 @@ def add_store():
     inform = request.form['inform']
     writer = request.form['writer']
     file = request.files['thumbnail']
-    filename = secure_filename(file.filename)
+    filename = file.filename
     if filename[-3:] not in allowed:
         return "지원하지 않은 이미지 형식입니다."
     file.save(os.path.join('static/img/thumb', filename))
