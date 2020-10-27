@@ -778,3 +778,39 @@ var infowindow21 = new naver.maps.InfoWindow({
             infowindow21.open(map, meal21);
         }
     }); //이벤트 발생 if문
+
+//                                  //
+
+var meal22 = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.4922,126.92347),
+    map: map
+});  //맵핀
+
+var contentString22 = [
+    '<div class="iw_inner">',
+        '   <h3>하노이의 아침</h3>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
+        '       <div>주소 : 서울특별시 동작구 신대방동 395-65</div>',
+        '       <div>평점 : 6</div>',
+        '       <div>정보 : 쌀국수 종류가 많다. 가성비 대비는 좀 안좋은편. </div>',
+        '</div>'
+    ].join('');  //핀 이벤트의 html
+
+var infowindow22 = new naver.maps.InfoWindow({
+        content: contentString22,
+        maxWidth: 140,
+        backgroundColor: "white",
+        borderColor: "green",
+        borderWidth: 5,
+        anchorSize: new naver.maps.Size(10, 10),
+        anchorSkew: true,
+        anchorColor: "white",
+        pixelOffset: new naver.maps.Point(30, -20)
+    }); //핀 이벤트의 css
+    naver.maps.Event.addListener(meal22, "click", function(e) {
+        if (infowindow22.getMap()) {
+            infowindow22.close();
+        } else {
+            infowindow22.open(map, meal22);
+        }
+    }); //이벤트 발생 if문
