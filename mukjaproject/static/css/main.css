@@ -581,7 +581,7 @@ span{
     }
 }
 
-@media screen and (max-width: 310px) {
+@media screen and (max-width: 3px) {
     .grid_view-item{
         width: 95%;
         height: 300px;
