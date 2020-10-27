@@ -179,8 +179,8 @@ span{
 
 
 .store_img img{
-    width: 95%;
-    height: 95%;
+    width: 80%;
+    height: 80%;
     overflow: hidden;
     position: absolute;
     object-fit: cover;
