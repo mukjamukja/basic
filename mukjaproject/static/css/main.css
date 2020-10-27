@@ -16,6 +16,11 @@ span{
     color:rgb(223, 7, 41);
 }
 
+.Title{
+    font-family: 'Niramit', sans-serif;
+    font-size: 40px;
+}
+
 .mainbar{
     position: relative;
     top: 0;
@@ -147,11 +152,15 @@ span{
 
 
 /* grid */
-
+.store_name{
+    /* font-family: 'Noto Sans KR'; */
+}
 
 .grid_view{
     width: 100%;
     display: grid;
+    /* font-family: 'Noto Sans KR'; */
+    
 }
 
 
@@ -205,6 +214,7 @@ span{
     float: right;
     color: grey;
     font-size: smaller;
+    margin-top: 0;
 }
 
 
