@@ -30,7 +30,7 @@ var contentString = [
         '      <img src="../img/thumb/tn_1.png'+ HOME_PATH +' width="10%" height="15" alt="사진">',
         '       <div>주소 : 신림동 1599-4</div>',
         '       <div>평점 : 8</div>',
-        '       <div>정보 : 한식</div>',
+        '       <div>정보 : 돼지 갈비 무한리필점이다.  가격 대비 가성비가 좋다.</div>',
         '</div>'
     ].join('');
 
@@ -67,7 +67,7 @@ var contentString2 = [
         '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_2.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 신림동 1433-60</div>',
         '       <div>평점 : 8</div>',
-        '       <div>정보 : 한식</div>',
+        '       <div>정보 : 면을 시키면 고기가 서비스로 나오지만 고기 퀄리티가 좀 떨어진다.</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
 
@@ -103,7 +103,7 @@ var contentString3 = [
         '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_3.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 서원동 34 3층</div>',
         '       <div>평점 : 8</div>',
-        '       <div>정보 : 양식</div>',
+        '       <div>정보 : 신림역 3번출구에 위치하며 크림파스타가 주메뉴다. </div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
 
@@ -139,7 +139,7 @@ var contentString4 = [
         '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_4.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 신림동 1640-1</div>',
         '       <div>평점 : 6</div>',
-        '       <div>정보 : 중식</div>',
+        '       <div>정보 : 짜장면에 고기,야채 등이 잘게 다져서 보통 짜장면보다 더 맛있다.</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
 
@@ -175,7 +175,7 @@ var contentString5 = [
         '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_5.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 신림동 1640-2</div>',
         '       <div>평점 : 6</div>',
-        '       <div>정보 : 일식</div>',
+        '       <div>정보 : 각종 샐러드, 냉모밀, 스시, 튀김 ,치킨 등등 뷔페 느낌이다.</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
 
@@ -211,7 +211,7 @@ var contentString6 = [
         '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_6.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 신림동 신림로66길20</div>',
         '       <div>평점 : 8</div>',
-        '       <div>정보 : 한식</div>',
+        '       <div>정보 : 냉동 삼겹살집이다. 고기에 육즙이 많다.</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
 
@@ -247,7 +247,7 @@ var contentString7 = [
             '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_7.png" width="15" height="15" alt="사진"></a>',
             '       <div>주소 : 서원동 관천로36-1</div>',
             '       <div>평점 : 7</div>',
-            '       <div>정보 : 한식</div>',
+            '       <div>정보 : 신림역 4번출구에 위치하며 제육볶음이 푸짐하다.</div>',
             '</div>'
         ].join('');  //핀 이벤트의 html
     
@@ -283,7 +283,7 @@ var contentString8 = [
         '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_8.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 신림동 1638-20</div>',
         '       <div>평점 : 7</div>',
-        '       <div>정보 : 분식</div>',
+        '       <div>정보 : 매운라면으로 유명하다. 매운맛 조절이 가능하다.</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
 
@@ -319,7 +319,7 @@ var contentString9 = [
         '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_9.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 서원동 신원로 35</div>',
         '       <div>평점 : 8</div>',
-        '       <div>정보 : 한식</div>',
+        '       <div>정보 : 메뉴가 굉장히 많다. 다양한 패키지로 준비되서 기호에 맞게 골라 먹으면 된다.</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
 
@@ -355,7 +355,7 @@ var contentString10 = [
         '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_10.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 서원동 신림로307</div>',
         '       <div>평점 : 7</div>',
-        '       <div>정보 : 한식</div>',
+        '       <div>정보 : 보쌈은 항상 비싸다는 편견을 깨주는 음식점이다.</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
 
@@ -391,7 +391,7 @@ var contentString11 = [
         '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_11.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 서원동 신림로310</div>',
         '       <div>평점 : 7</div>',
-        '       <div>정보 : 분식</div>',
+        '       <div>정보 : 떡볶이 무한 리필점이다. 각종 토핑과 튀김류들이 뷔페형식으로 진열 돼있다.</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
 
@@ -427,7 +427,7 @@ var contentString12 = [
         '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_12.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 신림동 신림로350</div>',
         '       <div>평점 : 6</div>',
-        '       <div>정보 : 양식</div>',
+        '       <div>정보 : 목살 스테이크로 유명한 맛집이다.</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
 
@@ -463,7 +463,7 @@ var contentString13 = [
         '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_13.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 남부순환로 1597-14</div>',
         '       <div>평점 : 8</div>',
-        '       <div>정보 : 한식</div>',
+        '       <div>정보 : 숯불 닭갈비집이다. 2인부이상 주문시 치즈를 서비스로 준다.</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
 
@@ -499,7 +499,7 @@ var contentString14 = [
         '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 신대방동 395-69번지 2층 211호</div>',
         '       <div>평점 : 8</div>',
-        '       <div>정보 : 중식</div>',
+        '       <div>정보 : 취향대로 바구니에 담아서 먹으면된다. 매운맛 조절이 가능하다.</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
 
@@ -522,3 +522,259 @@ var infowindow14 = new naver.maps.InfoWindow({
         }
     }); //이벤트 발생 if문
 
+
+//                                  //
+
+var meal15 = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.489686,126.927956),
+    map: map
+});  //맵핀
+
+var contentString15 = [
+    '<div class="iw_inner">',
+        '   <h3>예가 돈가스</h3>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
+        '       <div>주소 : 서울특별시 관악구 보라매동 971-1</div>',
+        '       <div>평점 : 5</div>',
+        '       <div>정보 : 돈가스 맛집 예가돈까스. 바삭하고 맛있는 돈가스를 판매하고 있다. 기름지지 않고 맛있어 인기가 많다.</div>',
+        '</div>'
+    ].join('');  //핀 이벤트의 html
+
+var infowindow15 = new naver.maps.InfoWindow({
+        content: contentString15,
+        maxWidth: 140,
+        backgroundColor: "white",
+        borderColor: "green",
+        borderWidth: 5,
+        anchorSize: new naver.maps.Size(10, 10),
+        anchorSkew: true,
+        anchorColor: "white",
+        pixelOffset: new naver.maps.Point(30, -20)
+    }); //핀 이벤트의 css
+    naver.maps.Event.addListener(meal15, "click", function(e) {
+        if (infowindow15.getMap()) {
+            infowindow15.close();
+        } else {
+            infowindow15.open(map, meal15);
+        }
+    }); //이벤트 발생 if문
+
+//                                  //
+
+var meal16 = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.490483,126.924865),
+    map: map
+});  //맵핀
+
+var contentString16 = [
+    '<div class="iw_inner">',
+        '   <h3>부엉이 돈가스</h3>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
+        '       <div>주소 : 서울특별시 관악구 봉천동 봉천로 209 롯데백화점 7층</div>',
+        '       <div>평점 : 6</div>',
+        '       <div>정보 : 비교적 비싼음식점들이 모여있는 롯데백와점 7층에 위치해 있다. 돈가스의 맛은 있으나 가격에 비해 양이 적은것이 단점이다. 소스가 특히 맛있다.</div>',
+        '</div>'
+    ].join('');  //핀 이벤트의 html
+
+var infowindow16 = new naver.maps.InfoWindow({
+        content: contentString16,
+        maxWidth: 140,
+        backgroundColor: "white",
+        borderColor: "green",
+        borderWidth: 5,
+        anchorSize: new naver.maps.Size(10, 10),
+        anchorSkew: true,
+        anchorColor: "white",
+        pixelOffset: new naver.maps.Point(30, -20)
+    }); //핀 이벤트의 css
+    naver.maps.Event.addListener(meal16, "click", function(e) {
+        if (infowindow16.getMap()) {
+            infowindow16.close();
+        } else {
+            infowindow16.open(map, meal16);
+        }
+    }); //이벤트 발생 if문
+
+
+//                                  //
+
+var meal17 = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.49034,126.92907),
+    map: map
+});  //맵핀
+
+var contentString17 = [
+    '<div class="iw_inner">',
+        '   <h3>강서중화요리</h3>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
+        '       <div>주소 : 서울특별시 관악구 보라매동 당곡길 22</div>',
+        '       <div>평점 : 8</div>',
+        '       <div>정보 : 동네 중국집느낌이며 , 짬뽕이 깔끔하고 시원한 맛이다. </div>',
+        '</div>'
+    ].join('');  //핀 이벤트의 html
+
+var infowindow17 = new naver.maps.InfoWindow({
+        content: contentString17,
+        maxWidth: 140,
+        backgroundColor: "white",
+        borderColor: "green",
+        borderWidth: 5,
+        anchorSize: new naver.maps.Size(10, 10),
+        anchorSkew: true,
+        anchorColor: "white",
+        pixelOffset: new naver.maps.Point(30, -20)
+    }); //핀 이벤트의 css
+    naver.maps.Event.addListener(meal17, "click", function(e) {
+        if (infowindow17.getMap()) {
+            infowindow17.close();
+        } else {
+            infowindow17.open(map, meal17);
+        }
+    }); //이벤트 발생 if문
+
+//                                  //
+
+var meal18 = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.490585,126.925013),
+    map: map
+});  //맵핀
+
+var contentString18 = [
+    '<div class="iw_inner">',
+        '   <h3>삿뽀로</h3>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
+        '       <div>주소 : 서울특별시 관악구 봉천동 봉천로 209</div>',
+        '       <div>평점 : 7</div>',
+        '       <div>정보 : 정통 일식을 저가로 즐길수있다. </div>',
+        '</div>'
+    ].join('');  //핀 이벤트의 html
+
+var infowindow18 = new naver.maps.InfoWindow({
+        content: contentString18,
+        maxWidth: 140,
+        backgroundColor: "white",
+        borderColor: "green",
+        borderWidth: 5,
+        anchorSize: new naver.maps.Size(10, 10),
+        anchorSkew: true,
+        anchorColor: "white",
+        pixelOffset: new naver.maps.Point(30, -20)
+    }); //핀 이벤트의 css
+    naver.maps.Event.addListener(meal18, "click", function(e) {
+        if (infowindow18.getMap()) {
+            infowindow18.close();
+        } else {
+            infowindow18.open(map, meal18);
+        }
+    }); //이벤트 발생 if문
+
+
+//                                  //
+
+var meal19 = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.48895,126.92677),
+    map: map
+});  //맵핀
+
+var contentString19 = [
+    '<div class="iw_inner">',
+        '   <h3>삼촌집</h3>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
+        '       <div>주소 : 서울특별시 관악구 신림동 봉천로8길 12</div>',
+        '       <div>평점 : 8</div>',
+        '       <div>정보 : 초밥 연어튀김 새우튀김이 주메뉴이다. 가성비가 정말 좋다. </div>',
+        '</div>'
+    ].join('');  //핀 이벤트의 html
+
+var infowindow19 = new naver.maps.InfoWindow({
+        content: contentString19,
+        maxWidth: 140,
+        backgroundColor: "white",
+        borderColor: "green",
+        borderWidth: 5,
+        anchorSize: new naver.maps.Size(10, 10),
+        anchorSkew: true,
+        anchorColor: "white",
+        pixelOffset: new naver.maps.Point(30, -20)
+    }); //핀 이벤트의 css
+    naver.maps.Event.addListener(meal19, "click", function(e) {
+        if (infowindow19.getMap()) {
+            infowindow19.close();
+        } else {
+            infowindow19.open(map, meal19);
+        }
+    }); //이벤트 발생 if문
+
+
+//                                  //
+
+var meal20 = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.48895,126.92677),
+    map: map
+});  //맵핀
+
+var contentString20 = [
+    '<div class="iw_inner">',
+        '   <h3>아이포</h3>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
+        '       <div>주소 : 서울특별시 관악구 봉천동 보라매로3길 29</div>',
+        '       <div>평점 : 8</div>',
+        '       <div>정보 : 주메뉴는 쌀국수이고 월남쌈 주문시 쌀국수가 서비스다. </div>',
+        '</div>'
+    ].join('');  //핀 이벤트의 html
+
+var infowindow20 = new naver.maps.InfoWindow({
+        content: contentString20,
+        maxWidth: 140,
+        backgroundColor: "white",
+        borderColor: "green",
+        borderWidth: 5,
+        anchorSize: new naver.maps.Size(10, 10),
+        anchorSkew: true,
+        anchorColor: "white",
+        pixelOffset: new naver.maps.Point(30, -20)
+    }); //핀 이벤트의 css
+    naver.maps.Event.addListener(meal20, "click", function(e) {
+        if (infowindow20.getMap()) {
+            infowindow20.close();
+        } else {
+            infowindow20.open(map, meal20);
+        }
+    }); //이벤트 발생 if문
+
+
+//                                  //
+
+var meal21 = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.49125,126.92736),
+    map: map
+});  //맵핀
+
+var contentString21 = [
+    '<div class="iw_inner">',
+        '   <h3>전티마이 베트남쌀국수</h3>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
+        '       <div>주소 : 봉천동 702-36번지 하동 1층 관악구 서울특별시 KR</div>',
+        '       <div>평점 : 8</div>',
+        '       <div>정보 : 국물이 진하고 가성비가 좋다. </div>',
+        '</div>'
+    ].join('');  //핀 이벤트의 html
+
+var infowindow21 = new naver.maps.InfoWindow({
+        content: contentString21,
+        maxWidth: 140,
+        backgroundColor: "white",
+        borderColor: "green",
+        borderWidth: 5,
+        anchorSize: new naver.maps.Size(10, 10),
+        anchorSkew: true,
+        anchorColor: "white",
+        pixelOffset: new naver.maps.Point(30, -20)
+    }); //핀 이벤트의 css
+    naver.maps.Event.addListener(meal21, "click", function(e) {
+        if (infowindow21.getMap()) {
+            infowindow21.close();
+        } else {
+            infowindow21.open(map, meal21);
+        }
+    }); //이벤트 발생 if문
