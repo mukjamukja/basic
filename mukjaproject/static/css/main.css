@@ -148,25 +148,21 @@ span{
 
 /* grid */
 
-.main_container{
-    display: flex;
-}
-
 
 .grid_view{
     width: 100%;
     display: grid;
-    margin: 0;
 }
 
 
 .grid_view-item{
-    width: 20%;
+    width: 17%;
+    height: 320px;
     border-style: solid;
     border-radius: 10px;
     border-color: rgb(243, 150, 1, 0.87);
     margin: 1.25%;
-    padding: 3px;
+    padding: 3.5px;
     border-width: 1px;
 }
 
@@ -180,14 +176,14 @@ span{
     position: relative;
     overflow: hidden;
     margin: 0 auto;
-    width: 100%;
-    height: 225px;
+    width: 90%;
+    height: 80%;
 }
 
 
 .store_img img{
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     position: absolute;
     object-fit: cover;
@@ -393,7 +389,53 @@ span{
 
 /* ----------------------mediaquery--------------------- */
 
-@media screen and (max-width: 760px) {
+
+@media screen and (max-width: 1795px) {
+    .grid_view-item{
+        width: 21.95%;
+        height: 409px;
+    }
+}
+
+@media screen and (max-width: 1633px) {
+    .grid_view-item{
+        width: 21.8%;
+        height: 363px;
+    }
+}
+
+@media screen and (max-width: 1283px) {
+    .grid_view-item{
+        width: 21.65%;
+        height: 318px;
+    }   
+}
+
+@media screen and (max-width: 1055px) {
+    .grid_view-item{
+        width: 21.5%;
+        height: 304px;
+    }
+}
+
+@media screen and (max-width: 897px) {
+    .grid_view-item{
+        width: 29.65%;
+        height: 310px;
+    }
+}
+
+@media screen and (max-width: 759px) {
+    .grid_view-item{
+        width: 29.50%;
+        height: 300px;
+    }
+}   
+
+
+
+
+@media screen and (max-width: 675px) {
     
     .top {
         font-size: 20px;
@@ -415,27 +457,158 @@ span{
         padding: 0;
     }
     
-   
-    .grid_view{
-        width: 100%;
-        margin: 0;
-        padding: auto;
+    .grid_view-item{
+        width: 50%;
+        height: 250px;
     }
 
-    .grid_view-item{
-        min-width: 45%;
-    }
     .sortbtn__menu li {
         list-style-type: none;
         float: left;
         padding: 5px;
     }
-    .store_img{
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        height: 200px;
+
+    .grid_view-item{
+        width: 46%;
+        height: 319px;
     }
-    
 
 }
+
+@media screen and (max-width: 598px) {
+    .grid_view-item{
+        width: 45.9%;
+        height: 328px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .grid_view-item{
+        width: 45.8%;
+        height: 328px;
+    }
+}
+
+@media screen and (max-width: 528px) {
+    .grid_view-item{
+        width: 45.7%;
+        height: 298px;
+    }
+}
+
+@media screen and (max-width: 498px) {
+    .grid_view-item{
+        width: 45.6%;
+        height: 298px;
+    }
+}
+
+@media screen and (max-width: 474px) {
+    .grid_view-item{
+        width: 45.5%;
+        height: 298px;
+    }
+}   
+
+@media screen and (max-width: 449px) {
+    .store_img{
+        height: 75%;
+    }
+    .grid_view-item{
+        width: 45.4%;
+        height: 260px;
+    }
+}
+
+@media screen and (max-width: 427px) {
+    .grid_view-item{
+        width: 45.3%;
+    }
+}
+
+@media screen and (max-width: 408px) {
+    .grid_view-item{
+        width: 45.2%;
+        height: 258px;
+    }
+}
+
+
+@media screen and (max-width: 391px) {
+    .store_img{
+        height: 70%;
+    }
+    .grid_view-item{
+        width: 45.1%;
+        height: 210px;
+    }
+    
+}
+
+
+@media screen and (max-width: 374px) {
+    .grid_view-item{
+        width: 45%;
+    }
+    
+}
+
+@media screen and (max-width: 359px) {
+    .grid_view-item{
+        width: 44.9%;
+    }
+    
+}
+
+
+@media screen and (max-width: 345px) {
+    .grid_view-item{
+        width: 44.8%;
+    }
+    
+}
+
+@media screen and (max-width: 333px) {
+    .grid_view-item{
+        width: 44.7%;
+    }
+    
+}
+
+@media screen and (max-width: 320px) {
+    .grid_view-item{
+        width: 44.6%;
+    }
+}
+
+@media screen and (max-width: 310px) {
+    .grid_view-item{
+        width: 95%;
+        height: 300px;
+    }
+
+    .store_img{
+        height: 80%;
+    }
+
+    .store_img img{
+        height: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

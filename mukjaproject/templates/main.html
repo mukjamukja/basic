@@ -71,39 +71,38 @@
             </div>
         </div>
    
-        <div class="main_container">
-            <div class="grid_view">
-                {% for info in inform %}
-                <!-- 0: store_id, 1: thumbnail, 2: name, 3: rate, 4: distance  -->
-                    
-                <div class = "grid_view-item{% for tag in dict_tag[info[0]] %} {{ tag }}{% endfor %}" onclick="loadDetail('{{ info[0] }}')">
-                        
-                    <div class="store_name" style="text-align: left;" id = "{{ info[2] }}" href="">
-                        {{ info[2] }}
-                    </div>
 
-                    <div class="store_img">
-                        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
-                        <img src= '../static/img/thumb/{{ info[1] }}' alt="{{ info[1] }}">
-                    </div>
+        <div class="grid_view">
+            {% for info in inform %}
+            <!-- 0: store_id, 1: thumbnail, 2: name, 3: rate, 4: distance  -->
                 
-                    <div class="score" style="display:none;">{{ info[3] }}</div>
-
-                    <div class="distance" style="display:none;">{{ info[4] }}</div>
-
-                    <div class="score">★{{ info[3] }}</div>
-
-                    <div class="distance">{{ info[4] }}m</div>
-
-                    <div class="tag{% for tag in dict_tag[inform[0]] %} {{ tag }}{% endfor %}" style="display:none;">
-                        {% for tag in dict_tag[info[0]] %} {{ tag }}{% endfor %}
-                    </div>
-
+            <div class = "grid_view-item{% for tag in dict_tag[info[0]] %} {{ tag }}{% endfor %}" onclick="loadDetail('{{ info[0] }}')">
+                    
+                <div class="store_name" style="text-align: left;" id = "{{ info[2] }}" href="">
+                    {{ info[2] }}
                 </div>
-                <!-- id="{{ info[0] }}" -->
-                {% endfor %}
-        
+
+                <div class="store_img">
+                    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+                    <img src= '../static/img/thumb/{{ info[1] }}' alt="{{ info[1] }}">
+                </div>
+            
+                <div class="score" style="display:none;">{{ info[3] }}</div>
+
+                <div class="distance" style="display:none;">{{ info[4] }}</div>
+
+                <div class="score">★{{ info[3] }}</div>
+
+                <div class="distance">{{ info[4] }}m</div>
+
+                <div class="tag{% for tag in dict_tag[inform[0]] %} {{ tag }}{% endfor %}" style="display:none;">
+                    {% for tag in dict_tag[info[0]] %} {{ tag }}{% endfor %}
+                </div>
+
             </div>
+            <!-- id="{{ info[0] }}" -->
+            {% endfor %}
+    
         </div>
 
     <div id="myModal" class="modal">
