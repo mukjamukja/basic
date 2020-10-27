@@ -231,7 +231,7 @@ span{
   margin-bottom: 200px;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 500px;
 }
 
 /* The Close Button */
@@ -595,8 +595,11 @@ span{
     }
 }
 
-
-
+@media screen and (max-width: 640px){
+    .modal-content{
+        width: 300px;
+    }
+}
 
 
 
