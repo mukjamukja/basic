@@ -8,10 +8,10 @@
 </head>
 <body>
     <div>
-        hello
+        hello!
     </div>
    
-    <form>
+    <form action="/admin/add_store" method="post">
         <fieldset>
             <legend>음식점 정보 입력</legend>
             <p>
@@ -19,7 +19,7 @@
                 <label for="store_name">store_name</label>
             </p>
             <p>
-                <input type="range" name="store_rate" id="store_rate">
+                <input type="range" name="store_rate" id="store_rate" min="0" max="10" step="1">
                 <label for="store_rate">store_rate</label>
             </p>
             <p>
@@ -27,11 +27,11 @@
                 <label for="address">address</label>
             </p>
             <p>
-                <input type="text" name="lat" id="lat" value="16.1212121">
+                <input type="text" name="lat" id="lat" value="37.489915">
                 <label for="lat">latitude</label>
             </p>
             <p>
-                <input type="text" name="lon" id="lon" value="16.1212121">
+                <input type="text" name="lon" id="lon" value="126.927116">
                 <label for="lon">longitude</label>
             </p>
             <p>
@@ -50,9 +50,14 @@
                 <input type="range" name="distance" id="distance">
                 <label for="distance">distance</label>
             </p>
+            <p>
+                <input type="password" name="pwd" id="pwd">
+                <label for="pwd">password</label>
+            </p>
 
-
-
+            <div>
+                <button type="submit">submit</button>
+            </div>
 
 
 
