@@ -6,8 +6,8 @@ html {
           margin: 0;
           padding: 0;
           height: 100%;
-          font-family: Arial, Helvetica, sans-serif;
-          
+          font-family: sans-serif;
+          background-color: rgb(249,244,227);
       }
       
       a{
@@ -29,7 +29,7 @@ html {
           background-color:rgba(245, 164, 34, 0.479);
           flex-direction: column;
           align-items: center;
-          padding: 8px 24px;
+          padding: 15px 24px;
       }
       
       .mainbar__logo{
@@ -38,7 +38,7 @@ html {
       }
       
       .mainbar__logo i {
-          color:whitesmoke;
+          color:rgb(249,244,227);
       }
       
       .mainbar__menu{
@@ -64,7 +64,7 @@ html {
       
       .mainbar__links {
           list-style: none;
-          color: white;
+          color: rgb(249,244,227);;
           padding-left: 0;
           font-size: 20px;
           display: none;
@@ -104,7 +104,7 @@ html {
           width: 100%;
           height: auto;
           background: rgb(41,41,41);
-          color: whitesmoke
+          color: whitesmoke;
       
       }
       
@@ -144,7 +144,7 @@ html {
     padding-right: 10px;
     padding-bottom: 120px;
     text-align: center;
-    color: white;
+    color: rgb(249,244,227);
     text-shadow:3px 3px 3px rgb(0,0,0);
 
   }
@@ -169,7 +169,7 @@ html {
     outline: 0;
     display: inline-block;
     padding: 8px;
-    color: white;
+    color: rgb(249,244,227);
     background-color: #F5A422;
     text-align: center;
     cursor: pointer;
