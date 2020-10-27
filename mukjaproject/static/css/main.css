@@ -263,7 +263,6 @@ span{
     z-index: 999;
 }
 
-
 #footer{
     padding-top: 20px;
     padding-bottom: 20px;
@@ -277,8 +276,8 @@ span{
 }
 
 #map{
-    width: 500px;
-    height: 500px;
+    width: 90%;
+    height: 400px;
     margin: 0 auto;
 }
 
