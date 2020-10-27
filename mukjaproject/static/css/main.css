@@ -151,15 +151,13 @@ span{
 
 .grid_view{
     display: grid;
-    padding: 1.25% 2.5% ;
-    margin: 0 6%;
     place-items: center;
     align-content: space-around;
 }
 
 
 .grid_view-item{
-    min-width: 15%;
+    width: 20%;
     border-style: solid;
     border-radius: 10px;
     border-color: rgb(243, 150, 1, 0.87);
@@ -174,6 +172,7 @@ span{
 
 
 .store_img{
+    overflow: hidden;
     position: relative;
     overflow: hidden;
     margin: 0 auto;
@@ -183,8 +182,8 @@ span{
 
 
 .store_img img{
-    width: 95%;
-    height: 95%;
+    width: 80%;
+    height: 80%;
     overflow: hidden;
     position: absolute;
     object-fit: cover;
@@ -423,7 +422,7 @@ span{
     }
 
     .grid_view-item{
-        width: 45%;
+        min-width: 45%;
     }
     .sortbtn__menu li {
         list-style-type: none;
