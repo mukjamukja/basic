@@ -147,11 +147,15 @@ span{
 
 /* grid */
 
+.main_container{
+    display: flex;
+}
+
 
 .grid_view{
+    width: 100%;
     display: grid;
-    place-items: center;
-    align-content: space-around;
+    margin: 0;
 }
 
 
@@ -180,8 +184,8 @@ span{
 
 
 .store_img img{
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
     overflow: hidden;
     position: absolute;
     object-fit: cover;
@@ -411,14 +415,11 @@ span{
         padding: 0;
     }
     
-    .loc{
-        padding: 10px;
-    }
-
+   
     .grid_view{
         width: 100%;
         margin: 0;
-        padding: 0;
+        padding: auto;
     }
 
     .grid_view-item{
@@ -432,7 +433,7 @@ span{
     .store_img{
         position: relative;
         overflow: hidden;
-        width: 200px;
+        width: 100%;
         height: 200px;
     }
     
