@@ -106,6 +106,10 @@ def add_store():
     if pwd != "0000":
         return "password wrong!"
     elif pwd == "0000":
+        cur.execute("select name from store")
+        for store_name in cur.fetchall():
+            if name in store_name:
+                return "already exist"
         cur.execute("insert into store\
             (name, rate, address,\
             lat, lon, inform,\
@@ -118,9 +122,28 @@ def add_store():
         for out in cur.fetchall():
             show_output += str(out)
         show_output += "<a href='/'>home</a>"
+        show_output += "<a href='/admin/'>back to admin</a>"
         conn.commit()
 
         return show_output
+
+
+@app.route("/admin/add_image", methods=('POST',))
+def add_image():
+    from python.image_commit import execute_image_commit
+    password = request.form['pwd']
+    if password != '0000':
+        return "password is wrong"
+    elif password == '0000':
+        file = request.files['detail_image']
+        filename = file.filename
+        if filename[-3:] not in allowed:
+            return "지원하지 않은 이미지 형식입니다."
+        file.save(os.path.join('static/img/details', filename))
+        execute_image_commit()
+        print('db updated')
+        return 'file added'
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
