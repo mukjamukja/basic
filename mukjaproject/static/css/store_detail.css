@@ -1,3 +1,5 @@
+
+
 .name {
     color: rgb(263, 172, 15);
     font-size: medium;
@@ -6,11 +8,12 @@
 }
 
 .imgs img{
-    width: 300px;
+    width: 280px;
     height: 250px;
 }
 
 *{margin:0;padding:0;}
+
 ul,li{
     list-style:none;
     }
@@ -98,3 +101,4 @@ strong{
 #pos2:checked~.pos>label:nth-child(2){background: rgb(243, 150, 1, 0.87);}
 #pos3:checked~.pos>label:nth-child(3){background: rgb(243, 150, 1, 0.87);}
 #pos4:checked~.pos>label:nth-child(4){background: rgb(243, 150, 1, 0.87);}
+
