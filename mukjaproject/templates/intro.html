@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muk:ja</title>
+    <link rel="stylesheet" href="../static/css/intro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Niramit:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div class="welcome-section content-hidden">
+        <div class="content-wrap">
+            <ul class="fly-in-text">
+            <li>M</li>
+            <li>u</li>
+            <li>k</li>
+            <li><span>:</span></li>
+            <li><span>j</span></li>
+            <li>a</li>
+        </ul>
+        <a href="#" class="enter-button">여기 눌러봐!</a>
+
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+	var welcomSection = $('.welcome-section'),
+  		enterButton = welcomSection.find('.enter-button');
+      
+      setTimeout(function(){
+      	welcomSection.removeClass('content-hidden');
+      },800);
+      
+      enterButton.on('click',function(e){
+      	e.preventDefault();
+        welcomSection.addClass('content-hidden').fadeOut();
+      })
+})
+    </script>
+</body>
+</html>

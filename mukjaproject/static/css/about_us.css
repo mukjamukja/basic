@@ -6,7 +6,7 @@ html {
           margin: 0;
           padding: 0;
           height: 100%;
-          font-family: sans-serif;
+          font-family: 'Niramit','Noto Sans KR',sans-serif;
           background-color: rgb(249,244,227);
       }
       
@@ -81,7 +81,8 @@ html {
           display: block;
           position: absolute;
           right:32px;
-          font-size: 24px;
+          /* top: 20px; */
+          font-size: 30px;
           color: rgb(223, 7, 41);
           
       }
@@ -189,7 +190,20 @@ html {
     color: rgb(0, 0, 0);
   
   }
-  
+
+  input{
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: rgb(249,244,227);
+    background-color: #F5A422;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+
+  }
+
   .about_bg {
     background-size: cover;
     background-position: center;
@@ -232,5 +246,68 @@ html {
       z-index: 999;
   }
       }
+
+    @media screen and (max-width: 675px) {
+  
+      .top {
+          font-size: 20px;
+          color: rgb(243, 150, 1);
+          position: fixed; 
+          right: 2%; 
+          bottom: 40px; 
+          display: none; 
+          z-index: 999;
+      }
+  
+      .Title{
+          font-family: 'Niramit', sans-serif;
+          font-size: 35px;
+      }
+  
+      .mainbar__logo{
+          font-size: 25px;
+          color: rgb(249,244,227);
+      }
+  
+      .mainbar__menubtn{
+          display: block;
+          position: absolute;
+          right:32px;
+          /* top: 21px; */
+          font-size: 25px;
+          color: rgb(223, 7, 41);
+          
+      }
+  }
+
+  @media screen and (max-width: 391px) {
+    .store_img{
+        height: 70%;
+    }
+    .grid_view-item{
+        width: 45.1%;
+        height: 210px;
+    }
+    
+    .Title{
+        font-family: 'Niramit', sans-serif;
+        font-size: 25px;
+    }
+
+    .mainbar__logo{
+        font-size: 20px;
+        color: rgb(249,244,227);
+    }
+
+    .mainbar__menubtn{
+        display: block;
+        position: absolute;
+        right:32px;
+        /* top: 14px; */
+        font-size: 20px;
+        color: rgb(223, 7, 41);
+        
+    }
+}
 
       
