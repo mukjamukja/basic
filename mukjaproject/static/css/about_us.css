@@ -18,6 +18,11 @@ html {
       span{
           color:rgb(223, 7, 41);
       }
+
+      .Title{
+        font-family: 'Niramit';
+        font-size: 30px;
+    }
       
       .mainbar{
           position: relative;
@@ -35,7 +40,7 @@ html {
       
       .mainbar__logo{
           font-size: 30px;
-          color: whitesmoke;
+          color: rgb(249,244,227);
       }
       
       .mainbar__logo i {
@@ -169,7 +174,7 @@ html {
     display: table;
   }
   
-  .title {
+  .pro_title {
     color: grey;
   }
   

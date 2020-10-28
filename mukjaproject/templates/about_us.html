@@ -8,8 +8,8 @@
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Niramit:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    
     <script src="https://kit.fontawesome.com/2e6580eb92.js" crossorigin="anonymous"></script>
-
     <script src="{{ url_for('static', filename='js/about_us.js') }}" defer></script>
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 
@@ -21,6 +21,7 @@
     <div class="top" style="cursor: pointer">
         <i class="fas fa-arrow-circle-up">TOP</i>
     </div>
+
     <div class="about_bg parallax">
         <nav class="mainbar">
             <div class="mainbar__logo">
@@ -31,7 +32,7 @@
             <ul class="mainbar__menu">        
                 <li><a href="/">HOME</a></li>
                 <li><a href="/about-us">ABOUT US</a></li>
-                <li><a href="">CONTACT US</a></li>
+                <li><a href="/admin">ADMIN</a></li>
             </ul>
 
             <ul class="mainbar__links">
@@ -44,9 +45,6 @@
             </a>
         </nav>
 
-
-
-        
             <div class="ABOUT">
                 <h1 class="about_title"><i>"Team Muk<span>:j</span>a"</i></h1>
                 <div class="about">
@@ -68,7 +66,7 @@
                       <img src="/static/img/about_us/TY.jpg" alt="택영" style="width:100%">
                       <div class="container">
                         <h2>Lee T.Y</h2>
-                        <p class="title">Captain & Developer</p>
+                        <p class="pro_title">Captain & Developer</p>
                         <p><b>안녕하세요.강아지 분양 받으실 분?</b></p>
                         <p>TY@example.com</p>
                         <p><input type="button" value="Contact" onclick="window.open('#')"></p>
