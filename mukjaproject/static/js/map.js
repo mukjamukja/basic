@@ -1,19 +1,6 @@
-var mapposition = {
-    p1:(37.484559, 126.928429),
-    p2:(37.484262, 126.92815),
-    p3:(37.481759, 126.929214),
-    p4:(37.484249,126.929418),
-    p5:(37.483683,126.928517),
-    p6:(37.485375,126.930741),
-    p7:(37.483168,126.927552),
-    p8:(37.482702,126.929376),
-    p9:(37.482125,126.928968),
-    p10:(37.48193,126.929747),
-    p11:(37.481896,126.930176),
-    p12:(37.485487,126.929956),
-    p13:(37.484697,126.927772)
-}
+
 var HOME_PATH = window.HOME_PATH || '.';
+
 var shinrim = new naver.maps.LatLng(37.489894,126.927110), //처음 맵 기준 
     map = new naver.maps.Map('map', {
         center: shinrim,
@@ -25,13 +12,17 @@ var shinrim = new naver.maps.LatLng(37.489894,126.927110), //처음 맵 기준
     });
 
 var contentString = [
-        '<div class="iw_inner">',
-        '   <h3>통큰갈비</h3>',
-        '      <img src="../img/thumb/tn_1.png'+ HOME_PATH +' width="10%" height="15" alt="사진">',
+        '<style>',
+        'div{top: 10px;}',
+        '</style>',
+        '<div>',
+        '   <h3 style="text-align: center; margin: 0;">통큰갈비</h3>',
+        '      <img src="../static/img/thumb/tn_1.png" style ="width:90%; height:auto; padding: 0 5%;" alt="사진">',
         '       <div>주소 : 신림동 1599-4</div>',
         '       <div>평점 : 8</div>',
         '       <div>정보 : 돼지 갈비 무한리필점이다.  가격 대비 가성비가 좋다.</div>',
-        '</div>'
+        '</div>',
+        
     ].join('');
 
 var infowindow = new naver.maps.InfoWindow({
@@ -40,6 +31,7 @@ var infowindow = new naver.maps.InfoWindow({
     backgroundColor: "white",
     borderColor: "green",
     borderWidth: 5,
+    disableAutoPan: false,
     anchorSize: new naver.maps.Size(10, 10),
     anchorSkew: true,
     anchorColor: "white",
@@ -64,7 +56,7 @@ var meal2 = new naver.maps.Marker({
 var contentString2 = [
     '<div class="iw_inner">',
         '   <h3>막불감동</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_2.png" width="15" height="15" alt="사진"></a>',
+        '      <img src="../static/img/thumb/tn_2.png" style ="width:90%; height:auto; padding: 0 5%;" alt="사진">',
         '       <div>주소 : 신림동 1433-60</div>',
         '       <div>평점 : 8</div>',
         '       <div>정보 : 면을 시키면 고기가 서비스로 나오지만 고기 퀄리티가 좀 떨어진다.</div>',
@@ -100,7 +92,7 @@ var meal3 = new naver.maps.Marker({
 var contentString3 = [
     '<div class="iw_inner">',
         '   <h3>르브와 </h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_3.png" width="15" height="15" alt="사진"></a>',
+        '      <img src="../static/img/thumb/tn_3.png" style ="width:90%; height:auto; padding: 0 5%;" alt="사진">',
         '       <div>주소 : 서원동 34 3층</div>',
         '       <div>평점 : 8</div>',
         '       <div>정보 : 신림역 3번출구에 위치하며 크림파스타가 주메뉴다. </div>',
@@ -136,7 +128,7 @@ var meal4 = new naver.maps.Marker({
 var contentString4 = [
     '<div class="iw_inner">',
         '   <h3>용궁중화요리</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_4.png" width="15" height="15" alt="사진"></a>',
+        '      <img src="../static/img/thumb/tn_4.png" style ="width:90%; height:auto; padding: 0 5%;" alt="사진">',
         '       <div>주소 : 신림동 1640-1</div>',
         '       <div>평점 : 6</div>',
         '       <div>정보 : 짜장면에 고기,야채 등이 잘게 다져서 보통 짜장면보다 더 맛있다.</div>',
@@ -172,7 +164,7 @@ var meal5 = new naver.maps.Marker({
 var contentString5 = [
     '<div class="iw_inner">',
         '   <h3>스시오</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_5.png" width="15" height="15" alt="사진"></a>',
+        '      <img src="../static/img/thumb/tn_5.png" style ="width:90%; height:auto; padding: 0 5%;" alt="사진">',
         '       <div>주소 : 신림동 1640-2</div>',
         '       <div>평점 : 6</div>',
         '       <div>정보 : 각종 샐러드, 냉모밀, 스시, 튀김 ,치킨 등등 뷔페 느낌이다.</div>',
@@ -208,7 +200,7 @@ var meal6 = new naver.maps.Marker({
 var contentString6 = [
     '<div class="iw_inner">',
         '   <h3>전주식당</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_6.png" width="15" height="15" alt="사진"></a>',
+        '      <img src="../static/img/thumb/tn_6.png" style ="width:90%; height:auto; padding: 0 5%;" alt="사진">',
         '       <div>주소 : 신림동 신림로66길20</div>',
         '       <div>평점 : 8</div>',
         '       <div>정보 : 냉동 삼겹살집이다. 고기에 육즙이 많다.</div>',
@@ -244,7 +236,7 @@ var meal7 = new naver.maps.Marker({
 var contentString7 = [
         '<div class="iw_inner">',
             '   <h3>24시서울밥집</h3>',
-            '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_7.png" width="15" height="15" alt="사진"></a>',
+            '      <img src="../static/img/thumb/tn_7.png" style ="width:90%; height:auto; padding: 0 5%;" alt="사진">',
             '       <div>주소 : 서원동 관천로36-1</div>',
             '       <div>평점 : 7</div>',
             '       <div>정보 : 신림역 4번출구에 위치하며 제육볶음이 푸짐하다.</div>',
@@ -460,10 +452,10 @@ var meal13 = new naver.maps.Marker({
 var contentString13 = [
     '<div class="iw_inner">',
         '   <h3>깡통 닭갈비</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_13.png" width="15" height="15" alt="사진"></a>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_13.png"  alt="사진"></a>',
         '       <div>주소 : 남부순환로 1597-14</div>',
         '       <div>평점 : 8</div>',
-        '       <div>정보 : 숯불 닭갈비집이다. 2인부이상 주문시 치즈를 서비스로 준다.</div>',
+        '       <div>정보 : 숯불 닭갈비집이다. 2인분이상 주문시 치즈를 서비스로 준다.</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
 
