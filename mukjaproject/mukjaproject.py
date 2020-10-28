@@ -200,6 +200,5 @@ def execute_store_edit(store_id=0):
     submit_clicked += "<a href='/'>go home</a>"
     return submit_clicked
 
-
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
