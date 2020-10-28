@@ -463,7 +463,7 @@ var contentString13 = [
         '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_13.png" width="15" height="15" alt="사진"></a>',
         '       <div>주소 : 남부순환로 1597-14</div>',
         '       <div>평점 : 8</div>',
-        '       <div>정보 : 숯불 닭갈비집이다. 2인부이상 주문시 치즈를 서비스로 준다.</div>',
+        '       <div>정보 : 숯불 닭갈비집이다. 2인분이상 주문시 치즈를 서비스로 준다.</div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
 
