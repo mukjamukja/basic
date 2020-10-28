@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muk:ja</title>
-    <link rel="stylesheet" href="../static/css/intro.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/intro.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Niramit:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
@@ -13,17 +13,16 @@
 </head>
 <body>
     <div class="welcome-section content-hidden">
-        <div class="content-wrap">
-            <ul class="fly-in-text">
-            <li>M</li>
-            <li>u</li>
-            <li>k</li>
-            <li><span>:</span></li>
-            <li><span>j</span></li>
-            <li>a</li>
-        </ul>
-        <a href="#" class="enter-button">여기 눌러봐!</a>
-
+        <div style="cursor:pointer" onclick="fn_detailView('/home')" class="content-wrap">
+                <ul class="fly-in-text">
+                    <li>M</li>
+                    <li>u</li>
+                    <li>k</li>
+                    <li><span>:</span></li>
+                    <li><span>j</span></li>
+                    <li>a</li>
+                </ul>
+            <p class="enter-button">여기 눌러봐!</p>
         </div>
     </div>
 
@@ -41,6 +40,12 @@
         welcomSection.addClass('content-hidden').fadeOut();
       })
 })
+    </script>
+
+    <script>
+        function fn_detailView(strUrl){
+            document.location.href=strUrl
+        }
     </script>
 </body>
 </html>

@@ -12,6 +12,10 @@ app = Flask(__name__)
 
 
 @app.route("/")
+def intro():
+    return render_template('intro.html')
+
+@app.route("/home")
 def main():
     conn = get_conn()
     cur = conn.cursor()
