@@ -1,3 +1,9 @@
+.input_form {
+    display: inline-block;
+    width: 48%;
+    margin: 0;
+    padding: 0;
+}
 
 input[id="address"] {
     width: 30rem;
@@ -7,4 +13,12 @@ input[id="inform"] {
     height: 5rem;
     width: 68%;
 
+}
+
+
+.store_data {
+    display: inline-block;
+    width: 48%;
+    margin: 0;
+    padding: 0;
 }

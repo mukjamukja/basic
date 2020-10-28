@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action="/admin/store_edit/{{ info[0][0] }}/" method="POST" enctype="multipart/form-data">
+        <div>store_id: {{ info[0][0] }}</div>
+        <label>store_name: <input type="text" value="{{ info[0][1] }}" name="store_name"></label>
+        <label>rate: <input type="number" value="{{ info[0][2] }}" name="rate"></label>
+        <label>address: <input type="text" value="{{ info[0][3] }}" name="address"></label>
+        <label>lat: <input type="number" value="{{ info[0][4] }}" name="lat"></label>
+        <label>lon: <input type="number" value="{{ info[0][5] }}" name="lon"></label>
+        <label>inform: <input type="text" value="{{ info[0][6] }}" name="inform"></label>
+        <label><div>{{ info[7] }}</div></label>
+        <label>writer: <input type="text" value="{{ info[0][8] }}" name="writer"></label>
+        <label>thumbnail:(사진변경은 아직 지원하지 않음.) <input type="file" value="{{ info[0][9] }}" name="thumbnail"></label>
+        <label>distance: <input type="text" value="{{ info[0][10] }}" name="distance"></label>
+        <button type="submit">SUBMIT!!</button>
+        </form>
+    </div>    
+</body>
+</html>

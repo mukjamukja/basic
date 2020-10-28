@@ -7,10 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        hello!
-    </div>
-   
+    <div class="input_form">
     <form action="/admin/add_store" method="post" enctype="multipart/form-data">
         <fieldset>
             <legend>음식점 정보 입력</legend>
@@ -66,7 +63,15 @@
             <legend>detail image update</legend>
             <p>
                 <input type="file" name="detail_image" id="detail_image">
-                <label for="detail_image">d{store_id}_{order}.{이미지 확장자} 형식으로 파일저장.</label>
+                <label for="detail_image">형식으로 파일저장.</label>
+            </p>
+            <p>
+                <input type="number" name="store_id">
+                <label for="store_id">store_id</label>
+            </p>
+            <p>
+                <input type="number" name="store_order">
+                <label for="store_id">store_order</label>
             </p>
             <p>
                 <input type="password" name="pwd" id="pwd">
@@ -78,6 +83,14 @@
             </div>
         </fieldset>
     </form>
-
+    </div>
+    <div class="store_data">
+        {% for store in info_store %}
+        <a href="/admin/store_data/{{ store[0] }}/"><div>{{ store }}</div></a>
+        {% endfor %}
+    </div>
+    <div>
+        <a href="/">back home</a>
+    </div>
 </body>
 </html>

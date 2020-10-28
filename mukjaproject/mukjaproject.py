@@ -36,7 +36,8 @@ def main():
 
     conn.close()
   
-    return render_template('main.html', inform=information, dict_tag=dict_tag, tag_list=tag_list)
+    return render_template('main.html',\
+         inform=information, dict_tag=dict_tag, tag_list=tag_list)
 
  
 @app.route("/store/<int:store_id>/")
@@ -73,16 +74,29 @@ def map():
 
     return render_template("map.html", location=location)
 
+
 @app.route("/about-us/")
 def about_us():
     return render_template("about_us.html")
 
+
 @app.route("/admin/")
 def admin():
-    return render_template("admin.html")
+    conn = get_conn()
+    cur = conn.cursor()
+
+    info_store = []
+    cur.execute("select store_id, name, thumbnail from store")
+    for (store_id, name, thumbnail) in cur.fetchall():
+        info_store.append((store_id, name, thumbnail))
+    conn.close()
+    return render_template("admin.html", info_store=info_store)
 
 
-allowed = ['jpg', 'peg', 'fif', 'gif', 'png', 'ppm', 'pgm', 'pbm', 'pnm', 'svg', 'bmp', 'JPG', 'PEG', 'FIF', 'GIF', 'PNG', 'PPM', 'PGM', 'PBM', 'PNM', 'SVG', 'BMP']  
+allowed = [\
+    'jpg', 'peg', 'fif', 'gif', 'png', 'ppm', 'pgm', 'pbm', 'pnm', 'svg', 'bmp',\
+    'JPG', 'PEG', 'FIF', 'GIF', 'PNG', 'PPM', 'PGM', 'PBM', 'PNM', 'SVG', 'BMP'\
+    ]
 @app.route("/admin/add_store" , methods=('POST',))
 def add_store():
     name = request.form['store_name']
@@ -104,11 +118,13 @@ def add_store():
     cur = conn.cursor()
 
     if pwd != "0000":
+        conn.close()
         return "password wrong!"
     elif pwd == "0000":
         cur.execute("select name from store")
         for store_name in cur.fetchall():
             if name in store_name:
+                conn.close()
                 return "already exist"
         cur.execute("insert into store\
             (name, rate, address,\
@@ -124,6 +140,7 @@ def add_store():
         show_output += "<a href='/'>home</a>"
         show_output += "<a href='/admin/'>back to admin</a>"
         conn.commit()
+        conn.close()
 
         return show_output
 
@@ -132,17 +149,60 @@ def add_store():
 def add_image():
     from python.image_commit import execute_image_commit
     password = request.form['pwd']
+    store_id = request.form['store_id']
+    store_order = request.form['store_order']
     if password != '0000':
         return "password is wrong"
     elif password == '0000':
         file = request.files['detail_image']
         filename = file.filename
+        index_of_dot = filename.index('.')
         if filename[-3:] not in allowed:
             return "지원하지 않은 이미지 형식입니다."
+        filename = f"d{store_id}_{store_order}" + filename[index_of_dot:]
         file.save(os.path.join('static/img/details', filename))
         execute_image_commit()
         print('db updated')
         return 'file added'
+
+@app.route("/admin/store_data/<int:store_id>/")
+def store_edit(store_id=0):
+    conn = get_conn()
+    cur = conn.cursor()
+    
+    store_info = []
+    cur.execute("select * from store where store_id=?", (store_id,))
+    # 0:store_id, 1:name, 2:rate, 3:address, 4:lon, 5:inform, 6:post_date,
+    # 7:writer, 8:thumbnail, 9:distance
+    for info in cur.fetchall():
+        store_info.append(info)
+    conn.close()
+    return render_template("store_edit.html", info=store_info)
+
+@app.route("/admin/store_edit/<int:store_id>/", methods=('POST',))
+def execute_store_edit(store_id=0):
+    conn = get_conn()
+    cur = conn.cursor()
+
+    store_name = request.form['store_name']
+    rate = request.form['rate']
+    address = request.form['address']
+    lat = request.form['lat']
+    lon = request.form['lon']
+    inform = request.form['inform']
+    writer = request.form['writer']
+    distance = request.form['distance']
+    print(store_name, rate, address, lat, lon, inform, writer, distance)
+    cur.execute(f"update store set name='{store_name}', rate={rate},\
+         address='{address}', lat={lat}, lon={lon}, inform='{inform}',\
+         writer='{writer}', distance={distance}\
+         where store_id = ?", (store_id,))
+    conn.commit()
+    conn.close()
+    print("update database")
+    submit_clicked = "submitted"
+    submit_clicked += "<a href='/'>go home</a>"
+    return submit_clicked
 
 
 if __name__ == "__main__":
