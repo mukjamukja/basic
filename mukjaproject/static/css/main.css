@@ -162,8 +162,9 @@ span{
 
 /* grid */
 .store_name{
+    font-family: 'Niramit',sans-serif;
     font-size: smaller;
-    font-weight: lighter;
+    font-weight: bold;
 }
 
 .grid_view{
