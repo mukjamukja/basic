@@ -211,8 +211,6 @@ def execute_store_edit(store_id=0):
     conn.close()
     return submit_clicked
 
-<<<<<<< HEAD
-=======
 @app.route("/admin/add_tag/<int:store_id>/", methods=('POST',))
 def add_tag(store_id=0):
 
@@ -229,7 +227,5 @@ def add_tag(store_id=0):
     return "tag added"
 
 
-
->>>>>>> 6960c40
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
