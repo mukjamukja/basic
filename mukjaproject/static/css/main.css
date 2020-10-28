@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: sans-serif;
+    font-family: 'Niramit',sans-serif;
     background-color: rgb(249,244,227);
     
 }
@@ -17,11 +17,12 @@ span{
 }
 
 .Title{
-    font-family: 'Niramit', sans-serif;
+    font-family: 'Niramit';
     font-size: 40px;
 }
 
 .mainbar{
+    font-family: 'Niramit';
     position: relative;
     top: 0;
     left: 0;
@@ -83,12 +84,14 @@ span{
     display: block;
     position: absolute;
     right:32px;
-    font-size: 24px;
+    top: 20px;
+    font-size: 30px;
     color: rgb(223, 7, 41);
     
 }
 
 .sectionbar{
+    font-family: 'Niramit';
     position: sticky;
     top: 0px;
     left: 0;
@@ -134,9 +137,11 @@ span{
 .sortbtn__menu{
     display: none;
     
+    
 }
 
 .sortbtn__menu li{
+    font-family: 'Niramit';
     list-style-type: none;
     padding: 1px 16px;
 }
@@ -153,7 +158,8 @@ span{
 
 /* grid */
 .store_name{
-    /* font-family: 'Noto Sans KR'; */
+    font-size: smaller;
+    font-weight: lighter;
 }
 
 .grid_view{
@@ -176,7 +182,8 @@ span{
 }
 
 .grid_view-item:hover{
-    border-color:rgba(223, 7, 39, 0.712);
+    border-color:rgb(223, 7, 41);
+    color: rgb(223, 7, 41);
 }
 
 
@@ -185,8 +192,8 @@ span{
     position: relative;
     overflow: hidden;
     margin: 0 auto;
-    width: 90%;
-    height: 80%;
+    width: 70%;
+    height: 70%;
 }
 
 
@@ -283,7 +290,7 @@ span{
 
 #map{
     width: 90%;
-    height: 400px;
+    height: 500px;
     margin: 0 auto;
 }
 
@@ -303,6 +310,7 @@ span{
     background-color: rgb(249,244,227);
     text-indent: -9999em;
     display: inline-block;
+    font-family: 'Niramit', sans-serif;
 }
 
 /* ----------------------filter sample CSS--------------------- */
@@ -401,7 +409,7 @@ span{
 
 @media screen and (max-width: 1795px) {
     .grid_view-item{
-        width: 21.95%;
+        width: 21.94%;
         height: 409px;
     }
 }
@@ -482,6 +490,25 @@ span{
         height: 319px;
     }
 
+    .Title{
+        font-family: 'Niramit', sans-serif;
+        font-size: 35px;
+    }
+
+    .mainbar__logo{
+        font-size: 25px;
+        color: rgb(249,244,227);
+    }
+
+    .mainbar__menubtn{
+        display: block;
+        position: absolute;
+        right:32px;
+        top: 21px;
+        font-size: 25px;
+        color: rgb(223, 7, 41);
+        
+    }
 }
 
 @media screen and (max-width: 598px) {
@@ -540,6 +567,8 @@ span{
         width: 45.2%;
         height: 258px;
     }
+
+ 
 }
 
 
@@ -552,6 +581,25 @@ span{
         height: 210px;
     }
     
+    .Title{
+        font-family: 'Niramit', sans-serif;
+        font-size: 25px;
+    }
+
+    .mainbar__logo{
+        font-size: 20px;
+        color: rgb(249,244,227);
+    }
+
+    .mainbar__menubtn{
+        display: block;
+        position: absolute;
+        right:32px;
+        top: 14px;
+        font-size: 20px;
+        color: rgb(223, 7, 41);
+        
+    }
 }
 
 
@@ -588,6 +636,7 @@ span{
     .grid_view-item{
         width: 44.6%;
     }
+
 }
 
 @media screen and (max-width: 3px) {

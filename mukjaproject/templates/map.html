@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../static/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Niramit:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <title>Muk:ja</title>
     <script 
     src="https://kit.fontawesome.com/2e6580eb92.js"
@@ -16,18 +18,20 @@
 </head>
 
 <body>
-    <div id = topfix>
+    <div class="top" style="cursor: pointer">
+        <i class="fas fa-arrow-circle-up">TOP</i>
+    </div>
+
         <nav class="mainbar">
             <div class="mainbar__logo">
                 <i class="fas fa-utensils"></i>
-                <b><a href="/"><span style = "color:rgb(192, 57, 43);">M</span>ukja-Muk<span style = "color:rgb(192, 57, 43);">j</span>a</a></b>
-
+                <b class="Title"><a href="/"><span>M</span>ukja-Muk<span>:j</span>a</a></b>
             </div>
 
             <ul class="mainbar__menu">        
                 <li><a href="/">HOME</a></li>
                 <li><a href="/about-us">ABOUT US</a></li>
-                <li><a href="">CONTACT US</a></li>
+                <li><a href="/admin">ADMIN</a></li>
             </ul>
 
             <ul class="mainbar__links">
@@ -38,7 +42,6 @@
             <a href="#" class="mainbar__menubtn">
             <i class="fas fa-bars"></i>
             </a>
-
         </nav>
     
         <div class="sectionbar">
@@ -52,8 +55,9 @@
     <div id="map"><br></div>
     
 
-    <div id = "footer" style="position: absolute;">
-        Project mjmj<br>ltyiz x mhj x gust x pavv
+    <div id = "footer">
+        <h2>Project mjmj</h2>
+        <p>ltyiz x mhj x gust x pavv</p>
     </div>
     <div style="display:none;">
         {% for i in location %}
