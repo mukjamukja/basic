@@ -1,3 +1,7 @@
+html {
+    box-sizing: border-box;
+      }
+
 body{
     margin: 0;
     padding: 0;
@@ -18,7 +22,7 @@ span{
 
 .Title{
     font-family: 'Niramit';
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .mainbar{
@@ -84,7 +88,7 @@ span{
     display: block;
     position: absolute;
     right:32px;
-    top: 20px;
+    /* top: 20px; */
     font-size: 30px;
     color: rgb(223, 7, 41);
     
@@ -220,7 +224,7 @@ span{
     text-align: right;
     float: right;
     color: grey;
-    font-size: smaller;
+    font-size: 15px;
     margin-top: 0;
 }
 
@@ -504,10 +508,24 @@ span{
         display: block;
         position: absolute;
         right:32px;
-        top: 21px;
+        /* top: 21px; */
         font-size: 25px;
         color: rgb(223, 7, 41);
         
+    }
+
+    .score {
+        text-align: left;
+        font-size: medium;
+        color: gold;   
+    }
+
+    .distance {
+        text-align: right;
+        float: right;
+        color: grey;
+        font-size: 7px;
+        margin-top: 0;
     }
 }
 
@@ -595,10 +613,23 @@ span{
         display: block;
         position: absolute;
         right:32px;
-        top: 14px;
+        /* top: 14px; */
         font-size: 20px;
         color: rgb(223, 7, 41);
         
+    }
+    .score {
+        text-align: left;
+        font-size: smaller;
+        color: gold;   
+    }
+
+    .distance {
+        text-align: right;
+        float: right;
+        color: grey;
+        font-size: 5px;
+        margin-top: 0;
     }
 }
 
