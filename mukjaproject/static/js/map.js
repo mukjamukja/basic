@@ -12,12 +12,7 @@ var shinrim = new naver.maps.LatLng(37.489894,126.927110), //처음 맵 기준
     });
 
 var contentString = [
-        '<style>',
-        'div{top: 10px;}',
-        '</style>',
-        '<div>',
         '   <h3 style="text-align: center; margin: 0;">통큰갈비</h3>',
-        '      <img src="../static/img/thumb/tn_1.png" style ="width:90%; height:auto; padding: 0 5%;" alt="사진">',
         '       <div>주소 : 신림동 1599-4</div>',
         '       <div>평점 : 8</div>',
         '       <div>정보 : 돼지 갈비 무한리필점이다.  가격 대비 가성비가 좋다.</div>',
@@ -55,8 +50,7 @@ var meal2 = new naver.maps.Marker({
 
 var contentString2 = [
     '<div class="iw_inner">',
-        '   <h3>막불감동</h3>',
-        '      <img src="../static/img/thumb/tn_2.png" style ="width:90%; height:auto; padding: 0 5%;" alt="사진">',
+        '   <h3 style="text-align: center; margin: 0;">막불감동</h3>',
         '       <div>주소 : 신림동 1433-60</div>',
         '       <div>평점 : 8</div>',
         '       <div>정보 : 면을 시키면 고기가 서비스로 나오지만 고기 퀄리티가 좀 떨어진다.</div>',
@@ -91,8 +85,7 @@ var meal3 = new naver.maps.Marker({
 
 var contentString3 = [
     '<div class="iw_inner">',
-        '   <h3>르브와 </h3>',
-        '      <img src="../static/img/thumb/tn_3.png" style ="width:90%; height:auto; padding: 0 5%;" alt="사진">',
+        '   <h3 style="text-align: center; margin: 0;">르브와 </h3>',
         '       <div>주소 : 서원동 34 3층</div>',
         '       <div>평점 : 8</div>',
         '       <div>정보 : 신림역 3번출구에 위치하며 크림파스타가 주메뉴다. </div>',
@@ -127,8 +120,7 @@ var meal4 = new naver.maps.Marker({
 
 var contentString4 = [
     '<div class="iw_inner">',
-        '   <h3>용궁중화요리</h3>',
-        '      <img src="../static/img/thumb/tn_4.png" style ="width:90%; height:auto; padding: 0 5%;" alt="사진">',
+        '   <h3 style="text-align: center; margin: 0;">용궁중화요리</h3>',
         '       <div>주소 : 신림동 1640-1</div>',
         '       <div>평점 : 6</div>',
         '       <div>정보 : 짜장면에 고기,야채 등이 잘게 다져서 보통 짜장면보다 더 맛있다.</div>',
@@ -163,8 +155,7 @@ var meal5 = new naver.maps.Marker({
 
 var contentString5 = [
     '<div class="iw_inner">',
-        '   <h3>스시오</h3>',
-        '      <img src="../static/img/thumb/tn_5.png" style ="width:90%; height:auto; padding: 0 5%;" alt="사진">',
+        '   <h3 style="text-align: center; margin: 0;">스시오</h3>',
         '       <div>주소 : 신림동 1640-2</div>',
         '       <div>평점 : 6</div>',
         '       <div>정보 : 각종 샐러드, 냉모밀, 스시, 튀김 ,치킨 등등 뷔페 느낌이다.</div>',
@@ -199,8 +190,7 @@ var meal6 = new naver.maps.Marker({
 
 var contentString6 = [
     '<div class="iw_inner">',
-        '   <h3>전주식당</h3>',
-        '      <img src="../static/img/thumb/tn_6.png" style ="width:90%; height:auto; padding: 0 5%;" alt="사진">',
+        '   <h3 style="text-align: center; margin: 0;">전주식당</h3>',
         '       <div>주소 : 신림동 신림로66길20</div>',
         '       <div>평점 : 8</div>',
         '       <div>정보 : 냉동 삼겹살집이다. 고기에 육즙이 많다.</div>',
@@ -235,8 +225,7 @@ var meal7 = new naver.maps.Marker({
     
 var contentString7 = [
         '<div class="iw_inner">',
-            '   <h3>24시서울밥집</h3>',
-            '      <img src="../static/img/thumb/tn_7.png" style ="width:90%; height:auto; padding: 0 5%;" alt="사진">',
+            '   <h3 style="text-align: center; margin: 0;">24시서울밥집</h3>',
             '       <div>주소 : 서원동 관천로36-1</div>',
             '       <div>평점 : 7</div>',
             '       <div>정보 : 신림역 4번출구에 위치하며 제육볶음이 푸짐하다.</div>',
@@ -271,8 +260,7 @@ var meal8 = new naver.maps.Marker({
 
 var contentString8 = [
     '<div class="iw_inner">',
-        '   <h3>틈새라면</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_8.png" width="15" height="15" alt="사진"></a>',
+        '   <h3 style="text-align: center; margin: 0;">틈새라면</h3>',
         '       <div>주소 : 신림동 1638-20</div>',
         '       <div>평점 : 7</div>',
         '       <div>정보 : 매운라면으로 유명하다. 매운맛 조절이 가능하다.</div>',
@@ -307,8 +295,7 @@ var meal9 = new naver.maps.Marker({
 
 var contentString9 = [
     '<div class="iw_inner">',
-        '   <h3>뽕잎사랑</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_9.png" width="15" height="15" alt="사진"></a>',
+        '   <h3 style="text-align: center; margin: 0;">뽕잎사랑</h3>',
         '       <div>주소 : 서원동 신원로 35</div>',
         '       <div>평점 : 8</div>',
         '       <div>정보 : 메뉴가 굉장히 많다. 다양한 패키지로 준비되서 기호에 맞게 골라 먹으면 된다.</div>',
@@ -343,8 +330,7 @@ var meal10 = new naver.maps.Marker({
 
 var contentString10 = [
     '<div class="iw_inner">',
-        '   <h3>싸움의 고수</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_10.png" width="15" height="15" alt="사진"></a>',
+        '   <h3 style="text-align: center; margin: 0;">싸움의 고수</h3>',
         '       <div>주소 : 서원동 신림로307</div>',
         '       <div>평점 : 7</div>',
         '       <div>정보 : 보쌈은 항상 비싸다는 편견을 깨주는 음식점이다.</div>',
@@ -379,8 +365,7 @@ var meal11 = new naver.maps.Marker({
 
 var contentString11 = [
     '<div class="iw_inner">',
-        '   <h3>두끼떡볶이</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_11.png" width="15" height="15" alt="사진"></a>',
+        '   <h3 style="text-align: center; margin: 0;">두끼떡볶이</h3>',
         '       <div>주소 : 서원동 신림로310</div>',
         '       <div>평점 : 7</div>',
         '       <div>정보 : 떡볶이 무한 리필점이다. 각종 토핑과 튀김류들이 뷔페형식으로 진열 돼있다.</div>',
@@ -415,8 +400,7 @@ var meal12 = new naver.maps.Marker({
 
 var contentString12 = [
     '<div class="iw_inner">',
-        '   <h3>서가앤쿡</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_12.png" width="15" height="15" alt="사진"></a>',
+        '   <h3 style="text-align: center; margin: 0;">서가앤쿡</h3>',
         '       <div>주소 : 신림동 신림로350</div>',
         '       <div>평점 : 6</div>',
         '       <div>정보 : 목살 스테이크로 유명한 맛집이다.</div>',
@@ -451,8 +435,7 @@ var meal13 = new naver.maps.Marker({
 
 var contentString13 = [
     '<div class="iw_inner">',
-        '   <h3>깡통 닭갈비</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_13.png"  alt="사진"></a>',
+        '   <h3 style="text-align: center; margin: 0;">깡통 닭갈비</h3>',
         '       <div>주소 : 남부순환로 1597-14</div>',
         '       <div>평점 : 8</div>',
         '       <div>정보 : 숯불 닭갈비집이다. 2인분이상 주문시 치즈를 서비스로 준다.</div>',
@@ -487,8 +470,7 @@ var meal14 = new naver.maps.Marker({
 
 var contentString14 = [
     '<div class="iw_inner">',
-        '   <h3>마라탕 전문점</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
+        '   <h3 style="text-align: center; margin: 0;">마라탕 전문점</h3>',
         '       <div>주소 : 신대방동 395-69번지 2층 211호</div>',
         '       <div>평점 : 8</div>',
         '       <div>정보 : 취향대로 바구니에 담아서 먹으면된다. 매운맛 조절이 가능하다.</div>',
@@ -524,8 +506,7 @@ var meal15 = new naver.maps.Marker({
 
 var contentString15 = [
     '<div class="iw_inner">',
-        '   <h3>예가 돈가스</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
+        '   <h3 style="text-align: center; margin: 0;">예가 돈가스</h3>',
         '       <div>주소 : 서울특별시 관악구 보라매동 971-1</div>',
         '       <div>평점 : 5</div>',
         '       <div>정보 : 돈가스 맛집 예가돈까스. 바삭하고 맛있는 돈가스를 판매하고 있다. 기름지지 않고 맛있어 인기가 많다.</div>',
@@ -560,8 +541,7 @@ var meal16 = new naver.maps.Marker({
 
 var contentString16 = [
     '<div class="iw_inner">',
-        '   <h3>부엉이 돈가스</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
+        '   <h3 style="text-align: center; margin: 0;">부엉이 돈가스</h3>',
         '       <div>주소 : 서울특별시 관악구 봉천동 봉천로 209 롯데백화점 7층</div>',
         '       <div>평점 : 6</div>',
         '       <div>정보 : 비교적 비싼음식점들이 모여있는 롯데백와점 7층에 위치해 있다. 돈가스의 맛은 있으나 가격에 비해 양이 적은것이 단점이다. 소스가 특히 맛있다.</div>',
@@ -597,8 +577,7 @@ var meal17 = new naver.maps.Marker({
 
 var contentString17 = [
     '<div class="iw_inner">',
-        '   <h3>강서중화요리</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
+        '   <h3 style="text-align: center; margin: 0;">강서중화요리</h3>',
         '       <div>주소 : 서울특별시 관악구 보라매동 당곡길 22</div>',
         '       <div>평점 : 8</div>',
         '       <div>정보 : 동네 중국집느낌이며 , 짬뽕이 깔끔하고 시원한 맛이다. </div>',
@@ -633,8 +612,7 @@ var meal18 = new naver.maps.Marker({
 
 var contentString18 = [
     '<div class="iw_inner">',
-        '   <h3>삿뽀로</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
+        '   <h3 style="text-align: center; margin: 0;">삿뽀로</h3>',
         '       <div>주소 : 서울특별시 관악구 봉천동 봉천로 209</div>',
         '       <div>평점 : 7</div>',
         '       <div>정보 : 정통 일식을 저가로 즐길수있다. </div>',
@@ -670,8 +648,7 @@ var meal19 = new naver.maps.Marker({
 
 var contentString19 = [
     '<div class="iw_inner">',
-        '   <h3>삼촌집</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
+        '   <h3 style="text-align: center; margin: 0;">삼촌집</h3>',
         '       <div>주소 : 서울특별시 관악구 신림동 봉천로8길 12</div>',
         '       <div>평점 : 8</div>',
         '       <div>정보 : 초밥 연어튀김 새우튀김이 주메뉴이다. 가성비가 정말 좋다. </div>',
@@ -707,11 +684,9 @@ var meal20 = new naver.maps.Marker({
 
 var contentString20 = [
     '<div class="iw_inner">',
-        '   <h3>아이포</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
+        '   <h3 style="text-align: center; margin: 0;">아이포</h3>',
         '       <div>주소 : 서울특별시 관악구 봉천동 보라매로3길 29</div>',
         '       <div>평점 : 8</div>',
-        '       <div>정보 : 주메뉴는 쌀국수이고 월남쌈 주문시 쌀국수가 서비스다. </div>',
         '</div>'
     ].join('');  //핀 이벤트의 html
 
@@ -744,8 +719,7 @@ var meal21 = new naver.maps.Marker({
 
 var contentString21 = [
     '<div class="iw_inner">',
-        '   <h3>전티마이 베트남쌀국수</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
+        '   <h4 style="text-align: center; margin: 0;">전티마이 베트남쌀국수</h4>',
         '       <div>주소 : 봉천동 702-36번지 하동 1층 관악구 서울특별시 KR</div>',
         '       <div>평점 : 8</div>',
         '       <div>정보 : 국물이 진하고 가성비가 좋다. </div>',
@@ -780,8 +754,7 @@ var meal22 = new naver.maps.Marker({
 
 var contentString22 = [
     '<div class="iw_inner">',
-        '   <h3>하노이의 아침</h3>',
-        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
+        '   <h3 style="text-align: center; margin: 0;">하노이의 아침</h3>',
         '       <div>주소 : 서울특별시 동작구 신대방동 395-65</div>',
         '       <div>평점 : 6</div>',
         '       <div>정보 : 쌀국수 종류가 많다. 가성비 대비는 좀 안좋은편. </div>',
