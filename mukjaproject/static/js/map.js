@@ -36,7 +36,7 @@ var contentString = [
 
 var infowindow = new naver.maps.InfoWindow({
     content: contentString,
-    maxWidth: 150,
+    maxWidth: 180,
     backgroundColor: "white",
     borderColor: "green",
     borderWidth: 5,
@@ -73,7 +73,7 @@ var contentString2 = [
 
     var infowindow2 = new naver.maps.InfoWindow({
         content: contentString2,
-        maxWidth: 140,
+        maxWidth: 180,
         backgroundColor: "white",
         borderColor: "green",
         borderWidth: 5,
@@ -109,7 +109,7 @@ var contentString3 = [
 
     var infowindow3 = new naver.maps.InfoWindow({
         content: contentString3,
-        maxWidth: 140,
+        maxWidth: 180,
         backgroundColor: "white",
         borderColor: "green",
         borderWidth: 5,
@@ -145,7 +145,7 @@ var contentString4 = [
 
     var infowindow4 = new naver.maps.InfoWindow({
         content: contentString4,
-        maxWidth: 140,
+        maxWidth: 180,
         backgroundColor: "white",
         borderColor: "green",
         borderWidth: 5,
@@ -181,7 +181,7 @@ var contentString5 = [
 
     var infowindow5 = new naver.maps.InfoWindow({
         content: contentString5,
-        maxWidth: 140,
+        maxWidth: 180,
         backgroundColor: "white",
         borderColor: "green",
         borderWidth: 5,
@@ -217,7 +217,7 @@ var contentString6 = [
 
     var infowindow6 = new naver.maps.InfoWindow({
         content: contentString6,
-        maxWidth: 140,
+        maxWidth: 180,
         backgroundColor: "white",
         borderColor: "green",
         borderWidth: 5,
@@ -253,7 +253,7 @@ var contentString7 = [
     
     var infowindow7 = new naver.maps.InfoWindow({
             content: contentString7,
-            maxWidth: 140,
+            maxWidth: 180,
             backgroundColor: "white",
             borderColor: "green",
             borderWidth: 5,
@@ -289,7 +289,7 @@ var contentString8 = [
 
 var infowindow8 = new naver.maps.InfoWindow({
         content: contentString8,
-        maxWidth: 140,
+        maxWidth: 180,
         backgroundColor: "white",
         borderColor: "green",
         borderWidth: 5,
@@ -325,7 +325,7 @@ var contentString9 = [
 
 var infowindow9 = new naver.maps.InfoWindow({
         content: contentString9,
-        maxWidth: 140,
+        maxWidth: 180,
         backgroundColor: "white",
         borderColor: "green",
         borderWidth: 5,
@@ -361,7 +361,7 @@ var contentString10 = [
 
 var infowindow10 = new naver.maps.InfoWindow({
         content: contentString10,
-        maxWidth: 140,
+        maxWidth: 180,
         backgroundColor: "white",
         borderColor: "green",
         borderWidth: 5,
@@ -397,7 +397,7 @@ var contentString11 = [
 
 var infowindow11 = new naver.maps.InfoWindow({
         content: contentString11,
-        maxWidth: 140,
+        maxWidth: 180,
         backgroundColor: "white",
         borderColor: "green",
         borderWidth: 5,
@@ -433,7 +433,7 @@ var contentString12 = [
 
 var infowindow12 = new naver.maps.InfoWindow({
         content: contentString12,
-        maxWidth: 140,
+        maxWidth: 180,
         backgroundColor: "white",
         borderColor: "green",
         borderWidth: 5,
@@ -469,7 +469,7 @@ var contentString13 = [
 
 var infowindow13 = new naver.maps.InfoWindow({
         content: contentString13,
-        maxWidth: 140,
+        maxWidth: 180,
         backgroundColor: "white",
         borderColor: "green",
         borderWidth: 5,
@@ -505,7 +505,7 @@ var contentString14 = [
 
 var infowindow14 = new naver.maps.InfoWindow({
         content: contentString14,
-        maxWidth: 140,
+        maxWidth: 180,
         backgroundColor: "white",
         borderColor: "green",
         borderWidth: 5,
@@ -542,7 +542,7 @@ var contentString15 = [
 
 var infowindow15 = new naver.maps.InfoWindow({
         content: contentString15,
-        maxWidth: 140,
+        maxWidth: 180,
         backgroundColor: "white",
         borderColor: "green",
         borderWidth: 5,
@@ -578,7 +578,7 @@ var contentString16 = [
 
 var infowindow16 = new naver.maps.InfoWindow({
         content: contentString16,
-        maxWidth: 140,
+        maxWidth: 180,
         backgroundColor: "white",
         borderColor: "green",
         borderWidth: 5,
@@ -615,7 +615,7 @@ var contentString17 = [
 
 var infowindow17 = new naver.maps.InfoWindow({
         content: contentString17,
-        maxWidth: 140,
+        maxWidth: 180,
         backgroundColor: "white",
         borderColor: "green",
         borderWidth: 5,
@@ -651,7 +651,7 @@ var contentString18 = [
 
 var infowindow18 = new naver.maps.InfoWindow({
         content: contentString18,
-        maxWidth: 140,
+        maxWidth: 180,
         backgroundColor: "white",
         borderColor: "green",
         borderWidth: 5,
@@ -688,7 +688,7 @@ var contentString19 = [
 
 var infowindow19 = new naver.maps.InfoWindow({
         content: contentString19,
-        maxWidth: 140,
+        maxWidth: 180,
         backgroundColor: "white",
         borderColor: "green",
         borderWidth: 5,
@@ -725,7 +725,7 @@ var contentString20 = [
 
 var infowindow20 = new naver.maps.InfoWindow({
         content: contentString20,
-        maxWidth: 140,
+        maxWidth: 180,
         backgroundColor: "white",
         borderColor: "green",
         borderWidth: 5,
@@ -762,7 +762,7 @@ var contentString21 = [
 
 var infowindow21 = new naver.maps.InfoWindow({
         content: contentString21,
-        maxWidth: 140,
+        maxWidth: 180,
         backgroundColor: "white",
         borderColor: "green",
         borderWidth: 5,
@@ -776,5 +776,41 @@ var infowindow21 = new naver.maps.InfoWindow({
             infowindow21.close();
         } else {
             infowindow21.open(map, meal21);
+        }
+    }); //이벤트 발생 if문
+
+//                                  //
+
+var meal22 = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.4922,126.92347),
+    map: map
+});  //맵핀
+
+var contentString22 = [
+    '<div class="iw_inner">',
+        '   <h3>하노이의 아침</h3>',
+        '      <a href="#" target="_blank"> <img src="'+ HOME_PATH +'../img/thumb/tn_14.png" width="15" height="15" alt="사진"></a>',
+        '       <div>주소 : 서울특별시 동작구 신대방동 395-65</div>',
+        '       <div>평점 : 6</div>',
+        '       <div>정보 : 쌀국수 종류가 많다. 가성비 대비는 좀 안좋은편. </div>',
+        '</div>'
+    ].join('');  //핀 이벤트의 html
+
+var infowindow22 = new naver.maps.InfoWindow({
+        content: contentString22,
+        maxWidth: 180,
+        backgroundColor: "white",
+        borderColor: "green",
+        borderWidth: 5,
+        anchorSize: new naver.maps.Size(10, 10),
+        anchorSkew: true,
+        anchorColor: "white",
+        pixelOffset: new naver.maps.Point(30, -20)
+    }); //핀 이벤트의 css
+    naver.maps.Event.addListener(meal22, "click", function(e) {
+        if (infowindow22.getMap()) {
+            infowindow22.close();
+        } else {
+            infowindow22.open(map, meal22);
         }
     }); //이벤트 발생 if문

@@ -57,10 +57,6 @@ def store_detail(store_id):
         imgs=get_img(store_id))
 
 
-@app.route("/practice/")
-def practice():
-    return render_template('practice.html')
-
 
 @app.route("/map/")
 def map():

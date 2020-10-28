@@ -45,4 +45,9 @@ def get_img(store_id=0):
     imgs = []
     for (img_name, img_order) in cur:
         imgs.append((img_name, img_order))
+
+    while len(imgs) < 4:
+        imgs.append(('default.jpg', len(imgs)+1))
+    
     return imgs
+
