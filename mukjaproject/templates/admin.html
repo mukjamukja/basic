@@ -58,11 +58,26 @@
             <div>
                 <button type="submit">submit</button>
             </div>
-
-
-
-
         </fieldset>
     </form>
+
+    <form action="/admin/add_image" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>detail image update</legend>
+            <p>
+                <input type="file" name="detail_image" id="detail_image">
+                <label for="detail_image">d{store_id}_{order}.{이미지 확장자} 형식으로 파일저장.</label>
+            </p>
+            <p>
+                <input type="password" name="pwd" id="pwd">
+                <label for="pwd">password</label>
+            </p>
+
+            <div>
+                <button type="submit">submit</button>
+            </div>
+        </fieldset>
+    </form>
+
 </body>
 </html>
