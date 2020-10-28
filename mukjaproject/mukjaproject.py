@@ -176,8 +176,15 @@ def store_edit(store_id=0):
     # 7:writer, 8:thumbnail, 9:distance
     for info in cur.fetchall():
         store_info.append(info)
+
+    tag_list = []
+    cur.execute("select * from tag")
+    for (tag_id, tag_name) in cur.fetchall():
+        tag_list.append((tag_id, tag_name))
+
     conn.close()
-    return render_template("store_edit.html", info=store_info)
+    return render_template("store_edit.html",\
+         info=store_info, tags=get_tag(store_id), tag_list=tag_list)
 
 @app.route("/admin/store_edit/<int:store_id>/", methods=('POST',))
 def execute_store_edit(store_id=0):
@@ -193,16 +200,36 @@ def execute_store_edit(store_id=0):
     writer = request.form['writer']
     distance = request.form['distance']
     print(store_name, rate, address, lat, lon, inform, writer, distance)
-    cur.execute(f"update store set name='{store_name}', rate={rate},\
-         address='{address}', lat={lat}, lon={lon}, inform='{inform}',\
-         writer='{writer}', distance={distance}\
-         where store_id = ?", (store_id,))
-    conn.commit()
-    conn.close()
+    pwd = request.form['pwd']
+    if pwd == "0000":
+        cur.execute(f"update store set name='{store_name}', rate={rate},\
+            address='{address}', lat={lat}, lon={lon}, inform='{inform}',\
+            writer='{writer}', distance={distance}\
+            where store_id = ?", (store_id,))
+        conn.commit()
+    else:
+        return "wrong password"
     print("update database")
     submit_clicked = "submitted"
     submit_clicked += "<a href='/'>go home</a>"
+    conn.close()
     return submit_clicked
+
+@app.route("/admin/add_tag/<int:store_id>/", methods=('POST',))
+def add_tag(store_id=0):
+
+    pwd = request.form['pwd']
+    tag_id = request.form['tag_id']
+    conn = get_conn()
+    cur = conn.cursor()
+    if pwd == "0000":
+        cur.execute("insert into tag_link(store_id, tag_id) values(?, ?), (store_id, tag_id)")
+        conn.commit()
+    else:
+        return "wrong password"
+    
+    return "tag added"
+
 
 
 if __name__ == "__main__":
