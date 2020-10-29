@@ -162,8 +162,7 @@ def add_image():
         filename = f"d{store_id}_{store_order}" + filename[index_of_dot:]
         file.save(os.path.join('static/img/details', filename))
         execute_image_commit()
-        print('db updated')
-        return 'file added'
+        return "img file added"
 
 @app.route("/admin/store_data/<int:store_id>/")
 def store_edit(store_id=0):
