@@ -129,7 +129,7 @@ def add_store():
         cur.execute("insert into store\
             (name, rate, address,\
             lat, lon, inform,\
-            writer, thumbnail, distance) values(?,?,?,?,?,?,?,?,?)",\
+            writer, thumbnail, distance) values('?',?,'?',?,?,'?','?','?',?)",\
             (name, rate, address, lat, lon, inform,\
             writer, file.filename, distance))
 
@@ -222,7 +222,7 @@ def add_tag(store_id=0):
     conn = get_conn()
     cur = conn.cursor()
     if pwd == "0000":
-        cur.execute("insert into tag_link(store_id, tag_id) values(?, ?), (store_id, tag_id)")
+        cur.execute("insert into tag_link(store_id, tag_id) values(?, ?)", (store_id, tag_id))
         conn.commit()
     else:
         return "wrong password"
