@@ -126,12 +126,12 @@ def add_store():
             if name in store_name:
                 conn.close()
                 return "already exist"
-        cur.execute("insert into store\
+        cur.execute(f"insert into store\
             (name, rate, address,\
             lat, lon, inform,\
-            writer, thumbnail, distance) values('?',?,'?',?,?,'?','?','?',?)",\
-            (name, rate, address, lat, lon, inform,\
-            writer, file.filename, distance))
+            writer, thumbnail, distance)\
+            values('{name}',{rate},'{address}',{lat},{lon},\
+            '{inform}','{writer}','{file.filename}',{distance})")
 
         cur.execute("select * from store where store_id=(select max(store_id) from store)")
         show_output = ""
